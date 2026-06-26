@@ -37,5 +37,10 @@ jobs:
       - name: Build static export
         run: pnpm run build:cloudflare
 
+      - name: Skip deploy when token is missing
+        if: ${{ env.CLOUDFLARE_API_TOKEN == '' }}
+        run: echo "CLOUDFLARE_API_TOKEN is not configured. Static export succeeded, deployment skipped."
+
       - name: Deploy to Cloudflare Pages
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
         run: pnpm dlx wrangler pages deploy out --project-name pei-design --branch main

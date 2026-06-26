@@ -141,7 +141,13 @@ void main() {
 
 const parseHexColor = (value: string): [number, number, number] => {
   const hex = value.replace("#", "");
-  const full = hex.length === 3 ? hex.split("").map((char) => char + char).join("") : hex;
+  const full =
+    hex.length === 3
+      ? hex
+          .split("")
+          .map((char) => char + char)
+          .join("")
+      : hex;
   const numeric = Number.parseInt(full, 16);
 
   return [((numeric >> 16) & 255) / 255, ((numeric >> 8) & 255) / 255, (numeric & 255) / 255];

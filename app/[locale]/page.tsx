@@ -52,22 +52,34 @@ export default async function HomePage({ params }: Props) {
     {
       icon: BrainCircuit,
       title: locale === "zh" ? "AI 产品定义" : "AI product definition",
-      body: locale === "zh" ? "从模型能力、用户任务和商业目标之间找到可上线范围。" : "Translate model capability, user tasks, and business goals into shippable scope."
+      body:
+        locale === "zh"
+          ? "从模型能力、用户任务和商业目标之间找到可上线范围。"
+          : "Translate model capability, user tasks, and business goals into shippable scope."
     },
     {
       icon: Layers3,
       title: locale === "zh" ? "复杂交互与设计系统" : "Interaction and systems",
-      body: locale === "zh" ? "沉淀 Agent、评测、生成工具的状态、反馈和组件模式。" : "Codify states, feedback, and components for agents, evaluation, and creation tools."
+      body:
+        locale === "zh"
+          ? "沉淀 Agent、评测、生成工具的状态、反馈和组件模式。"
+          : "Codify states, feedback, and components for agents, evaluation, and creation tools."
     },
     {
       icon: LineChart,
       title: locale === "zh" ? "评测与数据结果" : "Evaluation and metrics",
-      body: locale === "zh" ? "把主观体验质量拆解为团队可共同优化的指标。" : "Turn subjective AI experience quality into metrics teams can improve together."
+      body:
+        locale === "zh"
+          ? "把主观体验质量拆解为团队可共同优化的指标。"
+          : "Turn subjective AI experience quality into metrics teams can improve together."
     },
     {
       icon: Sparkles,
       title: locale === "zh" ? "前端可实现性" : "Frontend fluency",
-      body: locale === "zh" ? "理解组件、响应式和动效边界，减少设计到工程的损耗。" : "Understand components, responsive behavior, and motion constraints to reduce handoff loss."
+      body:
+        locale === "zh"
+          ? "理解组件、响应式和动效边界，减少设计到工程的损耗。"
+          : "Understand components, responsive behavior, and motion constraints to reduce handoff loss."
     }
   ];
 
@@ -100,7 +112,9 @@ export default async function HomePage({ params }: Props) {
               {dict.common.availability}
             </div>
             <p className="mb-5 font-mono text-xs uppercase tracking-[0.16em] text-blue">{dict.home.eyebrow}</p>
-            <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl lg:text-7xl">{dict.home.title}</h1>
+            <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl lg:text-7xl">
+              {dict.home.title}
+            </h1>
             <p className="mt-6 min-h-[8rem] max-w-2xl text-lg leading-8 text-muted sm:min-h-[6rem] md:min-h-[5rem] md:text-xl">
               <span className="sr-only">{dict.home.subtitle}</span>
               <TextType
@@ -113,10 +127,16 @@ export default async function HomePage({ params }: Props) {
               />
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link className="focus-ring motion-sheen rounded-md bg-text px-5 py-3 text-sm font-semibold text-ink transition hover:bg-blue" href={localizedPath(locale, "/projects")}>
+              <Link
+                className="focus-ring motion-sheen rounded-md bg-text px-5 py-3 text-sm font-semibold text-ink transition hover:bg-blue"
+                href={localizedPath(locale, "/projects")}
+              >
                 {dict.common.viewProjects}
               </Link>
-              <Link className="focus-ring rounded-md border border-line px-5 py-3 text-sm font-semibold text-text transition hover:border-lineStrong hover:bg-white/[0.05]" href={localizedPath(locale, "/contact")}>
+              <Link
+                className="focus-ring rounded-md border border-line px-5 py-3 text-sm font-semibold text-text transition hover:border-lineStrong hover:bg-white/[0.05]"
+                href={localizedPath(locale, "/contact")}
+              >
                 {dict.common.contactMe}
               </Link>
             </div>
@@ -164,14 +184,18 @@ export default async function HomePage({ params }: Props) {
           {featuredPosts.map((post) => (
             <Link className="glass motion-card group rounded-2xl p-6" href={localizedPath(locale, `/blog/${post.slug}`)} key={post.slug}>
               <div className="mb-8 flex items-center justify-between">
-                <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs text-muted">{post.topic[locale]}</span>
+                <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs text-muted">
+                  {post.topic[locale]}
+                </span>
                 <ArrowUpRight className="h-5 w-5 text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue" />
               </div>
               <h3 className="text-2xl font-semibold tracking-[-0.035em] text-text">{post.title[locale]}</h3>
               <p className="mt-4 leading-7 text-muted">{post.excerpt[locale]}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="rounded-md border border-line bg-panel2 px-2.5 py-1 font-mono text-[11px] text-muted">{post.date}</span>
-                <span className="rounded-md border border-line bg-panel2 px-2.5 py-1 font-mono text-[11px] text-muted">{post.readTime}</span>
+                <span className="rounded-md border border-line bg-panel2 px-2.5 py-1 font-mono text-[11px] text-muted">
+                  {post.readTime}
+                </span>
               </div>
             </Link>
           ))}
@@ -181,9 +205,15 @@ export default async function HomePage({ params }: Props) {
       <Section eyebrow="Resources" title={dict.common.featuredResources}>
         <div className="grid gap-5 md:grid-cols-2">
           {featuredResources.map((resource) => (
-            <Link className="glass motion-card group rounded-2xl p-6" href={localizedPath(locale, `/resources/${resource.slug}`)} key={resource.slug}>
+            <Link
+              className="glass motion-card group rounded-2xl p-6"
+              href={localizedPath(locale, `/resources/${resource.slug}`)}
+              key={resource.slug}
+            >
               <div className="mb-8 flex items-center justify-between">
-                <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs uppercase text-muted">{resource.type}</span>
+                <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs uppercase text-muted">
+                  {resource.type}
+                </span>
                 <ArrowUpRight className="h-5 w-5 text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue" />
               </div>
               <h3 className="text-2xl font-semibold tracking-[-0.035em] text-text">{resource.title[locale]}</h3>
@@ -203,9 +233,27 @@ export default async function HomePage({ params }: Props) {
       <Section eyebrow="Experience" title={dict.home.experienceTitle}>
         <div className="glass motion-card rounded-2xl p-6 md:p-8">
           {[
-            ["2024 - 2026", "Lead AI Product Designer", locale === "zh" ? "主导 Agent 工作台、AI 设计系统和 LLM 体验评测体系。" : "Led agent workspaces, AI design systems, and LLM experience evaluation."],
-            ["2021 - 2024", "Senior Product Designer", locale === "zh" ? "负责 B 端平台、创作工具和复杂工作流产品体验。" : "Owned B2B platforms, creation tools, and complex workflow experiences."],
-            ["2018 - 2021", "UX / UI Designer", locale === "zh" ? "建立用户研究、原型、视觉和交付规范基本功。" : "Built foundations across research, prototyping, visual design, and delivery specs."]
+            [
+              "2024 - 2026",
+              "Lead AI Product Designer",
+              locale === "zh"
+                ? "主导 Agent 工作台、AI 设计系统和 LLM 体验评测体系。"
+                : "Led agent workspaces, AI design systems, and LLM experience evaluation."
+            ],
+            [
+              "2021 - 2024",
+              "Senior Product Designer",
+              locale === "zh"
+                ? "负责 B 端平台、创作工具和复杂工作流产品体验。"
+                : "Owned B2B platforms, creation tools, and complex workflow experiences."
+            ],
+            [
+              "2018 - 2021",
+              "UX / UI Designer",
+              locale === "zh"
+                ? "建立用户研究、原型、视觉和交付规范基本功。"
+                : "Built foundations across research, prototyping, visual design, and delivery specs."
+            ]
           ].map(([time, title, body]) => (
             <div className="grid gap-3 border-b border-line py-6 last:border-0 md:grid-cols-[180px_1fr]" key={time}>
               <time className="font-mono text-sm text-blue">{time}</time>

@@ -29,7 +29,11 @@ export default async function BlogPage({ params }: Props) {
       <Section eyebrow="Blog" title={dict.blog.title} description={dict.blog.subtitle}>
         <div className="grid gap-4">
           {posts.map((post) => (
-            <Link className="glass motion-card group rounded-2xl p-6 transition hover:border-lineStrong" href={localizedPath(locale, `/blog/${post.slug}`)} key={post.slug}>
+            <Link
+              className="glass motion-card group rounded-2xl p-6 transition hover:border-lineStrong"
+              href={localizedPath(locale, `/blog/${post.slug}`)}
+              key={post.slug}
+            >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
                   <div className="mb-4 flex flex-wrap gap-2 text-xs text-muted">

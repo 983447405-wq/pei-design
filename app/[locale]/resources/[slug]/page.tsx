@@ -73,7 +73,10 @@ export default async function ResourceDetailPage({ params }: Props) {
     <main className="shell py-14 md:py-20">
       <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <Link className="focus-ring mb-10 inline-flex items-center gap-2 rounded-md text-sm text-muted transition hover:text-text" href={localizedPath(locale, "/resources")}>
+      <Link
+        className="focus-ring mb-10 inline-flex items-center gap-2 rounded-md text-sm text-muted transition hover:text-text"
+        href={localizedPath(locale, "/resources")}
+      >
         <ArrowLeft className="h-4 w-4" />
         {dict.common.backToList}
       </Link>
@@ -85,7 +88,9 @@ export default async function ResourceDetailPage({ params }: Props) {
             <span className="rounded-md border border-line bg-panel px-3 py-1 font-mono">{resource.date}</span>
             <span className="rounded-md border border-line bg-panel px-3 py-1 font-mono uppercase">{resource.type}</span>
           </div>
-          <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl">{resource.title[locale]}</h1>
+          <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl">
+            {resource.title[locale]}
+          </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-muted md:text-xl">{resource.description[locale]}</p>
 
           <div className="mt-10 flex flex-wrap gap-2">
@@ -134,7 +139,10 @@ export default async function ResourceDetailPage({ params }: Props) {
           <div />
         )}
         {adjacent.next ? (
-          <Link className="glass motion-card rounded-2xl p-5 md:text-right" href={localizedPath(locale, `/resources/${adjacent.next.slug}`)}>
+          <Link
+            className="glass motion-card rounded-2xl p-5 md:text-right"
+            href={localizedPath(locale, `/resources/${adjacent.next.slug}`)}
+          >
             <span className="mb-3 flex items-center gap-2 text-sm text-muted md:justify-end">
               {dict.common.next}
               <ArrowRight className="h-4 w-4" />

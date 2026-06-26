@@ -1,0 +1,14 @@
+.next
+node_modules
+.pnpm-store
+dist
+out
+pnpm-lock.yaml
+vendor
+assets
+src
+index.html
+script.js
+styles.css
+vite.config.js
+components/splash-cursor.tsx

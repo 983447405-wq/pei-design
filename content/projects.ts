@@ -79,16 +79,34 @@ export const projects: Project[] = [
       },
       responsibilities: [
         { zh: "定义 Agent 工作台信息架构和任务状态模型。", en: "Defined the agent workspace IA and task state model." },
-        { zh: "设计引用、确认、撤回、异常接管和审计记录模式。", en: "Designed references, confirmations, undo, exception takeover, and audit trails." },
-        { zh: "推动产品、算法、工程对齐 MVP 范围和评测指标。", en: "Aligned product, ML, and engineering on MVP scope and evaluation metrics." }
+        {
+          zh: "设计引用、确认、撤回、异常接管和审计记录模式。",
+          en: "Designed references, confirmations, undo, exception takeover, and audit trails."
+        },
+        {
+          zh: "推动产品、算法、工程对齐 MVP 范围和评测指标。",
+          en: "Aligned product, ML, and engineering on MVP scope and evaluation metrics."
+        }
       ],
       process: [
-        { zh: "访谈运营用户，拆解高频任务与人工判断节点。", en: "Interviewed operators and mapped high-frequency tasks with human judgment points." },
-        { zh: "用任务流原型验证 Agent 可控性和失败恢复路径。", en: "Validated controllability and recovery paths through task-flow prototypes." },
-        { zh: "建立状态组件库，统一等待、执行、风险和完成反馈。", en: "Built a state component library for waiting, running, risky, and completed states." }
+        {
+          zh: "访谈运营用户，拆解高频任务与人工判断节点。",
+          en: "Interviewed operators and mapped high-frequency tasks with human judgment points."
+        },
+        {
+          zh: "用任务流原型验证 Agent 可控性和失败恢复路径。",
+          en: "Validated controllability and recovery paths through task-flow prototypes."
+        },
+        {
+          zh: "建立状态组件库，统一等待、执行、风险和完成反馈。",
+          en: "Built a state component library for waiting, running, risky, and completed states."
+        }
       ],
       outcome: [
-        { zh: "交付端到端 Agent 工作台、高保真原型和设计系统规范。", en: "Delivered an end-to-end agent workspace, high-fidelity prototype, and design system specs." },
+        {
+          zh: "交付端到端 Agent 工作台、高保真原型和设计系统规范。",
+          en: "Delivered an end-to-end agent workspace, high-fidelity prototype, and design system specs."
+        },
         { zh: "建立从模型输出到人工审核的完整可追溯链路。", en: "Created a traceable path from model output to human review." }
       ],
       results: [
@@ -149,17 +167,26 @@ export const projects: Project[] = [
       },
       responsibilities: [
         { zh: "定义体验评测维度和评分规则。", en: "Defined evaluation dimensions and scoring rules." },
-        { zh: "设计评测看板、问题分布和版本对比体验。", en: "Designed evaluation dashboards, issue distribution, and version comparison flows." },
+        {
+          zh: "设计评测看板、问题分布和版本对比体验。",
+          en: "Designed evaluation dashboards, issue distribution, and version comparison flows."
+        },
         { zh: "组织跨团队评测工作坊。", en: "Facilitated cross-functional evaluation workshops." }
       ],
       process: [
         { zh: "收集历史问题，聚类为可操作的体验维度。", en: "Clustered historical issues into actionable experience dimensions." },
-        { zh: "把模型输出、用户意图和产品反馈串成评测样本。", en: "Connected model output, user intent, and product feedback into evaluation samples." },
+        {
+          zh: "把模型输出、用户意图和产品反馈串成评测样本。",
+          en: "Connected model output, user intent, and product feedback into evaluation samples."
+        },
         { zh: "用真实用例校准评分一致性。", en: "Calibrated scoring consistency with real use cases." }
       ],
       outcome: [
         { zh: "形成 LLM 体验评分表、看板和评审流程。", en: "Created an LLM experience scorecard, dashboard, and review workflow." },
-        { zh: "让模型、产品和设计在同一指标下讨论质量。", en: "Enabled ML, product, and design to discuss quality through the same metrics." }
+        {
+          zh: "让模型、产品和设计在同一指标下讨论质量。",
+          en: "Enabled ML, product, and design to discuss quality through the same metrics."
+        }
       ],
       results: [
         { zh: "设计评审周期缩短 42%。", en: "Design review cycles shortened by 42%." },
@@ -219,7 +246,10 @@ export const projects: Project[] = [
       },
       responsibilities: [
         { zh: "重构多模态生成的信息架构。", en: "Restructured the multimodal generation IA." },
-        { zh: "设计素材、参数、版本和预览的联动体验。", en: "Designed the interaction between assets, parameters, versions, and previews." },
+        {
+          zh: "设计素材、参数、版本和预览的联动体验。",
+          en: "Designed the interaction between assets, parameters, versions, and previews."
+        },
         { zh: "推动高保真原型进入工程拆解。", en: "Moved high-fidelity prototypes into engineering planning." }
       ],
       process: [
@@ -228,7 +258,10 @@ export const projects: Project[] = [
         { zh: "用可点击原型测试创作者的控制感。", en: "Tested perceived control through clickable prototypes." }
       ],
       outcome: [
-        { zh: "交付创作控制台、参数面板和版本管理体验。", en: "Delivered the studio console, parameter panel, and version management experience." },
+        {
+          zh: "交付创作控制台、参数面板和版本管理体验。",
+          en: "Delivered the studio console, parameter panel, and version management experience."
+        },
         { zh: "沉淀多模态工具的可复用交互模式。", en: "Codified reusable interaction patterns for multimodal tools." }
       ],
       results: [

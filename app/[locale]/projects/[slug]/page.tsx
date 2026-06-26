@@ -100,7 +100,10 @@ export default async function ProjectDetailPage({ params }: Props) {
     <main className="shell py-14 md:py-20">
       <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <Link className="focus-ring mb-10 inline-flex items-center gap-2 rounded-md text-sm text-muted transition hover:text-text" href={localizedPath(locale, "/projects")}>
+      <Link
+        className="focus-ring mb-10 inline-flex items-center gap-2 rounded-md text-sm text-muted transition hover:text-text"
+        href={localizedPath(locale, "/projects")}
+      >
         <ArrowLeft className="h-4 w-4" />
         {dict.common.backToList}
       </Link>
@@ -115,8 +118,12 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </span>
               ))}
             </div>
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">{project.year} / {project.role[locale]}</p>
-            <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl">{project.title[locale]}</h1>
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">
+              {project.year} / {project.role[locale]}
+            </p>
+            <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl">
+              {project.title[locale]}
+            </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-muted md:text-xl">{project.summary[locale]}</p>
           </div>
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="35%" cy="24%" r="58%">
+      <stop offset="0" stop-color="#828FFF" stop-opacity=".34"/>
+      <stop offset=".48" stop-color="#5E6AD2" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#010102" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#F7F8F8" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#828FFF" stop-opacity=".32"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#010102"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity=".48">
+    <path d="M0 140c188 48 294 48 442 0s252-48 440 0 264 48 318 0" fill="none" stroke="url(#line)" stroke-width="2"/>
+    <path d="M0 190c188 48 294 48 442 0s252-48 440 0 264 48 318 0" fill="none" stroke="url(#line)" stroke-width="2"/>
+    <path d="M0 240c188 48 294 48 442 0s252-48 440 0 264 48 318 0" fill="none" stroke="url(#line)" stroke-width="2"/>
+    <path d="M0 290c188 48 294 48 442 0s252-48 440 0 264 48 318 0" fill="none" stroke="url(#line)" stroke-width="2"/>
+  </g>
+  <text x="92" y="160" fill="#828FFF" font-family="Menlo, monospace" font-size="24" letter-spacing="3">AI PRODUCT DESIGNER</text>
+  <text x="90" y="300" fill="#F7F8F8" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="700">Pei Design</text>
+  <text x="94" y="372" fill="#A3A8B3" font-family="Inter, Arial, sans-serif" font-size="32">Portfolio, writing, resources, and AI product systems.</text>
+  <text x="94" y="504" fill="#F7F8F8" font-family="Menlo, monospace" font-size="24">pei.design</text>
+</svg>

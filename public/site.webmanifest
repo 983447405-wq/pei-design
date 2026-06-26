@@ -1,0 +1,17 @@
+{
+  "name": "Pei Design",
+  "short_name": "Pei Design",
+  "description": "AI Product Designer and UI/UX Designer portfolio, writing, resources, and content hub.",
+  "start_url": "/zh",
+  "display": "standalone",
+  "background_color": "#010102",
+  "theme_color": "#010102",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

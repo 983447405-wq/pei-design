@@ -82,7 +82,10 @@ export default async function BlogDetailPage({ params }: Props) {
     <main className="shell py-14 md:py-20">
       <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <Link className="focus-ring mb-10 inline-flex items-center gap-2 rounded-md text-sm text-muted transition hover:text-text" href={localizedPath(locale, "/blog")}>
+      <Link
+        className="focus-ring mb-10 inline-flex items-center gap-2 rounded-md text-sm text-muted transition hover:text-text"
+        href={localizedPath(locale, "/blog")}
+      >
         <ArrowLeft className="h-4 w-4" />
         {dict.common.backToList}
       </Link>

@@ -37,9 +37,15 @@ export default async function ResourcesPage({ params }: Props) {
         </div>
         <div className="grid gap-5 lg:grid-cols-3">
           {resources.map((resource) => (
-            <Link className="glass motion-card group rounded-2xl p-6" href={localizedPath(locale, `/resources/${resource.slug}`)} key={resource.slug}>
+            <Link
+              className="glass motion-card group rounded-2xl p-6"
+              href={localizedPath(locale, `/resources/${resource.slug}`)}
+              key={resource.slug}
+            >
               <div className="mb-8 flex items-center justify-between">
-                <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs uppercase text-muted">{resource.type}</span>
+                <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs uppercase text-muted">
+                  {resource.type}
+                </span>
                 <ArrowUpRight className="h-5 w-5 text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue" />
               </div>
               <h2 className="text-2xl font-semibold tracking-[-0.035em] text-text">{resource.title[locale]}</h2>

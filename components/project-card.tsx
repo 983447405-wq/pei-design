@@ -27,14 +27,15 @@ export function ProjectCard({ project, locale }: { project: Project; locale: Loc
             </div>
             <span className="font-mono text-[11px] text-dim">{project.year}</span>
           </div>
-          <div className="mb-4 rounded-lg border border-line bg-panel px-3 py-2 font-mono text-xs text-muted">
-            /case/{project.slug}
-          </div>
+          <div className="mb-4 rounded-lg border border-line bg-panel px-3 py-2 font-mono text-xs text-muted">/case/{project.slug}</div>
           <div className="grid gap-2">
             {project.media.map((asset) => {
               const Icon = mediaIcon[asset.type];
               return (
-                <div className="flex items-center justify-between rounded-lg border border-line bg-white/[0.025] px-3 py-2" key={asset.label.en}>
+                <div
+                  className="flex items-center justify-between rounded-lg border border-line bg-white/[0.025] px-3 py-2"
+                  key={asset.label.en}
+                >
                   <span className="flex min-w-0 items-center gap-2 text-sm text-text">
                     <Icon className="h-4 w-4 shrink-0 text-blue" />
                     <span className="truncate">{asset.label[locale]}</span>

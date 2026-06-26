@@ -1,5 +1,5 @@
 export const site = {
-  name: "AI Product Designer Portfolio",
+  name: "Pei Design",
   url: "https://pei.design",
   author: "Pei",
   email: "hello@pei.design",

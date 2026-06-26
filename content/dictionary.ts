@@ -27,8 +27,7 @@ export const dictionary = {
     home: {
       eyebrow: "AI Product Designer + UI/UX Designer",
       title: "把复杂 AI 能力，设计成可上线的产品体验。",
-      subtitle:
-        "我面向 HR、设计负责人和 AI 创业团队，展示从 0 到 1 AI 产品定义、Agent 工作流、设计系统、评测体系和前端落地能力。",
+      subtitle: "我面向 HR、设计负责人和 AI 创业团队，展示从 0 到 1 AI 产品定义、Agent 工作流、设计系统、评测体系和前端落地能力。",
       skillsTitle: "能力覆盖产品策略、体验设计和工程协作。",
       experienceTitle: "从用户问题到可量化结果。",
       ctaTitle: "正在寻找能把 AI 产品做清楚的人？",
@@ -88,7 +87,8 @@ export const dictionary = {
       skillsTitle: "A practice across product strategy, UX systems, and engineering collaboration.",
       experienceTitle: "From user problems to measurable outcomes.",
       ctaTitle: "Looking for someone who can make AI products legible?",
-      ctaBody: "I help teams define AI experiences, build design systems, and translate ambiguous model capability into shippable product decisions."
+      ctaBody:
+        "I help teams define AI experiences, build design systems, and translate ambiguous model capability into shippable product decisions."
     },
     about: {
       title: "I connect AI capability with real users through product judgment, systems thinking, and frontend fluency.",

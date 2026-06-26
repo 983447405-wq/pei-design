@@ -6,6 +6,5 @@ dist/
 *.log
 .env*
 !.env.example
-next-env.d.ts
 *.tsbuildinfo
 .DS_Store

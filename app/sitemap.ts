@@ -5,6 +5,8 @@ import { posts } from "@/content/blog";
 import { projects } from "@/content/projects";
 import { resources } from "@/content/resources";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/projects", "/about", "/blog", "/resources", "/contact"];
   const entries: MetadataRoute.Sitemap = [];

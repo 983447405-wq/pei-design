@@ -4,6 +4,8 @@ import { resources } from "@/content/resources";
 import { localizedPath } from "@/lib/i18n";
 import { site } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 function escapeXml(value: string) {
   return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;");
 }

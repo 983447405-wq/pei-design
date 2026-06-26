@@ -16,10 +16,48 @@ Free options before buying a domain:
 
 ```txt
 Vercel: https://pei-design.vercel.app
-Cloudflare Pages: https://<project>.pages.dev
+Cloudflare Pages: https://pei-design.pages.dev
 ```
 
 These free subdomains can be used as public portfolio links, but they do not guarantee stable Mainland China access.
+
+## Current Free Mirror
+
+The Cloudflare Pages project has been created:
+
+```txt
+Project: pei-design
+URL: https://pei-design.pages.dev
+Account ID: 703ccceb017b013cbfebb5ca4a9d327e
+```
+
+Manual deployment from this machine:
+
+```bash
+pnpm run deploy:cloudflare
+```
+
+Automatic deployment from GitHub:
+
+```txt
+GitHub push to main
+GitHub Actions builds static export
+Wrangler deploys out/ to Cloudflare Pages
+https://pei-design.pages.dev updates
+```
+
+Required GitHub secret:
+
+```txt
+CLOUDFLARE_API_TOKEN
+```
+
+Recommended token permission:
+
+```txt
+Account > Cloudflare Pages > Edit
+Account Resource > 983447405@qq.com's Account
+```
 
 For reliable Mainland China access, there are only two realistic paths:
 

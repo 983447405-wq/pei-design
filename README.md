@@ -6,6 +6,7 @@ Production:
 
 ```txt
 https://pei-design.vercel.app
+https://pei-design.pages.dev
 https://pei.design
 ```
 
@@ -114,6 +115,13 @@ git push
 
 Vercel deploys automatically after `git push`.
 
+Current public links:
+
+```txt
+Primary: https://pei-design.vercel.app
+Mirror:  https://pei-design.pages.dev
+```
+
 ## Commit Convention
 
 Use Conventional Commit style:
@@ -160,6 +168,40 @@ https://pei-design.vercel.app
 ```
 
 Vercel provides automatic HTTPS, preview URLs, and production deployment from GitHub. `vercel.json` is intentionally small: Next.js routing and asset optimization are handled by Vercel's Next.js integration.
+
+## Cloudflare Pages Mirror
+
+Cloudflare Pages project:
+
+```txt
+pei-design
+```
+
+Public mirror:
+
+```txt
+https://pei-design.pages.dev
+```
+
+Local manual deploy:
+
+```bash
+pnpm run deploy:cloudflare
+```
+
+GitHub Actions workflow:
+
+```txt
+.github/workflows/cloudflare-pages.yml
+```
+
+The workflow deploys `out/` to Cloudflare Pages after every push to `main`. It requires this GitHub repository secret:
+
+```txt
+CLOUDFLARE_API_TOKEN
+```
+
+The token only needs Cloudflare Pages write access for account `703ccceb017b013cbfebb5ca4a9d327e`.
 
 ## Cloudflare
 

@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "next dev --host 127.0.0.1",
     "build": "next build",
+    "build:cloudflare": "NEXT_OUTPUT=export next build",
+    "deploy:cloudflare": "pnpm run build:cloudflare && pnpm dlx wrangler pages deploy out --project-name pei-design --branch main",
     "start": "next start --host 127.0.0.1",
     "lint": "eslint app components content lib --max-warnings=0",
     "typecheck": "tsc --noEmit",

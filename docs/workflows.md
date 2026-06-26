@@ -17,14 +17,17 @@ Vercel automatic deployment
 
         |
         v
-Cloudflare DNS
+Cloudflare Pages mirror + optional DNS
 
         |
         v
+https://pei-design.vercel.app
+https://pei-design.pages.dev
 https://pei.design
 ```
 
 GitHub is the only source of truth. Vercel deploys from GitHub. Cloudflare only manages DNS and optional edge settings.
+Cloudflare Pages also serves a free mirror at `https://pei-design.pages.dev`.
 
 ## Daily Flow
 
@@ -50,7 +53,8 @@ Then:
 ```txt
 GitHub receives commit
 Vercel builds automatically
-Production or preview URL updates
+Cloudflare Pages mirror deploys automatically when CLOUDFLARE_API_TOKEN is configured
+Production or preview URLs update
 Next device runs git pull
 ```
 

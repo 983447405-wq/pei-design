@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Onest:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    background:
+      radial-gradient(circle at 12% 18%, rgba(200, 95, 61, 0.14), transparent 30rem),
+      radial-gradient(circle at 88% 12%, rgba(47, 108, 109, 0.12), transparent 34rem),
+      linear-gradient(180deg, #fbfaf6 0%, #f7f0e6 48%, #efe4d5 100%);
+    color: #171410;
+    font-family: "Onest", "Avenir Next", sans-serif;
+  }
+
+  ::selection {
+    background: #171410;
+    color: #f7f0e6;
+  }
+
+  button,
+  a,
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid #c85f3d;
+    outline-offset: 4px;
+  }
+
+  @media (pointer: fine) {
+    body.has-custom-cursor,
+    body.has-custom-cursor a,
+    body.has-custom-cursor button,
+    body.has-custom-cursor input,
+    body.has-custom-cursor textarea {
+      cursor: none;
+    }
+  }
+}

@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #010102;
+  --surface-1: #0f1011;
+  --surface-2: #141516;
+  --surface-3: #18191a;
+  --line: #23252a;
+  --line-strong: #34343a;
+  --text: #f7f8f8;
+  --muted: #a3a8b3;
+  --dim: #62666d;
+  --accent: #5e6ad2;
+  --accent-hover: #828fff;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 180ms;
+  --duration-med: 700ms;
+  --duration-slow: 12s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% -18%, rgba(94, 106, 210, 0.14), transparent 34rem),
+    radial-gradient(circle at 84% 12%, rgba(255, 255, 255, 0.055), transparent 24rem),
+    var(--bg);
+  color: var(--text);
+  font-family:
+    "Geist",
+    "Inter",
+    "SF Pro Display",
+    "SF Pro Text",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  letter-spacing: 0;
+  font-feature-settings: "calt", "kern", "liga", "ss03";
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle at 50% 0%, black, transparent 72%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(94, 106, 210, 0.18), transparent 24rem),
+    radial-gradient(circle at 76% 30%, rgba(130, 143, 255, 0.08), transparent 28rem);
+  filter: blur(34px);
+  opacity: 0.72;
+  animation: ambient-drift 18s var(--ease-soft) infinite alternate;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #010102;
+  background: #f7f8fa;
+}
+
+.shell {
+  width: min(100% - 32px, 1160px);
+  margin-inline: auto;
+}
+
+.glass {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(15, 16, 17, 0.86);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.045) inset;
+  backdrop-filter: blur(14px);
+}
+
+.motion-rise {
+  animation: motion-rise var(--duration-med) var(--ease-out) both;
+}
+
+.motion-card {
+  transform: translateY(0);
+  transition:
+    transform 220ms var(--ease-out),
+    border-color 220ms var(--ease-out),
+    box-shadow 220ms var(--ease-out),
+    background 220ms var(--ease-out);
+}
+
+.motion-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 16px 46px rgba(0, 0, 0, 0.24);
+}
+
+.motion-spotlight {
+  background-size: 140% 140%, 120% 120%, auto;
+  animation: motion-spotlight var(--duration-slow) var(--ease-soft) infinite alternate;
+}
+
+.motion-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.motion-sheen::after {
+  content: "";
+  position: absolute;
+  inset: -120% -40%;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.18), transparent 65%);
+  transform: translateX(-70%) rotate(10deg);
+  opacity: 0;
+  transition:
+    opacity var(--duration-fast) var(--ease-out),
+    transform 620ms var(--ease-out);
+}
+
+.motion-sheen:hover::after {
+  opacity: 1;
+  transform: translateX(70%) rotate(10deg);
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.18), rgba(94, 106, 210, 0.2), rgba(130, 143, 255, 0.12));
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.text-type-cursor {
+  display: inline-block;
+  margin-left: 0.08em;
+  color: var(--accent-hover);
+  animation: text-type-cursor-blink 0.92s steps(2, end) infinite;
+}
+
+.cursor-spotlight {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 45;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.cursor-spotlight::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(94, 106, 210, 0.16), rgba(94, 106, 210, 0.065) 34%, transparent 68%);
+  transform: translate3d(calc(var(--cursor-x, -999px) - 260px), calc(var(--cursor-y, -999px) - 260px), 0);
+  transition: transform 80ms linear;
+  opacity: 0.85;
+  mix-blend-mode: screen;
+}
+
+@keyframes motion-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1%, -1%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5%, 1%, 0) scale(1.06);
+  }
+}
+
+@keyframes motion-spotlight {
+  0% {
+    background-position: 42% 18%, 76% 62%, center;
+  }
+
+  100% {
+    background-position: 58% 30%, 58% 46%, center;
+  }
+}
+
+@keyframes text-type-cursor-blink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+
+  49%,
+  100% {
+    opacity: 0.16;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .motion-rise {
+    animation: motion-rise var(--duration-med) var(--ease-out) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .motion-rise {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  body::after,
+  .cursor-spotlight::before {
+    animation: none !important;
+    display: none;
+  }
+}

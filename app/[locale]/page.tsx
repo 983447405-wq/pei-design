@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
 import { SplashCursorAfterHero } from "@/components/splash-cursor-after-hero";
 import { TextType } from "@/components/text-type";
+import { VideoRotationCarousel } from "@/components/video-rotation-carousel";
 import { posts } from "@/content/blog";
 import { dictionary } from "@/content/dictionary";
 import { projects } from "@/content/projects";
@@ -155,6 +156,8 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <VideoRotationCarousel locale={locale} />
 
       <Section eyebrow="Skills" title={dict.home.skillsTitle}>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

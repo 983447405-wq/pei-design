@@ -1,298 +1,503 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, Play, VolumeX } from "lucide-react";
+import { ChevronLeft, ChevronRight, Volume2, VolumeX } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+  type KeyboardEvent as ReactKeyboardEvent,
+  type PointerEvent as ReactPointerEvent
+} from "react";
 import { localizedPath, type Locale } from "@/lib/i18n";
 
-type VideoShowcaseSlide = {
+type CarouselVideo = {
   id: string;
-  tag: Record<Locale, string>;
   title: Record<Locale, string>;
-  prompt: Record<Locale, string>;
-  metric: string;
+  category: Record<Locale, string>;
+  poster: string;
+  src: string;
   href: string;
   gradient: string;
-  videoSrc?: string;
-  posterSrc?: string;
 };
 
-const slides: VideoShowcaseSlide[] = [
+const videos: CarouselVideo[] = [
   {
     id: "agent-copilot",
-    tag: { zh: "AGENT WORKFLOW", en: "AGENT WORKFLOW" },
+    category: { zh: "VIDEO 01", en: "VIDEO 01" },
     title: { zh: "企业 Agent 工作台", en: "Enterprise Agent Workspace" },
-    prompt: {
-      zh: "把模型执行、人工接管和审计记录做成可控工作流",
-      en: "Make agent execution, takeover, and audit trails controllable"
-    },
-    metric: "+38%",
+    poster: "/about-trail/agent-flow.svg",
+    src: "",
     href: "/projects/enterprise-agent-copilot",
-    gradient:
-      "radial-gradient(circle at 28% 18%, rgba(125,242,255,.72), transparent 22rem), linear-gradient(135deg, #101d2a 0%, #182f36 42%, #111317 100%)"
+    gradient: "linear-gradient(135deg, #101d2a, #1e7d96)"
   },
   {
-    id: "llm-eval",
-    tag: { zh: "LLM EVALUATION", en: "LLM EVALUATION" },
+    id: "llm-evaluation",
+    category: { zh: "VIDEO 02", en: "VIDEO 02" },
     title: { zh: "AI 体验评测看板", en: "AI Experience Scoreboard" },
-    prompt: {
-      zh: "把主观体验质量拆成可评分、可复盘的产品指标",
-      en: "Turn subjective AI quality into measurable product signals"
-    },
-    metric: "-42%",
+    poster: "/about-trail/evaluation.svg",
+    src: "",
     href: "/projects/llm-experience-evaluation",
-    gradient:
-      "radial-gradient(circle at 70% 24%, rgba(94,106,210,.86), transparent 20rem), linear-gradient(135deg, #10111b 0%, #1d2450 48%, #07080c 100%)"
+    gradient: "linear-gradient(135deg, #171331, #6e61ff)"
   },
   {
     id: "creation-studio",
-    tag: { zh: "MULTIMODAL TOOL", en: "MULTIMODAL TOOL" },
+    category: { zh: "VIDEO 03", en: "VIDEO 03" },
     title: { zh: "多模态创作控制台", en: "Multimodal Creation Console" },
-    prompt: {
-      zh: "用一条连续链路管理素材、参数、版本和预览",
-      en: "Connect assets, parameters, versions, and previews in one loop"
-    },
-    metric: "9→4",
+    poster: "/about-trail/prototype.svg",
+    src: "",
     href: "/projects/multimodal-creation-studio",
-    gradient:
-      "radial-gradient(circle at 48% 20%, rgba(255,63,214,.64), transparent 19rem), linear-gradient(135deg, #241120 0%, #3b1837 44%, #0b0d11 100%)"
+    gradient: "linear-gradient(135deg, #2b1027, #ff3bd5)"
   },
   {
-    id: "handoff-system",
-    tag: { zh: "DESIGN SYSTEM", en: "DESIGN SYSTEM" },
+    id: "state-system",
+    category: { zh: "VIDEO 04", en: "VIDEO 04" },
     title: { zh: "AI 状态组件系统", en: "AI State Component System" },
-    prompt: {
-      zh: "统一等待、生成、失败、风险和完成状态",
-      en: "Unify waiting, generating, failure, risk, and completion states"
-    },
-    metric: "32",
+    poster: "/about-trail/design-system.svg",
+    src: "",
     href: "/projects",
-    gradient:
-      "radial-gradient(circle at 60% 20%, rgba(93,255,181,.58), transparent 19rem), linear-gradient(135deg, #0d1b16 0%, #14352b 44%, #08090b 100%)"
+    gradient: "linear-gradient(135deg, #0d1b16, #34f5a2)"
   },
   {
-    id: "ai-research",
-    tag: { zh: "USER RESEARCH", en: "USER RESEARCH" },
+    id: "task-research",
+    category: { zh: "VIDEO 05", en: "VIDEO 05" },
     title: { zh: "AI 任务场景研究", en: "AI Task Scenario Research" },
-    prompt: {
-      zh: "从用户判断节点反推 Agent 产品边界",
-      en: "Map user judgment points back to agent product boundaries"
-    },
-    metric: "12",
+    poster: "/about-trail/research.svg",
+    src: "",
     href: "/projects",
-    gradient:
-      "radial-gradient(circle at 36% 18%, rgba(255,184,77,.62), transparent 20rem), linear-gradient(135deg, #241708 0%, #3b2412 45%, #08090c 100%)"
+    gradient: "linear-gradient(135deg, #241708, #ffb84d)"
   },
   {
-    id: "launch-metrics",
-    tag: { zh: "PRODUCT OUTCOME", en: "PRODUCT OUTCOME" },
+    id: "launch-review",
+    category: { zh: "VIDEO 06", en: "VIDEO 06" },
     title: { zh: "上线指标复盘", en: "Launch Metrics Review" },
-    prompt: {
-      zh: "把设计决策连接到完成率、接管率和风险发现",
-      en: "Connect design decisions to completion, takeover, and risk discovery"
-    },
-    metric: "+55%",
+    poster: "/about-trail/ai-product.svg",
+    src: "",
     href: "/projects",
-    gradient:
-      "radial-gradient(circle at 74% 18%, rgba(118,144,255,.72), transparent 18rem), linear-gradient(135deg, #0f1529 0%, #1a2348 48%, #07080d 100%)"
+    gradient: "linear-gradient(135deg, #0f1529, #7690ff)"
+  },
+  {
+    id: "prompt-library",
+    category: { zh: "VIDEO 07", en: "VIDEO 07" },
+    title: { zh: "团队 Prompt Library", en: "Team Prompt Library" },
+    poster: "/about-trail/prototype.svg",
+    src: "",
+    href: "/resources",
+    gradient: "linear-gradient(135deg, #181818, #595959)"
+  },
+  {
+    id: "growth-lab",
+    category: { zh: "VIDEO 08", en: "VIDEO 08" },
+    title: { zh: "AI 增长实验台", en: "AI Growth Lab" },
+    poster: "/about-trail/agent-flow.svg",
+    src: "",
+    href: "/projects",
+    gradient: "linear-gradient(135deg, #03151b, #00e5ff)"
+  },
+  {
+    id: "ai-chat",
+    category: { zh: "VIDEO 09", en: "VIDEO 09" },
+    title: { zh: "AI Chat 体验框架", en: "AI Chat Experience Framework" },
+    poster: "/about-trail/evaluation.svg",
+    src: "",
+    href: "/projects",
+    gradient: "linear-gradient(135deg, #1c1532, #c8ff48)"
+  },
+  {
+    id: "resource-hub",
+    category: { zh: "VIDEO 10", en: "VIDEO 10" },
+    title: { zh: "设计资源内容中台", en: "Design Resource Hub" },
+    poster: "/about-trail/design-system.svg",
+    src: "",
+    href: "/resources",
+    gradient: "linear-gradient(135deg, #2a1308, #ff7a3d)"
   }
 ];
 
-function wrappedIndex(value: number, length: number) {
-  return ((value % length) + length) % length;
+const AUTO_ROTATE_MS = 7000;
+
+function mod(value: number, size: number) {
+  return ((value % size) + size) % size;
 }
 
-function circularDistance(index: number, active: number, length: number) {
-  const raw = Math.abs(index - active);
-  return Math.min(raw, length - raw);
+function nearestDistance(index: number, activeIndex: number, count: number) {
+  let distance = index - activeIndex;
+
+  if (distance > count / 2) distance -= count;
+  if (distance < -count / 2) distance += count;
+
+  return distance;
 }
 
-export function VideoRotationCarousel({ locale }: { locale: Locale }) {
-  const [position, setPosition] = useState(0);
+function useCarousel(count: number) {
+  const [activeIndex, setActiveIndex] = useState(3);
   const [isPaused, setIsPaused] = useState(false);
-  const reducedMotionRef = useRef(false);
-  const count = slides.length;
-  const spacing = 360 / count;
-  const active = wrappedIndex(position, count);
+  const [isMuted, setIsMuted] = useState(true);
+  const [isDragging, setIsDragging] = useState(false);
+  const activeIndexRef = useRef(activeIndex);
+  const dragRef = useRef({ active: false, pointerId: -1, startX: 0, moved: false });
 
+  useEffect(() => {
+    activeIndexRef.current = activeIndex;
+  }, [activeIndex]);
+
+  const goTo = useCallback(
+    (index: number) => {
+      setActiveIndex(mod(index, count));
+    },
+    [count]
+  );
+
+  const goBy = useCallback(
+    (delta: number) => {
+      setActiveIndex((current) => mod(current + delta, count));
+    },
+    [count]
+  );
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = window.setInterval(() => {
+      goBy(1);
+    }, AUTO_ROTATE_MS);
+
+    return () => window.clearInterval(timer);
+  }, [goBy, isPaused]);
+
+  const onPointerDown = useCallback((event: ReactPointerEvent<HTMLElement>) => {
+    if (event.button !== 0) return;
+
+    dragRef.current = {
+      active: true,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      moved: false
+    };
+    setIsDragging(true);
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }, []);
+
+  const onPointerMove = useCallback((event: ReactPointerEvent<HTMLElement>) => {
+    const drag = dragRef.current;
+    if (!drag.active || drag.pointerId !== event.pointerId) return;
+
+    if (Math.abs(event.clientX - drag.startX) > 8) {
+      drag.moved = true;
+    }
+  }, []);
+
+  const onPointerEnd = useCallback(
+    (event: ReactPointerEvent<HTMLElement>) => {
+      const drag = dragRef.current;
+      if (!drag.active || drag.pointerId !== event.pointerId) return;
+
+      const deltaX = event.clientX - drag.startX;
+      dragRef.current = { active: false, pointerId: -1, startX: 0, moved: drag.moved };
+      setIsDragging(false);
+
+      if (Math.abs(deltaX) > 46) {
+        goBy(deltaX < 0 ? 1 : -1);
+      }
+
+      if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+        event.currentTarget.releasePointerCapture(event.pointerId);
+      }
+
+      window.setTimeout(() => {
+        dragRef.current.moved = false;
+      }, 0);
+    },
+    [goBy]
+  );
+
+  const onKeyDown = useCallback(
+    (event: ReactKeyboardEvent<HTMLElement>) => {
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        goBy(1);
+      }
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        goBy(-1);
+      }
+    },
+    [goBy]
+  );
+
+  return {
+    activeIndex,
+    activeIndexRef,
+    goBy,
+    goTo,
+    isDragging,
+    isMuted,
+    isPaused,
+    setIsMuted,
+    setIsPaused,
+    dragRef,
+    bind: {
+      onKeyDown,
+      onPointerDown,
+      onPointerMove,
+      onPointerUp: onPointerEnd,
+      onPointerCancel: onPointerEnd
+    }
+  };
+}
+
+function VideoFace({
+  video,
+  locale,
+  isActive,
+  isMuted,
+  isBack,
+  movedRef,
+  onSelect
+}: {
+  video: CarouselVideo;
+  locale: Locale;
+  isActive: boolean;
+  isMuted: boolean;
+  isBack?: boolean;
+  movedRef: React.MutableRefObject<{ active: boolean; pointerId: number; startX: number; moved: boolean }>;
+  onSelect: () => void;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const node = videoRef.current;
+    if (!node) return;
+
+    node.muted = isMuted || !isActive;
+    node.volume = isActive && !isMuted ? 0.62 : 0;
+
+    if (isActive && video.src) {
+      void node.play().catch(() => {
+        node.muted = true;
+      });
+    }
+  }, [isActive, isMuted, video.src]);
+
+  return (
+    <Link
+      aria-label={`${video.category[locale]}: ${video.title[locale]}`}
+      className={`case-video-face ${isBack ? "case-video-face-back" : "case-video-face-front"}`}
+      draggable={false}
+      href={localizedPath(locale, video.href)}
+      onClick={(event) => {
+        if (movedRef.current.moved || !isActive) {
+          event.preventDefault();
+        }
+
+        if (!movedRef.current.moved && !isActive) {
+          onSelect();
+        }
+      }}
+      tabIndex={isActive && !isBack ? 0 : -1}
+    >
+      {!isBack && video.src ? (
+        <video
+          ref={videoRef}
+          aria-hidden="true"
+          autoPlay
+          className="case-video-media"
+          loop
+          muted={isMuted || !isActive}
+          playsInline
+          poster={video.poster}
+          preload="metadata"
+          src={video.src}
+        />
+      ) : null}
+      <div className="case-video-poster" aria-hidden="true" />
+      <span className="case-video-label">{video.category[locale]}</span>
+      <strong className="case-video-number">{video.category[locale].slice(-2)}</strong>
+      <span className="case-video-title">{video.title[locale]}</span>
+    </Link>
+  );
+}
+
+function CarouselCard({
+  video,
+  locale,
+  index,
+  spacing,
+  activeIndex,
+  isMuted,
+  movedRef,
+  onSelect
+}: {
+  video: CarouselVideo;
+  locale: Locale;
+  index: number;
+  spacing: number;
+  activeIndex: number;
+  isMuted: boolean;
+  movedRef: React.MutableRefObject<{ active: boolean; pointerId: number; startX: number; moved: boolean }>;
+  onSelect: () => void;
+}) {
+  const distance = Math.abs(nearestDistance(index, activeIndex, videos.length));
+  const isActive = index === activeIndex;
+  const style = {
+    "--angle": `${index * spacing}deg`,
+    "--poster": video.gradient,
+    "--opacity": Math.max(0.32, 1 - distance * 0.09),
+    "--brightness": Math.max(0.62, 1.04 - distance * 0.06),
+    "--saturation": Math.max(0.72, 1.04 - distance * 0.05)
+  } as CSSProperties;
+
+  return (
+    <article className="case-video-card" data-active={isActive} style={style}>
+      <VideoFace isActive={isActive} isMuted={isMuted} locale={locale} movedRef={movedRef} onSelect={onSelect} video={video} />
+      <VideoFace isActive={isActive} isBack isMuted={isMuted} locale={locale} movedRef={movedRef} onSelect={onSelect} video={video} />
+    </article>
+  );
+}
+
+function CarouselControls({ locale, onPrevious, onNext }: { locale: Locale; onPrevious: () => void; onNext: () => void }) {
+  return (
+    <>
+      <button
+        aria-label={locale === "zh" ? "上一张视频" : "Previous video"}
+        className="case-video-nav case-video-nav-prev"
+        type="button"
+        onClick={(event) => {
+          event.stopPropagation();
+          onPrevious();
+        }}
+        onPointerDown={(event) => event.stopPropagation()}
+        onPointerUp={(event) => event.stopPropagation()}
+      >
+        <ChevronLeft className="h-5 w-5" />
+      </button>
+      <button
+        aria-label={locale === "zh" ? "下一张视频" : "Next video"}
+        className="case-video-nav case-video-nav-next"
+        type="button"
+        onClick={(event) => {
+          event.stopPropagation();
+          onNext();
+        }}
+        onPointerDown={(event) => event.stopPropagation()}
+        onPointerUp={(event) => event.stopPropagation()}
+      >
+        <ChevronRight className="h-5 w-5" />
+      </button>
+    </>
+  );
+}
+
+function CarouselIndicator({
+  locale,
+  activeIndex,
+  isMuted,
+  onSelect,
+  onToggleMuted
+}: {
+  locale: Locale;
+  activeIndex: number;
+  isMuted: boolean;
+  onSelect: (index: number) => void;
+  onToggleMuted: () => void;
+}) {
+  return (
+    <div className="case-video-controls" aria-label={locale === "zh" ? "视频轮播控制" : "Video carousel controls"}>
+      <div className="case-video-dots" aria-label={locale === "zh" ? "选择视频" : "Select video"}>
+        {videos.map((video, index) => (
+          <button
+            aria-current={index === activeIndex}
+            aria-label={video.title[locale]}
+            className="case-video-dot"
+            key={video.id}
+            type="button"
+            onClick={() => onSelect(index)}
+          />
+        ))}
+      </div>
+      <button
+        aria-label={
+          isMuted
+            ? locale === "zh"
+              ? "当前静音，点击开启声音"
+              : "Muted, enable sound"
+            : locale === "zh"
+              ? "当前有声，点击静音"
+              : "Sound on, mute"
+        }
+        aria-pressed={isMuted}
+        className="case-video-mute"
+        type="button"
+        onClick={onToggleMuted}
+      >
+        {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+      </button>
+    </div>
+  );
+}
+
+function HeroCarousel({ locale }: { locale: Locale }) {
+  const carousel = useCarousel(videos.length);
+  const spacing = 360 / videos.length;
   const copy = useMemo(
     () => ({
-      eyebrow: locale === "zh" ? "Case Videos" : "Case Videos",
-      titleTop: locale === "zh" ? "项目案例" : "Product Cases",
-      titleAccent: locale === "zh" ? "转成动态叙事" : "Built In Motion",
-      body:
-        locale === "zh"
-          ? "这里预留案例视频位，当前用产品片段占位。后续把每张卡片的 videoSrc 换成 MP4 / WebM，就能成为真实视频作品墙。"
-          : "A motion-ready wall for case videos. Replace each slide videoSrc with MP4 or WebM when final project footage is ready.",
-      previous: locale === "zh" ? "上一个案例" : "Previous case",
-      next: locale === "zh" ? "下一个案例" : "Next case",
-      open: locale === "zh" ? "查看案例" : "Open case",
-      muted: locale === "zh" ? "静音预览" : "Muted preview"
+      eyebrow: locale === "zh" ? "CASE VIDEO REEL" : "CASE VIDEO REEL",
+      title: locale === "zh" ? "3D 回形视频画廊" : "3D Ring Video Gallery"
     }),
     [locale]
   );
 
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    reducedMotionRef.current = media.matches;
-
-    const handleChange = () => {
-      reducedMotionRef.current = media.matches;
-    };
-
-    media.addEventListener("change", handleChange);
-    return () => media.removeEventListener("change", handleChange);
-  }, []);
-
-  useEffect(() => {
-    if (isPaused || reducedMotionRef.current) return;
-
-    const timer = window.setInterval(() => {
-      setPosition((current) => current + 1);
-    }, 2800);
-
-    return () => window.clearInterval(timer);
-  }, [isPaused]);
-
-  function move(delta: number) {
-    setPosition((current) => current + delta);
-  }
-
-  function goTo(index: number) {
-    setPosition((current) => {
-      const currentRound = Math.round(current / count);
-      const candidates = [currentRound * count + index, (currentRound - 1) * count + index, (currentRound + 1) * count + index];
-
-      return candidates.reduce((best, candidate) => (Math.abs(candidate - current) < Math.abs(best - current) ? candidate : best));
-    });
-  }
-
   return (
     <section
-      className="case-video-band relative isolate overflow-hidden py-20 md:py-28"
       aria-labelledby="case-video-title"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
+      className="case-video-band"
+      tabIndex={0}
+      onBlur={() => carousel.setIsPaused(false)}
+      onFocus={() => carousel.setIsPaused(true)}
+      onMouseEnter={() => carousel.setIsPaused(true)}
+      onMouseLeave={() => carousel.setIsPaused(false)}
+      {...carousel.bind}
     >
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_4%,rgba(255,47,196,0.16),transparent_24rem),radial-gradient(circle_at_16%_54%,rgba(94,106,210,0.12),transparent_20rem),linear-gradient(180deg,#010102_0%,#050506_48%,#010102_100%)]" />
-      <div className="shell">
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-blue">{copy.eyebrow}</p>
-          <h2
-            id="case-video-title"
-            className="mt-5 text-balance text-4xl font-semibold uppercase tracking-[-0.055em] text-text md:text-6xl"
-          >
-            <span className="block">{copy.titleTop}</span>
-            <span className="block text-[#ff32c6]">{copy.titleAccent}</span>
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted md:text-lg">{copy.body}</p>
-        </div>
-
-        <div className="case-video-stage mx-[calc(50%-50vw)] mt-8 md:mt-12">
-          <div
-            className="case-video-track"
-            style={
-              {
-                "--case-rotation": `${-position * spacing}deg`
-              } as CSSProperties
-            }
-          >
-            {slides.map((slide, index) => {
-              const distance = circularDistance(index, active, count);
-              const isActive = distance === 0;
-              const cardStyle = {
-                "--case-angle": `${index * spacing}deg`,
-                "--case-card-opacity": distance > 2 ? 0.18 : isActive ? 1 : 0.72,
-                "--case-card-scale": isActive ? 1 : 0.94,
-                "--case-card-blur": distance > 2 ? "2px" : "0px",
-                "--case-card-saturation": distance > 1 ? 0.78 : 1,
-                background: slide.gradient
-              } as CSSProperties;
-
-              return (
-                <Link
-                  aria-label={`${copy.open}: ${slide.title[locale]}`}
-                  className="case-video-card group"
-                  href={localizedPath(locale, slide.href)}
-                  key={slide.id}
-                  style={cardStyle}
-                  tabIndex={isActive ? 0 : -1}
-                >
-                  {slide.videoSrc ? (
-                    <video
-                      aria-hidden="true"
-                      className="absolute inset-0 h-full w-full object-cover"
-                      loop
-                      muted
-                      playsInline
-                      poster={slide.posterSrc}
-                      preload="metadata"
-                      src={slide.videoSrc}
-                    />
-                  ) : null}
-                  <div className="case-video-frame" aria-hidden="true">
-                    <div className="case-video-orbit case-video-orbit-a" />
-                    <div className="case-video-orbit case-video-orbit-b" />
-                    <div className="case-video-grid">
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                  </div>
-                  <div className="absolute inset-x-4 top-4 flex items-center justify-between gap-3">
-                    <span className="rounded-md border border-white/20 bg-white/12 px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-white shadow-[0_8px_24px_rgba(0,0,0,0.22)] backdrop-blur-md">
-                      {slide.tag[locale]}
-                    </span>
-                    <span className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-black/24 text-white/80 backdrop-blur-md">
-                      <Play className="h-3.5 w-3.5 fill-current" />
-                    </span>
-                  </div>
-                  <div className="absolute inset-x-4 bottom-4 rounded-xl border border-white/10 bg-black/38 p-4 text-left shadow-[0_16px_34px_rgba(0,0,0,0.34)] backdrop-blur-xl">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <h3 className="text-lg font-semibold tracking-[-0.035em] text-white md:text-2xl">{slide.title[locale]}</h3>
-                        <p className="mt-2 line-clamp-2 text-sm leading-6 text-white/72">{slide.prompt[locale]}</p>
-                      </div>
-                      <strong className="shrink-0 rounded-md bg-[#ff32c6] px-3 py-2 text-sm font-semibold text-white shadow-[0_0_28px_rgba(255,50,198,0.42)]">
-                        {slide.metric}
-                      </strong>
-                    </div>
-                  </div>
-                  <span className="absolute bottom-3 right-3 flex items-center gap-1 text-[10px] text-white/50">
-                    <VolumeX className="h-3 w-3" />
-                    {copy.muted}
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-
-          <button aria-label={copy.previous} className="case-video-nav case-video-nav-prev" type="button" onClick={() => move(-1)}>
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button aria-label={copy.next} className="case-video-nav case-video-nav-next" type="button" onClick={() => move(1)}>
-            <ChevronRight className="h-5 w-5" />
-          </button>
-
-          <div className="case-video-dots" aria-label={locale === "zh" ? "选择案例视频" : "Select case video"}>
-            {slides.map((slide, index) => (
-              <button
-                aria-current={index === active}
-                aria-label={`${copy.open}: ${slide.title[locale]}`}
-                className="case-video-dot"
-                key={slide.id}
-                type="button"
-                onClick={() => goTo(index)}
+      <div className="case-video-backdrop" aria-hidden="true" />
+      <div className="case-video-heading">
+        <p>{copy.eyebrow}</p>
+        <h2 id="case-video-title">{copy.title}</h2>
+      </div>
+      <div className={`case-video-stage ${carousel.isDragging ? "is-dragging" : ""}`}>
+        <div className="case-video-scene">
+          <div className="case-video-track" style={{ "--current-rotation": `${-carousel.activeIndex * spacing}deg` } as CSSProperties}>
+            {videos.map((video, index) => (
+              <CarouselCard
+                activeIndex={carousel.activeIndex}
+                index={index}
+                isMuted={carousel.isMuted}
+                key={video.id}
+                locale={locale}
+                movedRef={carousel.dragRef}
+                onSelect={() => carousel.goTo(index)}
+                spacing={spacing}
+                video={video}
               />
             ))}
           </div>
         </div>
+        <CarouselControls locale={locale} onNext={() => carousel.goBy(1)} onPrevious={() => carousel.goBy(-1)} />
       </div>
+      <CarouselIndicator
+        activeIndex={carousel.activeIndex}
+        isMuted={carousel.isMuted}
+        locale={locale}
+        onSelect={carousel.goTo}
+        onToggleMuted={() => carousel.setIsMuted((current) => !current)}
+      />
     </section>
   );
+}
+
+export function VideoRotationCarousel({ locale }: { locale: Locale }) {
+  return <HeroCarousel locale={locale} />;
 }

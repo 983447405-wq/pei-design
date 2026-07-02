@@ -10,7 +10,15 @@ export function SplashCursorAfterHero() {
     let frame = 0;
 
     const update = () => {
-      setEnabled(window.scrollY > window.innerHeight * 0.85);
+      const videoSection = document.querySelector(".case-video-band");
+
+      if (!videoSection) {
+        setEnabled(false);
+        frame = 0;
+        return;
+      }
+
+      setEnabled(videoSection.getBoundingClientRect().bottom < 0);
       frame = 0;
     };
 

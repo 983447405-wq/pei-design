@@ -185,11 +185,163 @@ a {
   outline-offset: 4px;
 }
 
+.scroll-progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 80;
+  height: 2px;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.scroll-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(94, 106, 210, 0.95));
+  box-shadow: 0 0 18px rgba(94, 106, 210, 0.42);
+  transform-origin: 0 50%;
+  will-change: transform;
+}
+
 .text-type-cursor {
   display: inline-block;
   margin-left: 0.08em;
   color: var(--accent-hover);
   animation: text-type-cursor-blink 0.92s steps(2, end) infinite;
+}
+
+.motion-scroll-line {
+  animation: motion-scroll-line 1.7s var(--ease-out) infinite;
+}
+
+.project-visual-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018)), rgba(15, 16, 17, 0.86);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.045) inset;
+  backdrop-filter: blur(14px);
+}
+
+.project-visual-cover {
+  position: relative;
+  min-height: clamp(300px, 34vw, 460px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: var(--project-cover);
+}
+
+.project-visual-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at 52% 42%, black, transparent 76%);
+  opacity: 0.72;
+}
+
+.project-visual-window {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  width: min(74%, 520px);
+  aspect-ratio: 1.52;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.025)), rgba(1, 1, 2, 0.38);
+  box-shadow:
+    0 38px 90px rgba(0, 0, 0, 0.42),
+    0 1px 0 rgba(255, 255, 255, 0.14) inset;
+  transform: translate(-50%, -50%) perspective(900px) rotateX(4deg) rotateY(-7deg);
+  transition:
+    transform 420ms var(--ease-out),
+    box-shadow 420ms var(--ease-out);
+  backdrop-filter: blur(20px);
+}
+
+.project-visual-card:hover .project-visual-window {
+  box-shadow:
+    0 46px 110px rgba(0, 0, 0, 0.5),
+    0 0 74px rgba(94, 106, 210, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.18) inset;
+  transform: translate(-50%, -50%) perspective(900px) rotateX(2deg) rotateY(-3deg) scale(1.025);
+}
+
+.project-visual-bar {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 16px;
+  display: flex;
+  gap: 7px;
+}
+
+.project-visual-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.project-visual-orbit {
+  position: absolute;
+  left: 50%;
+  top: 53%;
+  width: 42%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  box-shadow:
+    0 0 34px rgba(255, 255, 255, 0.08) inset,
+    0 0 54px rgba(255, 255, 255, 0.08);
+  transform: translate(-50%, -50%);
+}
+
+.project-visual-panel {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+}
+
+.project-visual-panel-a {
+  left: 9%;
+  bottom: 13%;
+  width: 30%;
+  height: 30%;
+}
+
+.project-visual-panel-b {
+  right: 10%;
+  top: 22%;
+  width: 28%;
+  height: 20%;
+}
+
+.project-visual-panel-c {
+  right: 18%;
+  bottom: 16%;
+  width: 20%;
+  height: 16%;
+}
+
+.project-visual-year {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(1, 1, 2, 0.34);
+  padding: 7px 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
 }
 
 .cursor-spotlight {
@@ -319,7 +471,7 @@ a {
   isolation: isolate;
   display: grid;
   grid-template-rows: 1fr auto;
-  min-height: clamp(680px, 92svh, 860px);
+  min-height: 100svh;
   padding: clamp(72px, 10vh, 104px) 0 36px;
   overflow: hidden;
   background:
@@ -731,6 +883,23 @@ a {
   49%,
   100% {
     opacity: 0.16;
+  }
+}
+
+@keyframes motion-scroll-line {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  28%,
+  62% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(240%);
   }
 }
 

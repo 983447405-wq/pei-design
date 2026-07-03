@@ -26,90 +26,90 @@ type CarouselVideo = {
 
 const videos: CarouselVideo[] = [
   {
-    id: "agent-copilot",
+    id: "ai-generated-video",
     category: { zh: "VIDEO 01", en: "VIDEO 01" },
-    title: { zh: "企业 Agent 工作台", en: "Enterprise Agent Workspace" },
+    title: { zh: "AI Generated Videos", en: "AI Generated Videos" },
     poster: "/about-trail/agent-flow.svg",
     src: "",
-    href: "/projects/enterprise-agent-copilot",
-    gradient: "linear-gradient(135deg, #101d2a, #1e7d96)"
+    href: "/projects/ai-short-drama-studio",
+    gradient: "linear-gradient(135deg, #25103a, #a855f7)"
   },
   {
-    id: "llm-evaluation",
+    id: "interface-motion",
     category: { zh: "VIDEO 02", en: "VIDEO 02" },
-    title: { zh: "AI 体验评测看板", en: "AI Experience Scoreboard" },
+    title: { zh: "Interface Motion", en: "Interface Motion" },
     poster: "/about-trail/evaluation.svg",
     src: "",
-    href: "/projects/llm-experience-evaluation",
-    gradient: "linear-gradient(135deg, #171331, #6e61ff)"
+    href: "/projects/falcocut",
+    gradient: "linear-gradient(135deg, #071d2b, #22d3ee)"
   },
   {
-    id: "creation-studio",
+    id: "product-animation",
     category: { zh: "VIDEO 03", en: "VIDEO 03" },
-    title: { zh: "多模态创作控制台", en: "Multimodal Creation Console" },
+    title: { zh: "Product Animation", en: "Product Animation" },
     poster: "/about-trail/prototype.svg",
     src: "",
-    href: "/projects/multimodal-creation-studio",
+    href: "/projects/honor-smart-video",
+    gradient: "linear-gradient(135deg, #10172a, #5e6ad2)"
+  },
+  {
+    id: "lottie-animation",
+    category: { zh: "VIDEO 04", en: "VIDEO 04" },
+    title: { zh: "Lottie Animation", en: "Lottie Animation" },
+    poster: "/about-trail/design-system.svg",
+    src: "",
+    href: "/projects/ai-shopping-assistant",
+    gradient: "linear-gradient(135deg, #112315, #4ade80)"
+  },
+  {
+    id: "motion-graphics",
+    category: { zh: "VIDEO 05", en: "VIDEO 05" },
+    title: { zh: "Motion Graphics", en: "Motion Graphics" },
+    poster: "/about-trail/research.svg",
+    src: "",
+    href: "/projects/ai-virtual-try-on",
     gradient: "linear-gradient(135deg, #2b1027, #ff3bd5)"
   },
   {
-    id: "state-system",
-    category: { zh: "VIDEO 04", en: "VIDEO 04" },
-    title: { zh: "AI 状态组件系统", en: "AI State Component System" },
-    poster: "/about-trail/design-system.svg",
-    src: "",
-    href: "/projects",
-    gradient: "linear-gradient(135deg, #0d1b16, #34f5a2)"
-  },
-  {
-    id: "task-research",
-    category: { zh: "VIDEO 05", en: "VIDEO 05" },
-    title: { zh: "AI 任务场景研究", en: "AI Task Scenario Research" },
-    poster: "/about-trail/research.svg",
-    src: "",
-    href: "/projects",
-    gradient: "linear-gradient(135deg, #241708, #ffb84d)"
-  },
-  {
-    id: "launch-review",
+    id: "short-drama-motion",
     category: { zh: "VIDEO 06", en: "VIDEO 06" },
-    title: { zh: "上线指标复盘", en: "Launch Metrics Review" },
+    title: { zh: "AI Short Drama Motion", en: "AI Short Drama Motion" },
     poster: "/about-trail/ai-product.svg",
     src: "",
-    href: "/projects",
+    href: "/projects/ai-short-drama-studio",
     gradient: "linear-gradient(135deg, #0f1529, #7690ff)"
   },
   {
-    id: "prompt-library",
+    id: "video-editing-reel",
     category: { zh: "VIDEO 07", en: "VIDEO 07" },
-    title: { zh: "团队 Prompt Library", en: "Team Prompt Library" },
+    title: { zh: "Video Editing Reel", en: "Video Editing Reel" },
     poster: "/about-trail/prototype.svg",
     src: "",
-    href: "/resources",
-    gradient: "linear-gradient(135deg, #181818, #595959)"
+    href: "/projects/falcocut",
+    gradient: "linear-gradient(135deg, #27170a, #ff9f1c)"
   },
   {
-    id: "growth-lab",
+    id: "virtual-try-on-motion",
     category: { zh: "VIDEO 08", en: "VIDEO 08" },
-    title: { zh: "AI 增长实验台", en: "AI Growth Lab" },
+    title: { zh: "Virtual Try-on Motion", en: "Virtual Try-on Motion" },
     poster: "/about-trail/agent-flow.svg",
     src: "",
-    href: "/projects",
+    href: "/projects/ai-virtual-try-on",
     gradient: "linear-gradient(135deg, #03151b, #00e5ff)"
   },
   {
-    id: "ai-chat",
+    id: "tongyi-interaction",
     category: { zh: "VIDEO 09", en: "VIDEO 09" },
-    title: { zh: "AI Chat 体验框架", en: "AI Chat Experience Framework" },
+    title: { zh: "Tongyi AI Interaction", en: "Tongyi AI Interaction" },
     poster: "/about-trail/evaluation.svg",
     src: "",
-    href: "/projects",
+    href: "/projects/tongyi-app",
     gradient: "linear-gradient(135deg, #1c1532, #c8ff48)"
   },
   {
-    id: "resource-hub",
+    id: "creative-coding",
     category: { zh: "VIDEO 10", en: "VIDEO 10" },
-    title: { zh: "设计资源内容中台", en: "Design Resource Hub" },
+    title: { zh: "Creative Coding", en: "Creative Coding" },
     poster: "/about-trail/design-system.svg",
     src: "",
     href: "/resources",
@@ -133,7 +133,7 @@ function nearestDistance(index: number, activeIndex: number, count: number) {
 }
 
 function useCarousel(count: number) {
-  const [activeIndex, setActiveIndex] = useState(3);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
@@ -445,8 +445,8 @@ function HeroCarousel({ locale }: { locale: Locale }) {
   const spacing = 360 / videos.length;
   const copy = useMemo(
     () => ({
-      eyebrow: locale === "zh" ? "CASE VIDEO REEL" : "CASE VIDEO REEL",
-      title: locale === "zh" ? "3D 回形视频画廊" : "3D Ring Video Gallery"
+      eyebrow: locale === "zh" ? "MOTION SHOWCASE" : "MOTION SHOWCASE",
+      title: locale === "zh" ? "Selected Motion" : "Selected Motion"
     }),
     [locale]
   );
@@ -455,6 +455,7 @@ function HeroCarousel({ locale }: { locale: Locale }) {
     <section
       aria-labelledby="case-video-title"
       className="case-video-band"
+      id="motion-showcase"
       tabIndex={0}
       onBlur={() => carousel.setIsPaused(false)}
       onFocus={() => carousel.setIsPaused(true)}

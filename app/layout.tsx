@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { CursorSpotlight } from "@/components/cursor-spotlight";
+import { ScrollProgress } from "@/components/scroll-progress";
 import { site } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
         url: "/og.svg",
         width: 1200,
         height: 630,
-        alt: "Pei Design - AI Product Designer Portfolio"
+        alt: "Pei Design - Product Designer Portfolio"
       }
     ]
   },
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="zh-CN">
       <body>
+        <ScrollProgress />
         <CursorSpotlight />
         {children}
       </body>

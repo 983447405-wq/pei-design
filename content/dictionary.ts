@@ -11,7 +11,7 @@ export const dictionary = {
       contact: "联系"
     },
     common: {
-      availability: "可接受 AI 产品设计负责人 / 高级设计顾问机会",
+      availability: "可接受全职、自由职业和 AI 产品协作机会",
       viewProjects: "查看项目",
       viewResources: "查看资源",
       contactMe: "联系我",
@@ -26,21 +26,21 @@ export const dictionary = {
     },
     home: {
       eyebrow: "AI Product Designer + UI/UX Designer",
-      title: "把复杂 AI 能力，设计成可上线的产品体验。",
-      subtitle: "我面向 HR、设计负责人和 AI 创业团队，展示从 0 到 1 AI 产品定义、Agent 工作流、设计系统、评测体系和前端落地能力。",
-      skillsTitle: "能力覆盖产品策略、体验设计和工程协作。",
-      experienceTitle: "从用户问题到可量化结果。",
-      ctaTitle: "正在寻找能把 AI 产品做清楚的人？",
-      ctaBody: "我可以帮助团队定义 AI 产品体验、搭建设计系统，并把模糊能力转化为可交付方案。"
+      title: "用 AI、交互与动效设计有温度的数字体验。",
+      subtitle: "我是一名 Product Designer，关注用户体验、产品思考、AI 技术和动效表达。",
+      skillsTitle: "以用户体验、产品判断和新兴 AI 技术为核心。",
+      experienceTitle: "干净的时间线，记录设计如何进入真实业务。",
+      ctaTitle: "Let's Create Something Meaningful.",
+      ctaBody: "如果你正在寻找一名能把 AI、产品体验和动效表达连接起来的设计师，可以直接联系我。"
     },
     about: {
-      title: "我用产品判断力、设计系统和前端理解，连接 AI 能力与真实用户。",
+      title: "我用产品判断力、交互设计和视觉表达，把复杂 AI 能力变成清晰体验。",
       intro:
-        "过去的工作覆盖 B 端平台、生成式 AI 工具、Agent 工作台和设计系统。我关注的不只是界面好看，而是模型能力如何被理解、控制、信任和持续优化。"
+        "过去的工作覆盖 AI 内容创作、AI 购物、虚拟试衣、智能视频、企业 SaaS 和设计系统。我关注的不只是界面好看，而是产品是否降低复杂度、创造清晰度，并交付可衡量的价值。"
     },
     projects: {
       title: "项目案例",
-      subtitle: "每个项目都强调问题定义、我的职责、设计过程、最终成果和数据结果。"
+      subtitle: "精选 AI、视频、购物、企业平台和交互体验项目。"
     },
     blog: {
       title: "设计笔记",
@@ -51,8 +51,8 @@ export const dictionary = {
       subtitle: "沉淀 AI 产品设计模板、评审清单、Prompt 和工作流资源。"
     },
     contact: {
-      title: "让作品集替你打开下一次对话。",
-      subtitle: "如果你正在招 AI 产品设计负责人、UI/UX Designer 或需要设计顾问，可以直接联系我。",
+      title: "Let's build something meaningful.",
+      subtitle: "如果你正在寻找 AI Product Designer、UI/UX Designer，或需要 0→1 AI 产品顾问，可以直接联系我。",
       emailLabel: "发送邮件"
     }
   },
@@ -66,7 +66,7 @@ export const dictionary = {
       contact: "Contact"
     },
     common: {
-      availability: "Open to AI product design lead and senior design consultant roles",
+      availability: "Available for full-time, freelance, and AI product collaboration",
       viewProjects: "View projects",
       viewResources: "View resources",
       contactMe: "Contact me",
@@ -81,23 +81,22 @@ export const dictionary = {
     },
     home: {
       eyebrow: "AI Product Designer + UI/UX Designer",
-      title: "Designing complex AI capabilities into shippable product experiences.",
-      subtitle:
-        "A portfolio for hiring teams, design leaders, and AI startups. It covers 0-to-1 AI product definition, agent workflows, design systems, evaluation frameworks, and frontend fluency.",
-      skillsTitle: "A practice across product strategy, UX systems, and engineering collaboration.",
-      experienceTitle: "From user problems to measurable outcomes.",
-      ctaTitle: "Looking for someone who can make AI products legible?",
-      ctaBody:
-        "I help teams define AI experiences, build design systems, and translate ambiguous model capability into shippable product decisions."
+      title: "Designing AI products that connect technology, business and people.",
+      subtitle: "I'm a Product Designer focused on user experience, product thinking, emerging AI technologies, and motion craft.",
+      skillsTitle: "A practice around user experience, product thinking, and emerging AI technologies.",
+      experienceTitle: "A clean timeline of design work inside real products.",
+      ctaTitle: "Let's Create Something Meaningful.",
+      ctaBody: "Reach out if you are looking for a designer who connects AI, product experience, and motion craft."
     },
     about: {
-      title: "I connect AI capability with real users through product judgment, systems thinking, and frontend fluency.",
+      title:
+        "I transform complex AI capability into clear product experiences through product judgment, interaction design, and visual craft.",
       intro:
-        "My work spans B2B platforms, generative AI tools, agent workspaces, and design systems. I care less about decoration and more about how model behavior becomes understandable, controllable, trustworthy, and measurable."
+        "My work spans AI content creation, AI shopping, virtual try-on, smart video, enterprise SaaS, and design systems. I care less about decoration and more about reducing complexity, creating clarity, and delivering measurable value."
     },
     projects: {
       title: "Project cases",
-      subtitle: "Each case focuses on problem framing, my role, design process, final outcome, and measurable results."
+      subtitle: "Selected AI, video, shopping, enterprise platform, and interaction experience projects."
     },
     blog: {
       title: "Design notes",
@@ -108,8 +107,8 @@ export const dictionary = {
       subtitle: "Templates, checklists, prompts, and workflows for AI product design."
     },
     contact: {
-      title: "Let the portfolio start the next conversation.",
-      subtitle: "If you are hiring an AI product design lead, UI/UX designer, or design consultant, reach out directly.",
+      title: "Let's build something meaningful.",
+      subtitle: "If you are hiring an AI Product Designer, UI/UX Designer, or 0-to-1 AI product consultant, reach out directly.",
       emailLabel: "Send email"
     }
   }

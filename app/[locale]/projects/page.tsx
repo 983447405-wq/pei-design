@@ -29,7 +29,7 @@ export default async function ProjectsPage({ params }: Props) {
     <main>
       <Section eyebrow="Projects" title={dict.projects.title} description={dict.projects.subtitle}>
         <div className="mb-8 flex flex-wrap gap-2">
-          {["Agent UX", "LLM Eval", "Design System", "Multimodal", "B2B SaaS"].map((tag) => (
+          {["AI Content", "AI Video", "Retail AI", "Virtual Try-on", "Enterprise SaaS", "Motion", "Design System"].map((tag) => (
             <span className="rounded-md border border-line bg-panel px-3 py-2 font-mono text-xs text-muted" key={tag}>
               {tag}
             </span>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101114"/>
+      <stop offset=".5" stop-color="#24324a"/>
+      <stop offset="1" stop-color="#5dffb5"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="32" fill="url(#g)"/>
+  <path d="M70 150h90m42 0h88" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".58"/>
+  <circle cx="70" cy="150" r="34" fill="#fff" opacity=".2"/>
+  <circle cx="202" cy="150" r="42" fill="#fff" opacity=".3"/>
+  <circle cx="332" cy="150" r="34" fill="#fff" opacity=".18"/>
+  <path d="M186 122l52 28-52 28z" fill="#fff" opacity=".72"/>
+  <text x="34" y="64" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700">AGENT FLOW</text>
+  <text x="34" y="258" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" opacity=".72">CONTROL / TAKEOVER / AUDIT</text>
+</svg>

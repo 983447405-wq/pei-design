@@ -17,101 +17,92 @@ import { localizedPath, type Locale } from "@/lib/i18n";
 type CarouselVideo = {
   id: string;
   title: Record<Locale, string>;
-  category: Record<Locale, string>;
   poster: string;
   src: string;
   href: string;
   gradient: string;
 };
 
+const placeholderVideo = "/videos/portfolio-reel.webm";
+
 const videos: CarouselVideo[] = [
   {
     id: "ai-generated-video",
-    category: { zh: "VIDEO 01", en: "VIDEO 01" },
     title: { zh: "AI Generated Videos", en: "AI Generated Videos" },
     poster: "/about-trail/agent-flow.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/ai-short-drama-studio",
     gradient: "linear-gradient(135deg, #25103a, #a855f7)"
   },
   {
     id: "interface-motion",
-    category: { zh: "VIDEO 02", en: "VIDEO 02" },
     title: { zh: "Interface Motion", en: "Interface Motion" },
     poster: "/about-trail/evaluation.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/falcocut",
     gradient: "linear-gradient(135deg, #071d2b, #22d3ee)"
   },
   {
     id: "product-animation",
-    category: { zh: "VIDEO 03", en: "VIDEO 03" },
     title: { zh: "Product Animation", en: "Product Animation" },
     poster: "/about-trail/prototype.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/honor-smart-video",
     gradient: "linear-gradient(135deg, #10172a, #5e6ad2)"
   },
   {
     id: "lottie-animation",
-    category: { zh: "VIDEO 04", en: "VIDEO 04" },
     title: { zh: "Lottie Animation", en: "Lottie Animation" },
     poster: "/about-trail/design-system.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/ai-shopping-assistant",
     gradient: "linear-gradient(135deg, #112315, #4ade80)"
   },
   {
     id: "motion-graphics",
-    category: { zh: "VIDEO 05", en: "VIDEO 05" },
     title: { zh: "Motion Graphics", en: "Motion Graphics" },
     poster: "/about-trail/research.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/ai-virtual-try-on",
     gradient: "linear-gradient(135deg, #2b1027, #ff3bd5)"
   },
   {
     id: "short-drama-motion",
-    category: { zh: "VIDEO 06", en: "VIDEO 06" },
     title: { zh: "AI Short Drama Motion", en: "AI Short Drama Motion" },
     poster: "/about-trail/ai-product.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/ai-short-drama-studio",
     gradient: "linear-gradient(135deg, #0f1529, #7690ff)"
   },
   {
     id: "video-editing-reel",
-    category: { zh: "VIDEO 07", en: "VIDEO 07" },
     title: { zh: "Video Editing Reel", en: "Video Editing Reel" },
     poster: "/about-trail/prototype.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/falcocut",
     gradient: "linear-gradient(135deg, #27170a, #ff9f1c)"
   },
   {
     id: "virtual-try-on-motion",
-    category: { zh: "VIDEO 08", en: "VIDEO 08" },
     title: { zh: "Virtual Try-on Motion", en: "Virtual Try-on Motion" },
     poster: "/about-trail/agent-flow.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/ai-virtual-try-on",
     gradient: "linear-gradient(135deg, #03151b, #00e5ff)"
   },
   {
     id: "tongyi-interaction",
-    category: { zh: "VIDEO 09", en: "VIDEO 09" },
     title: { zh: "Tongyi AI Interaction", en: "Tongyi AI Interaction" },
     poster: "/about-trail/evaluation.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/projects/tongyi-app",
     gradient: "linear-gradient(135deg, #1c1532, #c8ff48)"
   },
   {
     id: "creative-coding",
-    category: { zh: "VIDEO 10", en: "VIDEO 10" },
     title: { zh: "Creative Coding", en: "Creative Coding" },
     poster: "/about-trail/design-system.svg",
-    src: "",
+    src: placeholderVideo,
     href: "/resources",
     gradient: "linear-gradient(135deg, #2a1308, #ff7a3d)"
   }
@@ -285,7 +276,7 @@ function VideoFace({
 
   return (
     <Link
-      aria-label={`${video.category[locale]}: ${video.title[locale]}`}
+      aria-label={video.title[locale]}
       className={`case-video-face ${isBack ? "case-video-face-back" : "case-video-face-front"}`}
       draggable={false}
       href={localizedPath(locale, video.href)}
@@ -315,8 +306,6 @@ function VideoFace({
         />
       ) : null}
       <div className="case-video-poster" aria-hidden="true" />
-      <span className="case-video-label">{video.category[locale]}</span>
-      <strong className="case-video-number">{video.category[locale].slice(-2)}</strong>
       <span className="case-video-title">{video.title[locale]}</span>
     </Link>
   );

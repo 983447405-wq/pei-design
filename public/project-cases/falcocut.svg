@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061018"/>
+      <stop offset=".5" stop-color="#0f3a4a"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="34" flood-color="#000000" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" rx="52" fill="url(#bg)"/>
+  <circle cx="996" cy="148" r="220" fill="#ffffff" opacity=".12"/>
+  <g filter="url(#shadow)">
+    <rect x="96" y="112" width="1088" height="438" rx="36" fill="#071018" stroke="#ffffff" stroke-opacity=".18"/>
+    <rect x="132" y="154" width="412" height="246" rx="26" fill="#ffffff" opacity=".12"/>
+    <rect x="574" y="154" width="560" height="56" rx="28" fill="#ffffff" opacity=".18"/>
+    <rect x="574" y="246" width="434" height="34" rx="17" fill="#ffffff" opacity=".12"/>
+    <rect x="574" y="306" width="328" height="34" rx="17" fill="#ffffff" opacity=".1"/>
+    <rect x="132" y="440" width="1002" height="62" rx="20" fill="#ffffff" opacity=".08"/>
+    <rect x="164" y="462" width="116" height="18" rx="9" fill="#67e8f9" opacity=".78"/>
+    <rect x="306" y="462" width="180" height="18" rx="9" fill="#ffffff" opacity=".22"/>
+    <rect x="514" y="462" width="138" height="18" rx="9" fill="#ffffff" opacity=".18"/>
+    <rect x="688" y="462" width="260" height="18" rx="9" fill="#ffffff" opacity=".14"/>
+  </g>
+  <text x="86" y="94" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="700" opacity=".86">CASE 02 / AI VIDEO EDITING</text>
+  <text x="86" y="636" fill="#ffffff" font-family="Arial, sans-serif" font-size="56" font-weight="800">FalcoCut</text>
+</svg>

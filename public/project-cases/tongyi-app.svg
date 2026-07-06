@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b12"/>
+      <stop offset=".5" stop-color="#20245a"/>
+      <stop offset="1" stop-color="#c8ff48"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#000000" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" rx="52" fill="url(#bg)"/>
+  <circle cx="1036" cy="166" r="260" fill="#ffffff" opacity=".1"/>
+  <g filter="url(#shadow)">
+    <rect x="126" y="146" width="446" height="388" rx="46" fill="#ffffff" opacity=".12" stroke="#ffffff" stroke-opacity=".18"/>
+    <rect x="174" y="202" width="288" height="46" rx="23" fill="#ffffff" opacity=".22"/>
+    <rect x="174" y="292" width="336" height="46" rx="23" fill="#ffffff" opacity=".15"/>
+    <rect x="174" y="382" width="238" height="46" rx="23" fill="#ffffff" opacity=".13"/>
+    <rect x="674" y="126" width="386" height="430" rx="48" fill="#071018" stroke="#ffffff" stroke-opacity=".18"/>
+    <circle cx="866" cy="310" r="108" fill="#ffffff" opacity=".14"/>
+    <path d="M802 310c26-52 102-52 128 0-26 52-102 52-128 0z" fill="#ffffff" opacity=".24"/>
+  </g>
+  <text x="86" y="94" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="700" opacity=".86">CASE 06 / AI INTERACTION</text>
+  <text x="86" y="636" fill="#ffffff" font-family="Arial, sans-serif" font-size="56" font-weight="800">Tongyi App</text>
+</svg>

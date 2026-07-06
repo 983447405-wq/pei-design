@@ -19,9 +19,9 @@ const config: Config = {
         text: "#F7F8F8",
         muted: "#A3A8B3",
         dim: "#62666D",
-        cyan: "#5E6AD2",
-        blue: "#828FFF",
-        violet: "#7A7FAD"
+        cyan: "#00D2FF",
+        blue: "#A4F4FD",
+        violet: "#5E6AD2"
       },
       boxShadow: {
         glow: "0 0 0 1px rgba(255,255,255,0.07), 0 16px 48px rgba(0,0,0,0.34)",

@@ -14,22 +14,28 @@ export function ContactCTA({ locale }: { locale: Locale }) {
   const dict = dictionary[locale];
 
   return (
-    <section className="shell pb-20">
-      <div className="glass gradient-border motion-card overflow-hidden rounded-2xl p-8 md:p-12">
-        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-3xl">
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">Contact</p>
-            <h2 className="text-balance text-3xl font-semibold tracking-[-0.035em] text-text md:text-5xl">{dict.home.ctaTitle}</h2>
-            <p className="mt-5 text-lg leading-8 text-muted">{dict.home.ctaBody}</p>
-            <a className="mt-7 inline-block font-mono text-sm text-text transition hover:text-blue" href={`mailto:${profile.email}`}>
+    <section className="shell relative z-10 pb-20 md:pb-32">
+      <div className="liquid-glass motion-card relative overflow-hidden rounded-3xl px-8 py-16 text-center md:py-24">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-30"
+          style={{ background: "radial-gradient(600px circle at 50% 0%, rgba(255,255,255,0.15), transparent 70%)" }}
+        />
+        <div className="relative z-10">
+          <div className="mx-auto max-w-3xl">
+            <p className="portfolio-eyebrow mb-5 justify-center">Contact</p>
+            <h2 className="text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.035em] text-white md:text-6xl">
+              {dict.home.ctaTitle}
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-white/60 md:text-lg">{dict.home.ctaBody}</p>
+            <a className="portfolio-button portfolio-button-primary mt-8 font-mono text-sm" href={`mailto:${profile.email}`}>
               {profile.email}
             </a>
           </div>
-          <div className="flex gap-3">
+          <div className="mt-8 flex justify-center gap-3">
             {profile.socialLinks.map((link) => {
               const Icon = socialIcon[link.label as keyof typeof socialIcon] ?? Mail;
               const className =
-                "focus-ring grid h-12 w-12 place-items-center rounded-full border border-line bg-panel2 text-muted transition hover:border-lineStrong hover:bg-white/[0.06] hover:text-text";
+                "focus-ring grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-white/60 transition hover:bg-white/[0.08] hover:text-white";
 
               if (link.href.startsWith("/")) {
                 return (

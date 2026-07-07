@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Code2, ImageIcon, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
+import { ProjectImageGallery } from "@/components/circular-gallery";
 import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
 import { VideoRotationCarousel } from "@/components/video-rotation-carousel";
@@ -138,6 +139,8 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       <VideoRotationCarousel locale={locale} />
+
+      <ProjectImageGallery locale={locale} />
 
       <Section eyebrow="Featured Projects" title={projectTitle} description={dict.projects.subtitle}>
         <div className="grid gap-5 lg:grid-cols-2">

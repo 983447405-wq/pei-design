@@ -952,19 +952,19 @@ a {
 .portfolio-image-gallery-band::before {
   content: "";
   position: absolute;
-  inset: 12% 0 auto;
+  inset: 62% 0 auto;
   z-index: -1;
-  height: 46%;
+  height: 28%;
   pointer-events: none;
-  background: radial-gradient(ellipse at 50% 50%, rgba(0, 210, 255, 0.08), transparent 68%);
-  filter: blur(32px);
+  background: radial-gradient(ellipse at 50% 50%, rgba(0, 210, 255, 0.055), transparent 70%);
+  filter: blur(36px);
 }
 
 .portfolio-circular-gallery-frame {
   position: relative;
   width: 100%;
-  height: min(66vh, 660px);
-  min-height: 560px;
+  height: min(72vh, 720px);
+  min-height: 620px;
 }
 
 .circular-gallery {
@@ -1177,8 +1177,8 @@ a {
   }
 
   .portfolio-circular-gallery-frame {
-    height: 520px;
-    min-height: 520px;
+    height: 580px;
+    min-height: 580px;
   }
 }
 

@@ -84,6 +84,9 @@ function createTextTexture(gl: OGLRenderingContext, text: string, font: string, 
   context.scale(dpr, dpr);
   context.font = font;
   context.fillStyle = color;
+  context.shadowColor = "rgba(0, 0, 0, 0.62)";
+  context.shadowBlur = 12;
+  context.shadowOffsetY = 3;
   context.textBaseline = "middle";
   context.textAlign = "center";
   context.clearRect(0, 0, canvas.width, canvas.height);
@@ -157,11 +160,12 @@ class Title {
     this.mesh = new Mesh(this.gl, { geometry, program });
 
     const aspect = width / height;
-    const textHeight = this.plane.scale.y * 0.105;
+    const textHeight = this.plane.scale.y * 0.095;
     const textWidth = textHeight * aspect;
 
     this.mesh.scale.set(textWidth, textHeight, 1);
-    this.mesh.position.y = -this.plane.scale.y * 0.5 - textHeight * 0.42;
+    this.mesh.position.y = -this.plane.scale.y * 0.5 - textHeight * 0.4 - 0.02;
+    this.mesh.position.z = 0.04;
     this.mesh.setParent(this.plane);
   }
 }
@@ -331,8 +335,10 @@ class Media {
     const x = this.plane.position.x;
     const halfWidth = this.viewport.width / 2;
 
+    const galleryLift = this.screen.width < 760 ? this.viewport.height * 0.07 : this.viewport.height * 0.08;
+
     if (this.bend === 0) {
-      this.plane.position.y = 0;
+      this.plane.position.y = galleryLift;
       this.plane.rotation.z = 0;
     } else {
       const bendAbs = Math.abs(this.bend);
@@ -340,7 +346,7 @@ class Media {
       const effectiveX = Math.min(Math.abs(x), halfWidth);
       const arc = radius - Math.sqrt(radius * radius - effectiveX * effectiveX);
 
-      this.plane.position.y = this.bend > 0 ? -arc : arc;
+      this.plane.position.y = galleryLift + (this.bend > 0 ? -arc : arc);
       this.plane.rotation.z = (this.bend > 0 ? -1 : 1) * Math.sign(x) * Math.asin(effectiveX / radius);
     }
 
@@ -367,8 +373,8 @@ class Media {
     if (viewport) this.viewport = viewport;
 
     const scale = this.screen.width < 760 ? this.screen.height / 1320 : this.screen.height / 1280;
-    const imageWidth = this.screen.width < 760 ? 520 : 700;
-    const imageHeight = this.screen.width < 760 ? 780 : 900;
+    const imageWidth = this.screen.width < 760 ? 440 : 600;
+    const imageHeight = this.screen.width < 760 ? 660 : 760;
 
     this.plane.scale.y = (this.viewport.height * (imageHeight * scale)) / this.screen.height;
     this.plane.scale.x = (this.viewport.width * (imageWidth * scale)) / this.screen.width;

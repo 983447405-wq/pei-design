@@ -11,10 +11,13 @@ const navItems = [
   [{ zh: "联系", en: "Contact" }, "/contact"]
 ] as const;
 
-function LogoMark({ className = "h-5 w-5" }: { className?: string }) {
+function LogoMark({ className = "h-6 w-6 shrink-0" }: { className?: string }) {
   return (
-    <svg aria-hidden="true" className={className} fill="currentColor" viewBox="0 0 256 256">
-      <path d="M0 128c70.692 0 128 57.308 128 128H64c0-35.346-28.654-64-64-64Zm256 64c-35.346 0-64 28.654-64 64h-64c0-70.692 57.308-128 128-128ZM128 0C128 70.692 70.692 128 0 128V64c35.346 0 64-28.654 64-64Zm64 0c0 35.346 28.654 64 64 64v64c-70.692 0-128-57.308-128-128Z" />
+    <svg aria-hidden="true" className={className} fill="none" shapeRendering="geometricPrecision" viewBox="0 0 40 40">
+      <path
+        d="M20 0C20 11.0457 28.9543 20 40 20C28.9543 20 20 28.9543 20 40C20 28.9543 11.0457 20 0 20C11.0457 20 20 11.0457 20 0Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }

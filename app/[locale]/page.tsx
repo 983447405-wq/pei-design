@@ -44,14 +44,6 @@ function RootNoiseFilter() {
   );
 }
 
-function LogoMark({ className = "h-3.5 w-3.5" }: { className?: string }) {
-  return (
-    <svg aria-hidden="true" className={className} fill="currentColor" viewBox="0 0 256 256">
-      <path d="M0 128c70.692 0 128 57.308 128 128H64c0-35.346-28.654-64-64-64Zm256 64c-35.346 0-64 28.654-64 64h-64c0-70.692 57.308-128 128-128ZM128 0C128 70.692 70.692 128 0 128V64c35.346 0 64-28.654 64-64Zm64 0c0 35.346 28.654 64 64 64v64c-70.692 0-128-57.308-128-128Z" />
-    </svg>
-  );
-}
-
 function ImpactShowcase({ locale }: { locale: Locale }) {
   return (
     <section className="shell motion-rise py-16 md:py-24" id="impact">
@@ -116,7 +108,6 @@ export default async function HomePage({ params }: Props) {
           <p className="mx-auto mt-8 max-w-xl text-balance text-base leading-[1.5] text-white/60 md:text-lg">{profile.tagline[locale]}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link className="portfolio-button portfolio-button-primary" href={localizedPath(locale, "/projects")}>
-              <LogoMark className="h-4 w-4" />
               <span>{dict.common.viewProjects}</span>
             </Link>
             <a className="portfolio-button portfolio-button-secondary" href="#motion-showcase">

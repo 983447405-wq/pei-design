@@ -27,14 +27,14 @@ export const profile = {
   },
   about: {
     zh: [
-      "我是一名拥有 5+ 年经验的 AI Product Designer，长期设计 AI 产品、企业系统和消费级应用。",
-      "我的工作重点是把复杂 AI 能力转译成用户能理解、控制和信任的产品体验，结合产品判断、交互设计和视觉表达推动落地。",
-      "我主导过多个 0→1 产品、可扩展设计系统、企业 SaaS 工作流，以及 AI 购物和 AI 内容创作体验。"
+      "我专注于 AI 大模型产品、企业平台和消费级应用的体验设计，致力于将复杂的技术能力转化为简单、可信且易于使用的产品体验。",
+      "我相信优秀的设计不仅来自视觉表达，更源于产品思考、用户洞察与技术理解。我的工作涵盖 AI Workflow、交互设计、Design System 与前端实现，不断探索设计与 AI 的融合方式。",
+      "除了产品设计，我也持续研究 Web Coding、AIGC 与创意开发，通过代码、动画和 AI 工具构建更具表现力的数字体验。"
     ],
     en: [
-      "I'm an AI Product Designer with over 5 years of experience designing AI products, enterprise systems, and consumer applications.",
-      "My work transforms complex AI capabilities into intuitive experiences through product thinking, interaction design, and visual craftsmanship.",
-      "I have led multiple 0-to-1 products, built scalable design systems, optimized enterprise SaaS workflows, and delivered AI-powered shopping and content creation experiences."
+      "I focus on experience design for large-model AI products, enterprise platforms, and consumer applications, turning complex technical capabilities into simple, trustworthy, and usable product experiences.",
+      "I believe excellent design comes not only from visual expression, but also from product thinking, user insight, and technical understanding. My work spans AI workflows, interaction design, design systems, and frontend implementation as I explore new ways to bring design and AI together.",
+      "Beyond product design, I continue to explore web coding, AIGC, and creative development, using code, motion, and AI tools to build more expressive digital experiences."
     ]
   },
   numbers: [
@@ -47,11 +47,51 @@ export const profile = {
     { value: "40%", label: { zh: "组件复用", en: "Component reuse" } }
   ],
   impact: [
-    { value: "36%", label: { zh: "GMV Growth", en: "GMV Growth" } },
-    { value: "1M+", label: { zh: "Single-day GMV", en: "Single-day GMV" } },
-    { value: "50%", label: { zh: "Efficiency Improvement", en: "Efficiency Improvement" } },
-    { value: "30s", label: { zh: "Workflow Optimization", en: "Workflow Optimization" } },
-    { value: "2024", label: { zh: "Innovation Award", en: "Innovation Award" } }
+    {
+      value: "36%",
+      label: { zh: "GMV 增长", en: "GMV Growth" },
+      project: { zh: "AI 购物助手", en: "AI Shopping Assistant" },
+      description: {
+        zh: "通过优化 AI 对话体验与购物流程，帮助产品实现 GMV 提升 36%。",
+        en: "By refining AI dialogue and shopping flows, the product achieved a 36% increase in GMV."
+      }
+    },
+    {
+      value: "1M+",
+      label: { zh: "单日 GMV", en: "Single-day GMV" },
+      project: { zh: "AI 虚拟试衣", en: "AI Virtual Try-on" },
+      description: {
+        zh: "AI 创新项目上线后，单日 GMV 突破 100 万。",
+        en: "After launch, the AI innovation initiative surpassed ¥1M in single-day GMV."
+      }
+    },
+    {
+      value: "50%",
+      label: { zh: "工作流效率", en: "Workflow Efficiency" },
+      project: { zh: "自如企业平台", en: "Ziroom Enterprise Platform" },
+      description: {
+        zh: "优化企业工作流，提升跟进效率约 50%。",
+        en: "Redesigned enterprise workflows improved follow-up efficiency by approximately 50%."
+      }
+    },
+    {
+      value: "30s",
+      label: { zh: "节省时间", en: "Time Saved" },
+      project: { zh: "企业 SaaS", en: "Enterprise SaaS" },
+      description: {
+        zh: "通过流程重构，减少单次操作约 30 秒。",
+        en: "Workflow restructuring reduced each operation by approximately 30 seconds."
+      }
+    },
+    {
+      value: "2024",
+      label: { zh: "创新奖项", en: "Innovation Award" },
+      project: {
+        zh: "中国零售数字化创新案例",
+        en: "China Retail Digital Innovation Case"
+      },
+      description: { zh: "AI 虚拟试衣", en: "AI Virtual Try-on" }
+    }
   ],
   skills: [
     {
@@ -226,7 +266,12 @@ export const profile = {
   availability: Localized;
   about: Record<Locale, string[]>;
   numbers: Array<{ value: string; label: Localized }>;
-  impact: Array<{ value: string; label: Localized }>;
+  impact: Array<{
+    value: string;
+    label: Localized;
+    project: Localized;
+    description: Localized;
+  }>;
   skills: Array<{ title: Localized; body: Localized }>;
   motionShowcase: { title: Localized; description: Localized; items: string[] };
   experience: Array<{

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Code2, ImageIcon, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
 import { ProjectImageGallery } from "@/components/circular-gallery";
+import { ImageTrail } from "@/components/image-trail";
 import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
 import { VideoRotationCarousel } from "@/components/video-rotation-carousel";
@@ -19,6 +20,16 @@ const backgroundVideoUrl =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4";
 
 const playgroundIcons = [ImageIcon, Sparkles, Code2];
+
+const experienceTrailItems = [
+  "/project-cases/ai-short-drama-studio.svg",
+  "/project-cases/falcocut.svg",
+  "/project-cases/honor-smart-video.svg",
+  "/project-cases/ai-shopping-assistant.svg",
+  "/project-cases/ai-virtual-try-on.svg",
+  "/project-cases/tongyi-app.svg",
+  "/project-cases/ziroom-enterprise-platform.svg"
+];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params;
@@ -48,32 +59,32 @@ function ImpactShowcase({ locale }: { locale: Locale }) {
   return (
     <section className="shell motion-rise py-16 md:py-24" id="impact">
       <div className="mb-10 max-w-3xl">
-        <p className="portfolio-eyebrow mb-4">Impact</p>
+        <p className="portfolio-eyebrow mb-4">{locale === "zh" ? "设计影响力" : "Impact"}</p>
         <h2 className="text-balance text-3xl font-semibold tracking-[-0.035em] text-white md:text-5xl">
-          {locale === "zh" ? "一些被验证过的设计结果。" : "Selected signals from shipped work."}
+          {locale === "zh" ? "设计创造价值，而不仅仅是界面。" : "Design creates value, not just interfaces."}
         </h2>
         <p className="mt-4 text-base leading-8 text-white/55 md:text-lg">
           {locale === "zh"
-            ? "不把作品集做成销售页，只保留能说明产品判断、协作深度和落地价值的关键片段。"
-            : "A quiet record of product judgment, collaboration depth, and outcomes from real shipped work."}
+            ? "每一个数字背后，都是一次产品判断、团队协作与持续迭代的结果。"
+            : "Behind every number is a product decision, team collaboration, and continuous iteration."}
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-6">
         {profile.impact.map((item, index) => (
           <article
-            className={`liquid-glass motion-card rounded-2xl p-6 ${
+            className={`impact-card liquid-glass motion-card rounded-2xl p-6 ${
               index < 2 ? "md:col-span-3" : index === 2 ? "md:col-span-2" : "md:col-span-2"
             }`}
             key={item.label.en}
+            tabIndex={0}
           >
-            <div className="flex items-start justify-between gap-5">
-              <span className="font-mono text-xs uppercase tracking-[0.16em] text-white/35">{String(index + 1).padStart(2, "0")}</span>
-              <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] text-white/45">
-                {locale === "zh" ? "作品信号" : "Portfolio signal"}
-              </span>
+            <div className="flex items-start gap-5">
+              <span className="font-mono text-xs uppercase tracking-[0.16em] text-white/25">{String(index + 1).padStart(2, "0")}</span>
             </div>
             <strong className="mt-10 block text-4xl font-semibold tracking-[-0.055em] text-white md:text-6xl">{item.value}</strong>
-            <p className="mt-4 text-sm leading-6 text-white/58">{item.label[locale]}</p>
+            <p className="mt-4 text-sm font-medium leading-6 text-white/72">{item.label[locale]}</p>
+            <p className="mt-2 text-xs leading-5 text-white/42">{item.project[locale]}</p>
+            <p className="impact-card-description mt-3 min-h-12 max-w-md text-sm leading-6 text-white/58">{item.description[locale]}</p>
           </article>
         ))}
       </div>
@@ -102,7 +113,6 @@ export default async function HomePage({ params }: Props) {
         <div className="mx-auto max-w-5xl">
           <p className="mb-5 text-xs font-medium uppercase tracking-[0.22em] text-white/45">{profile.name} · UED / Product Design Lead</p>
           <h1 className="text-balance text-5xl font-semibold leading-[1.08] tracking-[-0.06em] md:text-7xl lg:text-8xl">
-            <span className="block text-white">{profile.name}</span>
             <span className="portfolio-gradient-text animate-shiny block">{profile.role[locale]}</span>
           </h1>
           <p className="mx-auto mt-8 max-w-xl text-balance text-base leading-[1.5] text-white/60 md:text-lg">{profile.tagline[locale]}</p>
@@ -144,18 +154,20 @@ export default async function HomePage({ params }: Props) {
       <Section eyebrow="About" title={aboutTitle}>
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <div className="sticky top-24 hidden rounded-2xl border border-white/10 bg-black/30 p-6 backdrop-blur-xl lg:block">
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-white/50">{profile.meta[locale]}</p>
-            <div className="mt-8 grid gap-3">
-              {["AI", "Product", "UX", "Motion"].map((item) => (
+            <div className="grid gap-3">
+              {["LLM", "Product Strategy", "UX", "Web Coding", "Design Leadership"].map((item) => (
                 <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/60" key={item}>
                   {item}
                 </span>
               ))}
             </div>
           </div>
-          <div className="space-y-5">
+          <div className="max-w-3xl space-y-5">
             {profile.about[locale].map((paragraph) => (
-              <p className="text-balance text-2xl leading-10 tracking-[-0.035em] text-white md:text-4xl md:leading-[1.16]" key={paragraph}>
+              <p
+                className="text-pretty text-base font-normal leading-8 tracking-normal text-white/72 md:text-xl md:leading-9"
+                key={paragraph}
+              >
                 {paragraph}
               </p>
             ))}
@@ -165,18 +177,21 @@ export default async function HomePage({ params }: Props) {
 
       <ImpactShowcase locale={locale} />
 
-      <Section eyebrow="Experience" title={dict.home.experienceTitle}>
-        <div className="grid gap-5">
-          {profile.experience.map((item) => (
-            <article className="grid gap-4 md:grid-cols-[180px_1fr]" key={item.company}>
-              <time className="font-mono text-sm text-white/50">{item.period}</time>
-              <div className="liquid-glass motion-card relative rounded-2xl p-6">
-                <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white">{item.company}</h3>
-                <p className="mt-1 text-sm font-medium text-white/55">{item.title[locale]}</p>
-                <p className="mt-4 max-w-3xl leading-7 text-white/60">{item.body[locale]}</p>
-              </div>
-            </article>
-          ))}
+      <Section className="experience-section" eyebrow="Experience" title={dict.home.experienceTitle}>
+        <div className="experience-trail-region" data-image-trail-surface id="experience">
+          <ImageTrail items={experienceTrailItems} variant={1} />
+          <div className="experience-trail-content grid gap-5">
+            {profile.experience.map((item) => (
+              <article className="grid gap-4 md:grid-cols-[180px_1fr]" key={item.company}>
+                <time className="font-mono text-sm text-white/50">{item.period}</time>
+                <div className="liquid-glass motion-card relative rounded-2xl p-6">
+                  <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white">{item.company}</h3>
+                  <p className="mt-1 text-sm font-medium text-white/55">{item.title[locale]}</p>
+                  <p className="mt-4 max-w-3xl leading-7 text-white/60">{item.body[locale]}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </Section>
 

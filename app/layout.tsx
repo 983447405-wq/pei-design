@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { CursorSpotlight } from "@/components/cursor-spotlight";
+import { SectionReveal } from "@/components/section-reveal";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { site } from "@/lib/seo";
 
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <ScrollProgress />
         <CursorSpotlight />
+        <SectionReveal />
         {children}
       </body>
     </html>

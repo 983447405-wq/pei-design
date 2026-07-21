@@ -404,6 +404,8 @@ class GalleryApp {
   private viewport!: ViewportSize;
   private medias: Media[] = [];
   private raf = 0;
+  private isVisible = true;
+  private visibilityObserver: IntersectionObserver | null = null;
   private isDown = false;
   private start = 0;
   private scrollPosition = 0;
@@ -570,12 +572,37 @@ class GalleryApp {
   }
 
   private update() {
+    this.raf = 0;
+    if (!this.isVisible) return;
+
     this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
     const direction = this.scroll.current > this.scroll.last ? "right" : "left";
     this.medias.forEach((media) => media.update(this.scroll, direction));
     this.renderer.render({ scene: this.scene, camera: this.camera });
     this.scroll.last = this.scroll.current;
     this.raf = window.requestAnimationFrame(this.update);
+  }
+
+  private observeVisibility() {
+    if (!("IntersectionObserver" in window)) return;
+
+    this.visibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        const isVisible = entry.isIntersecting;
+        if (isVisible === this.isVisible) return;
+
+        this.isVisible = isVisible;
+
+        if (isVisible && !this.raf) {
+          this.raf = window.requestAnimationFrame(this.update);
+        } else if (!isVisible && this.raf) {
+          window.cancelAnimationFrame(this.raf);
+          this.raf = 0;
+        }
+      },
+      { rootMargin: "240px 0px" }
+    );
+    this.visibilityObserver.observe(this.container);
   }
 
   private addEventListeners() {
@@ -586,10 +613,14 @@ class GalleryApp {
     this.container.addEventListener("pointerup", this.boundOnPointerUp);
     this.container.addEventListener("pointercancel", this.boundOnPointerUp);
     this.container.addEventListener("keydown", this.boundOnKeyDown);
+    this.observeVisibility();
   }
 
   destroy() {
     window.cancelAnimationFrame(this.raf);
+    this.raf = 0;
+    this.visibilityObserver?.disconnect();
+    this.visibilityObserver = null;
     window.removeEventListener("resize", this.boundOnResize);
     this.container.removeEventListener("wheel", this.boundOnWheel);
     this.container.removeEventListener("pointerdown", this.boundOnPointerDown);

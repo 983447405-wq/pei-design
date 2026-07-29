@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Code2, ImageIcon, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
@@ -20,16 +21,6 @@ const backgroundVideoUrl =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4";
 
 const playgroundIcons = [ImageIcon, Sparkles, Code2];
-
-const experienceTrailItems = [
-  "/project-cases/ai-short-drama-studio.svg",
-  "/project-cases/falcocut.svg",
-  "/project-cases/honor-smart-video.svg",
-  "/project-cases/ai-shopping-assistant.svg",
-  "/project-cases/ai-virtual-try-on.svg",
-  "/project-cases/tongyi-app.svg",
-  "/project-cases/ziroom-enterprise-platform.svg"
-];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params;
@@ -57,9 +48,9 @@ function RootNoiseFilter() {
 
 function ImpactShowcase({ locale }: { locale: Locale }) {
   return (
-    <section className="shell motion-rise py-16 md:py-24" id="impact">
+    <section className="shell motion-rise py-16 md:py-24" id="design-impact">
       <div className="mb-10 max-w-3xl">
-        <p className="portfolio-eyebrow mb-4">{locale === "zh" ? "设计影响力" : "Impact"}</p>
+        <p className="portfolio-eyebrow mb-4">{locale === "zh" ? "数据" : "Impact"}</p>
         <h2 className="text-balance text-3xl font-semibold tracking-[-0.035em] text-white md:text-5xl">
           {locale === "zh" ? "设计创造价值，而不仅仅是界面。" : "Design creates value, not just interfaces."}
         </h2>
@@ -177,17 +168,47 @@ export default async function HomePage({ params }: Props) {
 
       <ImpactShowcase locale={locale} />
 
-      <Section className="experience-section" eyebrow="Experience" title={dict.home.experienceTitle}>
-        <div className="experience-trail-region" data-image-trail-surface id="experience">
-          <ImageTrail items={experienceTrailItems} variant={1} />
+      <Section
+        className="experience-section"
+        eyebrow="Project Timeline"
+        title={
+          locale === "zh" ? (
+            <>
+              项目时间线，
+              <br />
+              记录设计如何推动真实业务。
+            </>
+          ) : (
+            dict.home.experienceTitle
+          )
+        }
+      >
+        <div className="experience-trail-region" id="experience">
           <div className="experience-trail-content grid gap-5">
             {profile.experience.map((item) => (
-              <article className="grid gap-4 md:grid-cols-[180px_1fr]" key={item.company}>
-                <time className="font-mono text-sm text-white/50">{item.period}</time>
-                <div className="liquid-glass motion-card relative rounded-2xl p-6">
-                  <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white">{item.company}</h3>
-                  <p className="mt-1 text-sm font-medium text-white/55">{item.title[locale]}</p>
-                  <p className="mt-4 max-w-3xl leading-7 text-white/60">{item.body[locale]}</p>
+              <article
+                className="experience-row relative grid gap-4 md:grid-cols-[180px_1fr]"
+                data-image-trail-surface={item.trailItems ? true : undefined}
+                key={item.company}
+              >
+                {item.trailItems ? <ImageTrail items={item.trailItems} variant={1} /> : null}
+                <time className="relative z-[5] font-mono text-sm text-white/50">{item.period}</time>
+                <div className="experience-card liquid-glass motion-card relative rounded-2xl p-6">
+                  {item.logo ? (
+                    <Image
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute right-6 top-6 z-[5] h-11 w-11 rounded-xl object-cover"
+                      height={44}
+                      src={item.logo}
+                      width={44}
+                    />
+                  ) : null}
+                  <div className={`relative z-[5] ${item.logo ? "pr-16" : ""}`}>
+                    <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white">{item.displayName?.[locale] ?? item.company}</h3>
+                    <p className="mt-1 text-sm font-medium text-white/55">{item.title[locale]}</p>
+                  </div>
+                  <p className="relative z-[5] mt-4 max-w-3xl leading-7 text-white/60">{item.body[locale]}</p>
                 </div>
               </article>
             ))}
@@ -195,9 +216,9 @@ export default async function HomePage({ params }: Props) {
         </div>
       </Section>
 
-      <Section eyebrow="Articles" title={writingTitle}>
-        <div className="grid gap-5 md:grid-cols-3">
-          {profile.writingChannels.map((channel) => (
+      <Section eyebrow="Influence" id="impact" title={writingTitle}>
+        <div className="grid gap-5 md:grid-cols-2">
+          {profile.writingChannels.slice(0, 2).map((channel) => (
             <a
               className="group liquid-glass motion-card rounded-2xl p-6"
               href={channel.href}

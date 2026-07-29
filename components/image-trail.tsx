@@ -76,8 +76,20 @@ export function ImageTrail({ items = [], variant = 1 }: ImageTrailProps) {
       });
     };
 
+    const clampPosition = (position: Point, item: TrailItem): Point => {
+      const padding = 14;
+      const maxX = Math.max(padding, surfaceRect.width - item.width - padding);
+
+      return {
+        x: gsap.utils.clamp(padding, maxX, position.x - item.width / 2),
+        y: (surfaceRect.height - item.height) / 2
+      };
+    };
+
     const showNextImage = () => {
       const item = trailItems[itemIndex];
+      const startPosition = clampPosition(cachedPointer, item);
+      const endPosition = clampPosition(pointer, item);
       itemIndex = (itemIndex + 1) % trailItems.length;
       zIndex += 1;
 
@@ -94,15 +106,15 @@ export function ImageTrail({ items = [], variant = 1 }: ImageTrailProps) {
             scale: 0.78,
             rotation: gsap.utils.random(-4, 4),
             zIndex,
-            x: cachedPointer.x - item.width / 2,
-            y: cachedPointer.y - item.height / 2
+            x: startPosition.x,
+            y: startPosition.y
           },
           {
             duration: 0.42,
             ease: "power2.out",
             scale: 1,
-            x: pointer.x - item.width / 2,
-            y: pointer.y - item.height / 2,
+            x: endPosition.x,
+            y: endPosition.y,
             overwrite: "auto"
           },
           0
@@ -136,14 +148,25 @@ export function ImageTrail({ items = [], variant = 1 }: ImageTrailProps) {
       frameId = window.requestAnimationFrame(render);
     };
 
+    const activate = (event: MouseEvent) => {
+      if (active) return;
+
+      measure();
+      pointer = localPointerPosition(event, surfaceRect);
+      cachedPointer = { ...pointer };
+      lastPointer = { ...pointer };
+      active = true;
+      showNextImage();
+      frameId = window.requestAnimationFrame(render);
+    };
+
+    const handleMouseEnter = (event: MouseEvent) => {
+      activate(event);
+    };
+
     const handleMouseMove = (event: MouseEvent) => {
       if (!active) {
-        measure();
-        pointer = localPointerPosition(event, surfaceRect);
-        cachedPointer = { ...pointer };
-        lastPointer = { ...pointer };
-        active = true;
-        frameId = window.requestAnimationFrame(render);
+        activate(event);
         return;
       }
 
@@ -158,6 +181,7 @@ export function ImageTrail({ items = [], variant = 1 }: ImageTrailProps) {
 
     const resizeObserver = new ResizeObserver(measure);
     resizeObserver.observe(surface);
+    surface.addEventListener("mouseenter", handleMouseEnter);
     surface.addEventListener("mousemove", handleMouseMove);
     surface.addEventListener("mouseleave", handleMouseLeave);
 
@@ -165,6 +189,7 @@ export function ImageTrail({ items = [], variant = 1 }: ImageTrailProps) {
       active = false;
       if (frameId !== null) window.cancelAnimationFrame(frameId);
       resizeObserver.disconnect();
+      surface.removeEventListener("mouseenter", handleMouseEnter);
       surface.removeEventListener("mousemove", handleMouseMove);
       surface.removeEventListener("mouseleave", handleMouseLeave);
       gsap.killTweensOf(trailItems.flatMap((item) => [item.element, item.inner]));

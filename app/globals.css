@@ -662,6 +662,29 @@ a {
   z-index: 1;
 }
 
+.experience-row[data-image-trail-surface] {
+  isolation: isolate;
+  z-index: 1;
+}
+
+.experience-row[data-image-trail-surface]:hover {
+  z-index: 6;
+}
+
+.experience-row .image-trail {
+  z-index: 20;
+  overflow: visible;
+  border-radius: 0;
+}
+
+.experience-row .image-trail__item {
+  width: clamp(264px, 30vw, 380px);
+}
+
+.experience-row .image-trail__img {
+  filter: grayscale(1) contrast(1.05);
+}
+
 .image-trail {
   position: absolute;
   z-index: 4;
@@ -868,8 +891,7 @@ a {
 }
 
 .case-video-label,
-.case-video-number,
-.case-video-title {
+.case-video-number {
   position: absolute;
   z-index: 6;
 }
@@ -897,18 +919,6 @@ a {
   opacity: 0.72;
   text-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
   transform: translate(-50%, -50%);
-}
-
-.case-video-title {
-  left: 18px;
-  right: 18px;
-  bottom: 16px;
-  pointer-events: none;
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 
 .case-video-nav {
@@ -1312,13 +1322,6 @@ a {
 
   .case-video-number {
     font-size: 58px;
-  }
-
-  .case-video-title {
-    left: 10px;
-    right: 10px;
-    bottom: 9px;
-    font-size: 0.62rem;
   }
 
   .case-video-controls {

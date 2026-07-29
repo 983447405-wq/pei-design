@@ -137,6 +137,8 @@ export const profile = {
   experience: [
     {
       company: "Huxiang Technology",
+      displayName: { zh: "小影科技", en: "QuVideo" },
+      logo: "/company-logos/quvideo.png",
       title: { zh: "Design Lead", en: "Design Lead" },
       period: "2025 — Present",
       body: {
@@ -150,7 +152,16 @@ export const profile = {
     },
     {
       company: "Alibaba · Intime",
-      title: { zh: "Product Designer", en: "Product Designer" },
+      displayName: { zh: "阿里巴巴·银泰", en: "Alibaba · Intime" },
+      logo: "/company-logos/intime.jpg",
+      trailItems: [
+        "/experience-trail/intime-01.jpg",
+        "/experience-trail/intime-02.jpg",
+        "/experience-trail/intime-03.jpg",
+        "/experience-trail/intime-04.jpg",
+        "/experience-trail/intime-05.jpg"
+      ],
+      title: { zh: "UI", en: "UI" },
       period: "2024 — 2025",
       body: {
         zh: "负责 AI 购物助手、AI 虚拟试衣和 AI 购物体验创新，推动 GMV +36%、单日 GMV 超 ¥1M，并获得创新突破团队奖。",
@@ -163,7 +174,17 @@ export const profile = {
     },
     {
       company: "Alibaba Cloud",
-      title: { zh: "UI Designer", en: "UI Designer" },
+      displayName: { zh: "阿里巴巴·通义", en: "Alibaba · Tongyi" },
+      logo: "/company-logos/tongyi.png",
+      trailItems: [
+        "/experience-trail/tongyi-01.jpg",
+        "/experience-trail/tongyi-02.jpg",
+        "/experience-trail/tongyi-03.jpg",
+        "/experience-trail/tongyi-04.jpg",
+        "/experience-trail/tongyi-05.jpg",
+        "/experience-trail/tongyi-06.jpg"
+      ],
+      title: { zh: "UED", en: "UED" },
       period: "2023 — 2024",
       body: {
         zh: "参与通义、百炼相关 AI 交互体验和 Web 产品设计，支持多项 AI 运营活动和交互能力落地。",
@@ -176,7 +197,15 @@ export const profile = {
     },
     {
       company: "Ziroom",
-      title: { zh: "Product Designer", en: "Product Designer" },
+      displayName: { zh: "自如", en: "Ziroom" },
+      logo: "/company-logos/ziroom.webp",
+      trailItems: [
+        "/experience-trail/ziroom-01.jpg",
+        "/experience-trail/ziroom-02.jpg",
+        "/experience-trail/ziroom-03.jpg",
+        "/experience-trail/ziroom-04.jpg"
+      ],
+      title: { zh: "UI", en: "UI" },
       period: "2021 — 2024",
       body: {
         zh: "负责企业 SaaS 体验设计，覆盖 CRM、VR 看房、房源管理、客户管理和业务流程优化。",
@@ -276,6 +305,9 @@ export const profile = {
   motionShowcase: { title: Localized; description: Localized; items: string[] };
   experience: Array<{
     company: string;
+    displayName?: Localized;
+    logo?: string;
+    trailItems?: string[];
     title: Localized;
     period: string;
     body: Localized;

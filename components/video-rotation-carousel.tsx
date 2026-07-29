@@ -321,7 +321,6 @@ function VideoFace({
         />
       ) : null}
       <div className="case-video-poster" aria-hidden="true" />
-      <span className="case-video-title">{video.title[locale]}</span>
     </Link>
   );
 }

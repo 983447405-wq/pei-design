@@ -1,16 +1,17 @@
 import type { ReactNode } from "react";
 
 type SectionProps = {
+  id?: string;
   eyebrow?: string;
-  title?: string;
+  title?: ReactNode;
   description?: string;
   children?: ReactNode;
   className?: string;
 };
 
-export function Section({ eyebrow, title, description, children, className = "" }: SectionProps) {
+export function Section({ id, eyebrow, title, description, children, className = "" }: SectionProps) {
   return (
-    <section className={`shell motion-rise py-16 md:py-24 ${className}`}>
+    <section className={`shell motion-rise py-16 md:py-24 ${className}`} id={id}>
       {(eyebrow || title || description) && (
         <div className="mb-10 max-w-3xl">
           {eyebrow ? <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">{eyebrow}</p> : null}

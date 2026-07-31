@@ -3,11 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Code2, ImageIcon, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
-import { ProjectImageGallery } from "@/components/circular-gallery";
-import { ImageTrail } from "@/components/image-trail";
 import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
-import { VideoRotationCarousel } from "@/components/video-rotation-carousel";
 import { dictionary } from "@/content/dictionary";
 import { profile } from "@/content/profile";
 import { projects } from "@/content/projects";
@@ -111,17 +108,17 @@ export default async function HomePage({ params }: Props) {
             <Link className="portfolio-button portfolio-button-primary" href={localizedPath(locale, "/projects")}>
               <span>{dict.common.viewProjects}</span>
             </Link>
-            <a className="portfolio-button portfolio-button-secondary" href="#motion-showcase">
-              <span>{locale === "zh" ? "查看视频" : "View Video"}</span>
+            <a className="portfolio-button portfolio-button-secondary" href="#experience">
+              <span>{locale === "zh" ? "项目时间线" : "Project Timeline"}</span>
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
         </div>
 
         <a
-          aria-label={locale === "zh" ? "滚动到动效画廊" : "Scroll to motion showcase"}
+          aria-label={locale === "zh" ? "滚动到精选项目" : "Scroll to featured projects"}
           className="focus-ring absolute bottom-8 left-1/2 inline-flex -translate-x-1/2 flex-col items-center gap-3 rounded-full px-3 py-2 text-xs text-white/45 transition hover:text-white"
-          href="#motion-showcase"
+          href="#featured-projects"
         >
           <span className="h-12 w-px overflow-hidden rounded-full bg-white/15">
             <span className="motion-scroll-line block h-5 w-px rounded-full bg-white/80" />
@@ -130,11 +127,7 @@ export default async function HomePage({ params }: Props) {
         </a>
       </section>
 
-      <VideoRotationCarousel locale={locale} />
-
-      <ProjectImageGallery locale={locale} />
-
-      <Section eyebrow="Featured Projects" title={projectTitle} description={dict.projects.subtitle}>
+      <Section eyebrow="Featured Projects" id="featured-projects" title={projectTitle} description={dict.projects.subtitle}>
         <div className="grid gap-5 lg:grid-cols-2">
           {featured.map((project) => (
             <ProjectCard key={project.slug} locale={locale} project={project} />
@@ -185,33 +178,61 @@ export default async function HomePage({ params }: Props) {
       >
         <div className="experience-trail-region" id="experience">
           <div className="experience-trail-content grid gap-5">
-            {profile.experience.map((item) => (
-              <article
-                className="experience-row relative grid gap-4 md:grid-cols-[180px_1fr]"
-                data-image-trail-surface={item.trailItems ? true : undefined}
-                key={item.company}
-              >
-                {item.trailItems ? <ImageTrail items={item.trailItems} variant={1} /> : null}
-                <time className="relative z-[5] font-mono text-sm text-white/50">{item.period}</time>
-                <div className="experience-card liquid-glass motion-card relative rounded-2xl p-6">
-                  {item.logo ? (
-                    <Image
-                      alt=""
-                      aria-hidden="true"
-                      className="absolute right-6 top-6 z-[5] h-11 w-11 rounded-xl object-cover"
-                      height={44}
-                      src={item.logo}
-                      width={44}
-                    />
-                  ) : null}
-                  <div className={`relative z-[5] ${item.logo ? "pr-16" : ""}`}>
-                    <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white">{item.displayName?.[locale] ?? item.company}</h3>
-                    <p className="mt-1 text-sm font-medium text-white/55">{item.title[locale]}</p>
+            {profile.experience.map((item) => {
+              const hasFlipGallery = Boolean(item.trailItems?.length);
+
+              return (
+                <article
+                  className={`experience-row relative grid gap-4 md:grid-cols-[180px_1fr] ${
+                    hasFlipGallery ? "experience-row--flippable" : ""
+                  }`}
+                  key={item.company}
+                  tabIndex={hasFlipGallery ? 0 : undefined}
+                >
+                  <time className="font-mono text-sm text-white/50">{item.period}</time>
+                  <div className="experience-flip-shell">
+                    <div className="experience-flip-card">
+                      <div className="experience-card experience-flip-face experience-flip-front liquid-glass relative rounded-2xl p-6">
+                        {item.logo ? (
+                          <Image
+                            alt=""
+                            aria-hidden="true"
+                            className="absolute right-6 top-6 z-[5] h-11 w-11 rounded-xl object-cover"
+                            height={44}
+                            src={item.logo}
+                            width={44}
+                          />
+                        ) : null}
+                        <div className={`relative z-[5] ${item.logo ? "pr-16" : ""}`}>
+                          <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white">
+                            {item.displayName?.[locale] ?? item.company}
+                          </h3>
+                          <p className="mt-1 text-sm font-medium text-white/55">{item.title[locale]}</p>
+                        </div>
+                        <p className="relative z-[5] mt-4 max-w-3xl leading-7 text-white/60">{item.body[locale]}</p>
+                      </div>
+                      {hasFlipGallery ? (
+                        <div aria-hidden="true" className="experience-flip-back experience-flip-face rounded-2xl">
+                          <div className="experience-flip-gallery">
+                            {item.trailItems?.map((imageSrc) => (
+                              <span className="experience-flip-image" key={imageSrc}>
+                                <Image
+                                  alt=""
+                                  className="experience-flip-image-media"
+                                  fill
+                                  sizes="(min-width: 768px) 18vw, 32vw"
+                                  src={imageSrc}
+                                />
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
                   </div>
-                  <p className="relative z-[5] mt-4 max-w-3xl leading-7 text-white/60">{item.body[locale]}</p>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
       </Section>

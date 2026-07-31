@@ -139,6 +139,7 @@ export const profile = {
       company: "Huxiang Technology",
       displayName: { zh: "小影科技", en: "QuVideo" },
       logo: "/company-logos/quvideo.png",
+      trailItems: ["/project-cases/ai-short-drama-studio.svg", "/project-cases/falcocut.svg", "/project-cases/honor-smart-video.svg"],
       title: { zh: "Design Lead", en: "Design Lead" },
       period: "2025 — Present",
       body: {

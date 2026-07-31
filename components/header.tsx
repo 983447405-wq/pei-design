@@ -4,7 +4,7 @@ import { localizedPath, type Locale } from "@/lib/i18n";
 import { LanguageToggle } from "@/components/language-toggle";
 
 const navItems = [
-  [{ zh: "视频", en: "Video" }, "/#motion-showcase"],
+  [{ zh: "时间线", en: "Timeline" }, "/#experience"],
   [{ zh: "项目", en: "Projects" }, "/projects"],
   [{ zh: "影响力", en: "Impact" }, "/#impact"],
   [{ zh: "文章", en: "Writing" }, "/blog"],

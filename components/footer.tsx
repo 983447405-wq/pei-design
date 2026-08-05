@@ -16,7 +16,7 @@ export function Footer({ locale }: { locale: Locale }) {
           <Link href={localizedPath(locale, "/about")} className="focus-ring rounded-md transition hover:text-text">
             {dict.nav.about}
           </Link>
-          <Link href={localizedPath(locale, "/blog")} className="focus-ring rounded-md transition hover:text-text">
+          <Link href={localizedPath(locale, "/#insights")} className="focus-ring rounded-md transition hover:text-text">
             {dict.nav.blog}
           </Link>
           <Link href={localizedPath(locale, "/resources")} className="focus-ring rounded-md transition hover:text-text">

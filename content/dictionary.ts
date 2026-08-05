@@ -12,7 +12,7 @@ export const dictionary = {
     },
     common: {
       availability: "可接受全职、自由职业和 AI 产品协作机会",
-      viewProjects: "查看项目",
+      viewProjects: "查看精选项目",
       viewResources: "查看资源",
       contactMe: "联系我",
       readMore: "阅读全文",
@@ -34,7 +34,7 @@ export const dictionary = {
       ctaBody: "如果你正在寻找一名能把 AI、产品体验和动效表达连接起来的设计师，可以直接联系我。"
     },
     about: {
-      title: "我用产品判断力、交互设计和视觉表达，把复杂 AI 能力变成清晰体验。",
+      title: "我用产品判断力、视觉设计和视觉表达，把复杂 AI 能力变成清晰体验。",
       intro:
         "过去的工作覆盖 AI 内容创作、AI 购物、虚拟试衣、智能视频、企业 SaaS 和设计系统。我关注的不只是界面好看，而是产品是否降低复杂度、创造清晰度，并交付可衡量的价值。"
     },
@@ -67,7 +67,7 @@ export const dictionary = {
     },
     common: {
       availability: "Available for full-time, freelance, and AI product collaboration",
-      viewProjects: "View projects",
+      viewProjects: "View Selected Work",
       viewResources: "View resources",
       contactMe: "Contact me",
       readMore: "Read more",

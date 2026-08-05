@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Code2, ImageIcon, PenLine, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Code2, Flame, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
 import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
@@ -17,7 +16,102 @@ type Props = {
 const backgroundVideoUrl =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4";
 
-const playgroundIcons = [ImageIcon, Sparkles, Code2];
+const insightIcons = [PenLine, Sparkles, Code2, PenLine, Flame];
+const heroTags = ["AI Product", "AIGC", "E-commerce", "Interaction"];
+
+const insightCards = [
+  {
+    category: "Product Writing",
+    title: {
+      zh: "如何用 Markdown 标注文档提升产品工作效能",
+      en: "Using Markdown annotation to improve product workflow efficiency"
+    },
+    description: {
+      zh: "用结构化标注提升需求、评审和协作中的文档效率。",
+      en: "Using structured annotation to improve product documentation, reviews, and collaboration."
+    },
+    metric: {
+      zh: "1.2K 阅读",
+      en: "1.2K reads"
+    },
+    platform: "人人都是产品经理",
+    date: "2026",
+    href: "https://www.woshipm.com/share/6194629.html"
+  },
+  {
+    category: "Design Thinking",
+    title: {
+      zh: "AI时代，设计师如何重新定义价值？",
+      en: "How designers redefine value in the AI era"
+    },
+    description: {
+      zh: "探索设计、AI与产品体验融合的新方向。",
+      en: "Exploring how design, AI, and product experience come together."
+    },
+    metric: {
+      zh: "8.6K 阅读",
+      en: "8.6K reads"
+    },
+    platform: "XHS",
+    date: "2026",
+    href: "/blog/llm-eval-for-designers"
+  },
+  {
+    category: "AI Workflow",
+    title: {
+      zh: "Codex、Claude Code 与设计工作流",
+      en: "Codex, Claude Code and design workflows"
+    },
+    description: {
+      zh: "探索 AI Coding 如何提升设计研发协作效率。",
+      en: "How AI coding improves collaboration between design and engineering."
+    },
+    metric: {
+      zh: "5.2K 阅读",
+      en: "5.2K reads"
+    },
+    platform: "Tutorial",
+    date: "2026",
+    href: "/blog/design-system-for-ai"
+  },
+  {
+    category: "Tutorial",
+    title: {
+      zh: "全网最邪修的 Claude Code 安装",
+      en: "The wildest Claude Code installation guide"
+    },
+    description: {
+      zh: "面向设计师和产品人的 AI Coding 工具安装与上手教程。",
+      en: "A practical setup guide for designers and product makers getting into AI coding."
+    },
+    metric: {
+      zh: "9.7K 阅读",
+      en: "9.7K reads"
+    },
+    platform: "优设",
+    date: "2026",
+    href: "https://www.uisdc.com/group/668627.html"
+  },
+  {
+    category: "Design",
+    title: {
+      zh: "识货 APP 竞品分析",
+      en: "Shihuo App Competitive Analysis"
+    },
+    description: {
+      zh: "从竞品结构、核心体验与视觉表达拆解消费决策路径。",
+      en: "A competitive analysis of product structure, core experience, and visual expression."
+    },
+    metric: {
+      zh: "1.1K 阅读",
+      en: "1.1K reads"
+    },
+    iconCount: 3,
+    platform: "ZCOOL",
+    date: "Portfolio",
+    href: "https://www.zcool.com.cn/work/ZNjczODc4ODg=.html"
+  }
+] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params;
@@ -25,7 +119,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dict = dictionary[locale];
 
   return {
-    title: locale === "zh" ? "Pei Jinxian | Product Designer" : "Pei Jinxian | Product Designer",
+    title: locale === "zh" ? "Pei Jinxian | AI Product Designer" : "Pei Jinxian | AI Product Designer",
     description: dict.home.subtitle
   };
 }
@@ -47,7 +141,7 @@ function ImpactShowcase({ locale }: { locale: Locale }) {
   return (
     <section className="shell motion-rise py-16 md:py-24" id="design-impact">
       <div className="mb-10 max-w-3xl">
-        <p className="portfolio-eyebrow mb-4">{locale === "zh" ? "数据" : "Impact"}</p>
+        <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">Impact</p>
         <h2 className="text-balance text-3xl font-semibold tracking-[-0.035em] text-white md:text-5xl">
           {locale === "zh" ? "设计创造价值，而不仅仅是界面。" : "Design creates value, not just interfaces."}
         </h2>
@@ -99,26 +193,25 @@ export default async function HomePage({ params }: Props) {
 
       <section className="portfolio-hero" id="home">
         <div className="mx-auto max-w-5xl">
-          <p className="mb-5 text-xs font-medium uppercase tracking-[0.22em] text-white/45">{profile.name} · UED / Product Design Lead</p>
+          <p className="hero-kicker mx-auto mb-6 max-w-xl text-xs font-medium uppercase text-white/52">
+            <span>{profile.name}</span>
+            <span>AI · Product · Experience Design</span>
+          </p>
           <h1 className="text-balance text-5xl font-semibold leading-[1.08] tracking-[-0.06em] md:text-7xl lg:text-8xl">
             <span className="portfolio-gradient-text animate-shiny block">{profile.role[locale]}</span>
           </h1>
-          <p className="mx-auto mt-8 max-w-xl text-balance text-base leading-[1.5] text-white/60 md:text-lg">{profile.tagline[locale]}</p>
+          <p className="mx-auto mt-8 max-w-xl text-balance text-base leading-[1.55] text-white/70 md:text-lg">{profile.tagline[locale]}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link className="portfolio-button portfolio-button-primary" href={localizedPath(locale, "/projects")}>
+            <a className="portfolio-button portfolio-button-primary" href="#featured-projects">
               <span>{dict.common.viewProjects}</span>
-            </Link>
-            <a className="portfolio-button portfolio-button-secondary" href="#experience">
-              <span>{locale === "zh" ? "项目时间线" : "Project Timeline"}</span>
-              <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
         </div>
 
         <a
-          aria-label={locale === "zh" ? "滚动到精选项目" : "Scroll to featured projects"}
+          aria-label={locale === "zh" ? "滚动到关于我" : "Scroll to about"}
           className="focus-ring absolute bottom-8 left-1/2 inline-flex -translate-x-1/2 flex-col items-center gap-3 rounded-full px-3 py-2 text-xs text-white/45 transition hover:text-white"
-          href="#featured-projects"
+          href="#about"
         >
           <span className="h-12 w-px overflow-hidden rounded-full bg-white/15">
             <span className="motion-scroll-line block h-5 w-px rounded-full bg-white/80" />
@@ -127,26 +220,34 @@ export default async function HomePage({ params }: Props) {
         </a>
       </section>
 
-      <Section eyebrow="Featured Projects" id="featured-projects" title={projectTitle} description={dict.projects.subtitle}>
-        <div className="grid gap-5 lg:grid-cols-2">
-          {featured.map((project) => (
-            <ProjectCard key={project.slug} locale={locale} project={project} />
-          ))}
+      <section className="shell motion-rise py-16 md:py-24" id="about">
+        <div className="mb-10 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div className="max-w-3xl">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">About</p>
+            <h2 className="text-balance text-3xl font-semibold tracking-[-0.035em] text-text md:text-5xl">{aboutTitle}</h2>
+          </div>
+          <div className="flex flex-wrap gap-2 lg:pb-2">
+            {heroTags.map((tag) => (
+              <span className="hero-tag" key={tag}>
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-      </Section>
-
-      <Section eyebrow="About" title={aboutTitle}>
-        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-          <div className="sticky top-24 hidden rounded-2xl border border-white/10 bg-black/30 p-6 backdrop-blur-xl lg:block">
-            <div className="grid gap-3">
-              {["LLM", "Product Strategy", "UX", "Web Coding", "Design Leadership"].map((item) => (
-                <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/60" key={item}>
-                  {item}
-                </span>
-              ))}
+        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div className="about-visual sticky top-24 hidden lg:block">
+            <div className="about-portrait">
+              <Image
+                alt={locale === "zh" ? "裴锦贤艺术照" : "Portrait of Pei Jinxian"}
+                className="about-portrait-image"
+                height={1046}
+                priority
+                src="/about-portrait.png"
+                width={1044}
+              />
             </div>
           </div>
-          <div className="max-w-3xl space-y-5">
+          <div className="about-copy max-w-3xl space-y-5">
             {profile.about[locale].map((paragraph) => (
               <p
                 className="text-pretty text-base font-normal leading-8 tracking-normal text-white/72 md:text-xl md:leading-9"
@@ -157,9 +258,7 @@ export default async function HomePage({ params }: Props) {
             ))}
           </div>
         </div>
-      </Section>
-
-      <ImpactShowcase locale={locale} />
+      </section>
 
       <Section
         className="experience-section"
@@ -186,6 +285,7 @@ export default async function HomePage({ params }: Props) {
                   className={`experience-row relative grid gap-4 md:grid-cols-[180px_1fr] ${
                     hasFlipGallery ? "experience-row--flippable" : ""
                   }`}
+                  data-company={item.company}
                   key={item.company}
                   tabIndex={hasFlipGallery ? 0 : undefined}
                 >
@@ -209,7 +309,11 @@ export default async function HomePage({ params }: Props) {
                           </h3>
                           <p className="mt-1 text-sm font-medium text-white/55">{item.title[locale]}</p>
                         </div>
-                        <p className="relative z-[5] mt-4 max-w-3xl leading-7 text-white/60">{item.body[locale]}</p>
+                        <div className="relative z-[5] mt-4 max-w-3xl space-y-3 leading-7 text-white/60">
+                          {(Array.isArray(item.body[locale]) ? item.body[locale] : [item.body[locale]]).map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </div>
                       </div>
                       {hasFlipGallery ? (
                         <div aria-hidden="true" className="experience-flip-back experience-flip-face rounded-2xl">
@@ -237,9 +341,19 @@ export default async function HomePage({ params }: Props) {
         </div>
       </Section>
 
+      <Section eyebrow="Featured Projects" id="featured-projects" title={projectTitle} description={dict.projects.subtitle}>
+        <div className="grid gap-5 lg:grid-cols-2">
+          {featured.map((project) => (
+            <ProjectCard key={project.slug} locale={locale} project={project} />
+          ))}
+        </div>
+      </Section>
+
+      <ImpactShowcase locale={locale} />
+
       <Section eyebrow="Influence" id="impact" title={writingTitle}>
-        <div className="grid gap-5 md:grid-cols-2">
-          {profile.writingChannels.slice(0, 2).map((channel) => (
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {profile.writingChannels.map((channel) => (
             <a
               className="group liquid-glass motion-card rounded-2xl p-6"
               href={channel.href}
@@ -258,23 +372,50 @@ export default async function HomePage({ params }: Props) {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Playground"
-        title={locale === "zh" ? "设计、AI 和动效之间的实验场。" : "Experiments at the intersection of design, AI, and motion."}
-      >
-        <div className="columns-1 gap-5 md:columns-2 lg:columns-3">
-          {profile.playground.map((item, index) => {
-            const Icon = playgroundIcons[index % playgroundIcons.length];
+      <section className="shell motion-rise py-16 md:py-24" id="insights">
+        <div className="mb-10 max-w-4xl">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">Insights</p>
+          <h2 className="insights-title text-balance text-4xl font-bold leading-none text-white md:text-6xl">INSIGHTS</h2>
+          <p className="mt-5 text-base leading-8 text-white/55 md:text-lg">
+            {locale === "zh" ? "关于 AI、产品设计与未来体验的思考。" : "Thoughts on AI, product design, and future experiences."}
+          </p>
+        </div>
+        <div className="grid gap-5 md:grid-cols-2">
+          {insightCards.map((card, index) => {
+            const Icon = insightIcons[index % insightIcons.length];
+            const isExternal = card.href.startsWith("http");
             return (
-              <div className="liquid-glass motion-card mb-5 break-inside-avoid rounded-2xl p-6" key={item}>
-                <Icon className="mb-10 h-5 w-5 text-white/55" />
-                <h3 className="text-xl font-semibold tracking-[-0.035em] text-white">{item}</h3>
-                <div className="mt-8 h-24 rounded-xl border border-white/10 bg-[radial-gradient(circle_at_30%_20%,rgba(0,210,255,0.18),transparent_12rem),linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.015))]" />
-              </div>
+              <a
+                className="insight-card group liquid-glass rounded-2xl p-6"
+                href={isExternal ? card.href : localizedPath(locale, card.href)}
+                key={card.title.en}
+                rel={isExternal ? "noreferrer" : undefined}
+                target={isExternal ? "_blank" : undefined}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="insight-category">{card.category}</span>
+                  <ArrowUpRight className="h-5 w-5 text-white/38 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" />
+                </div>
+                <div className="mt-10 flex gap-1.5">
+                  {Array.from({ length: "iconCount" in card ? card.iconCount : 1 }).map((_, iconIndex) => (
+                    <Icon className="h-5 w-5 text-white/45 transition group-hover:text-blue" key={iconIndex} />
+                  ))}
+                </div>
+                <h3 className="mt-6 text-balance text-2xl font-semibold tracking-[-0.035em] text-white md:text-3xl">
+                  {card.title[locale]}
+                </h3>
+                <p className="mt-4 max-w-xl text-sm leading-6 text-white/56 md:text-base md:leading-7">{card.description[locale]}</p>
+                <div className="insight-meta mt-10 flex items-center justify-between gap-4 border-t border-white/10 pt-5 text-xs text-white/45">
+                  <span className="insight-views font-mono uppercase tracking-[0.12em]">{card.metric[locale]}</span>
+                  <span>
+                    {card.platform} · {card.date}
+                  </span>
+                </div>
+              </a>
             );
           })}
         </div>
-      </Section>
+      </section>
 
       <ContactCTA locale={locale} />
     </main>

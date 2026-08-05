@@ -1,16 +1,17 @@
 import type { Locale } from "@/lib/i18n";
 
 type Localized = Record<Locale, string>;
+type LocalizedParagraphs = Record<Locale, string | string[]>;
 
 export const profile = {
   name: "Pei Jinxian",
   role: {
-    zh: "Product Designer",
-    en: "Product Designer"
+    zh: "AI Product Designer",
+    en: "AI Product Designer"
   },
   tagline: {
-    zh: "用 AI、交互与动效设计有温度的数字体验。",
-    en: "Designing thoughtful digital experiences with AI, interaction and motion."
+    zh: "用 AI 与体验设计，打造下一代智能体验。",
+    en: "Designing intelligent products with AI, interaction and motion."
   },
   meta: {
     zh: "5+ 年经验 · AI 产品 · UX · 动效 · Design System",
@@ -28,7 +29,7 @@ export const profile = {
   about: {
     zh: [
       "我专注于 AI 大模型产品、企业平台和消费级应用的体验设计，致力于将复杂的技术能力转化为简单、可信且易于使用的产品体验。",
-      "我相信优秀的设计不仅来自视觉表达，更源于产品思考、用户洞察与技术理解。我的工作涵盖 AI Workflow、交互设计、Design System 与前端实现，不断探索设计与 AI 的融合方式。",
+      "我相信优秀的设计不仅来自视觉表达，更源于产品思考、用户洞察与技术理解。我的工作涵盖 AI Workflow、视觉设计、Design System 与前端实现，不断探索设计与 AI 的融合方式。",
       "除了产品设计，我也持续研究 Web Coding、AIGC 与创意开发，通过代码、动画和 AI 工具构建更具表现力的数字体验。"
     ],
     en: [
@@ -139,7 +140,12 @@ export const profile = {
       company: "Huxiang Technology",
       displayName: { zh: "小影科技", en: "QuVideo" },
       logo: "/company-logos/quvideo.png",
-      trailItems: ["/project-cases/ai-short-drama-studio.svg", "/project-cases/falcocut.svg", "/project-cases/honor-smart-video.svg"],
+      trailItems: [
+        "/experience-trail/quvideo-01.png",
+        "/experience-trail/quvideo-02.png",
+        "/experience-trail/quvideo-03.png",
+        "/experience-trail/quvideo-04.png"
+      ],
       title: { zh: "Design Lead", en: "Design Lead" },
       period: "2025 — Present",
       body: {
@@ -152,48 +158,30 @@ export const profile = {
       }
     },
     {
-      company: "Alibaba · Intime",
-      displayName: { zh: "阿里巴巴·银泰", en: "Alibaba · Intime" },
-      logo: "/company-logos/intime.jpg",
-      trailItems: [
-        "/experience-trail/intime-01.jpg",
-        "/experience-trail/intime-02.jpg",
-        "/experience-trail/intime-03.jpg",
-        "/experience-trail/intime-04.jpg",
-        "/experience-trail/intime-05.jpg"
-      ],
-      title: { zh: "UI", en: "UI" },
-      period: "2024 — 2025",
-      body: {
-        zh: "负责 AI 购物助手、AI 虚拟试衣和 AI 购物体验创新，推动 GMV +36%、单日 GMV 超 ¥1M，并获得创新突破团队奖。",
-        en: "Owned AI Shopping Assistant, AI Virtual Try-on, and AI shopping experience innovation, driving +36% GMV growth, ¥1M+ single-day GMV, and innovation awards."
-      },
-      highlights: {
-        zh: ["GMV +36%", "单日 GMV ¥1M+", "中国零售数字化创新案例 2024", "创新突破团队奖"],
-        en: ["GMV +36%", "¥1M+ single-day GMV", "China Retail Digital Innovation Case 2024", "Innovation Breakthrough Team Award"]
-      }
-    },
-    {
-      company: "Alibaba Cloud",
-      displayName: { zh: "阿里巴巴·通义", en: "Alibaba · Tongyi" },
+      company: "Alibaba",
+      displayName: { zh: "阿里巴巴", en: "Alibaba" },
       logo: "/company-logos/tongyi.png",
       trailItems: [
-        "/experience-trail/tongyi-01.jpg",
-        "/experience-trail/tongyi-02.jpg",
-        "/experience-trail/tongyi-03.jpg",
-        "/experience-trail/tongyi-04.jpg",
-        "/experience-trail/tongyi-05.jpg",
-        "/experience-trail/tongyi-06.jpg"
+        "/experience-trail/alibaba-01.png",
+        "/experience-trail/alibaba-02.png",
+        "/experience-trail/alibaba-03.png",
+        "/experience-trail/alibaba-04.png"
       ],
-      title: { zh: "UED", en: "UED" },
-      period: "2023 — 2024",
+      title: { zh: "UI / UED", en: "UI / UED" },
+      period: "2024 — 2025",
       body: {
-        zh: "参与通义、百炼相关 AI 交互体验和 Web 产品设计，支持多项 AI 运营活动和交互能力落地。",
-        en: "Designed AI interaction experiences and web products for Tongyi and Bailian, supporting AI operation campaigns and interaction features."
+        zh: [
+          "负责 AI 购物助手、AI 虚拟试衣和 AI 购物体验创新，推动 GMV +36%、单日 GMV 超 ¥1M，并获得创新突破团队奖。",
+          "参与通义、百炼相关 AI 交互体验和 Web 产品设计，支持多项 AI 运营活动和交互能力落地。"
+        ],
+        en: [
+          "Owned AI Shopping Assistant, AI Virtual Try-on, and AI shopping experience innovation, driving +36% GMV growth, ¥1M+ single-day GMV, and innovation awards.",
+          "Designed AI interaction experiences and web products for Tongyi and Bailian, supporting AI operation campaigns and interaction features."
+        ]
       },
       highlights: {
-        zh: ["Tongyi App", "Bailian", "AI Interaction", "Operation Campaigns"],
-        en: ["Tongyi App", "Bailian", "AI Interaction", "Operation Campaigns"]
+        zh: ["GMV +36%", "单日 GMV ¥1M+", "中国零售数字化创新案例 2024", "Tongyi App", "Bailian"],
+        en: ["GMV +36%", "¥1M+ single-day GMV", "China Retail Digital Innovation Case 2024", "Tongyi App", "Bailian"]
       }
     },
     {
@@ -253,17 +241,22 @@ export const profile = {
     {
       name: "人人都是产品经理",
       topics: ["Product Thinking"],
-      href: "https://www.woshipm.com/"
+      href: "https://www.woshipm.com/share/6194629.html"
     },
     {
       name: "微信公众号",
       topics: ["Design Notes"],
-      href: "https://mp.weixin.qq.com/"
+      href: "https://mp.weixin.qq.com/s/r2GD-v4bwLayTrSYN0YAzQ"
     },
     {
       name: "小红书",
       topics: ["AI Design"],
-      href: "https://www.xiaohongshu.com/"
+      href: "https://www.xiaohongshu.com/user/profile/5f53a67900000000010001d6?xsec_token=ABOJpmH_naOgbJbq7Td_JXL3xkqLUVamWBvTclmWllwII%3D&xsec_source=pc_search&m_source=baidusem"
+    },
+    {
+      name: "站酷",
+      topics: ["Portfolio"],
+      href: "https://www.zcool.com.cn/u/20817353"
     }
   ],
   playground: [
@@ -278,13 +271,13 @@ export const profile = {
     "Shader Experiments"
   ],
   contactOptions: {
-    zh: ["AI 产品设计负责人", "UI/UX 设计", "0→1 AI 产品顾问", "自由职业", "内容与设计协作"],
-    en: ["AI product design lead", "UI/UX design", "0-to-1 AI product consulting", "Freelance", "Content and design collaboration"]
+    zh: ["AI 产品设计负责人", "UI/UX 设计", "0→1 AI 产品顾问"],
+    en: ["AI product design lead", "UI/UX design", "0-to-1 AI product consulting"]
   },
   socialLinks: [
     { label: "Email", href: "mailto:pjx983447405@outlook.com" },
     { label: "GitHub", href: "https://github.com/983447405-wq" },
-    { label: "Blog", href: "/blog" }
+    { label: "Blog", href: "/#insights" }
   ]
 } satisfies {
   name: string;
@@ -311,7 +304,7 @@ export const profile = {
     trailItems?: string[];
     title: Localized;
     period: string;
-    body: Localized;
+    body: LocalizedParagraphs;
     highlights: Record<Locale, string[]>;
   }>;
   philosophy: { title: Localized; body: Localized };

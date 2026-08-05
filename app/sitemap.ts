@@ -8,7 +8,7 @@ import { resources } from "@/content/resources";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/projects", "/about", "/blog", "/resources", "/contact"];
+  const staticRoutes = ["", "/projects", "/about", "/resources", "/contact"];
   const entries: MetadataRoute.Sitemap = [];
 
   locales.forEach((locale) => {

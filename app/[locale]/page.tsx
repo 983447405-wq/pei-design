@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Code2, Flame, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
 import { ProjectCard } from "@/components/project-card";
+import { RecognitionSection } from "@/components/recognition-section";
 import { Section } from "@/components/section";
 import { dictionary } from "@/content/dictionary";
 import { profile } from "@/content/profile";
@@ -39,40 +40,22 @@ const insightCards = [
     href: "https://www.woshipm.com/share/6194629.html"
   },
   {
-    category: "Design Thinking",
+    category: "WeChat",
     title: {
-      zh: "AI时代，设计师如何重新定义价值？",
-      en: "How designers redefine value in the AI era"
+      zh: "看到前产品写下 7.5 万字《置身钉内》后，我开始理解：为什么 AI 产品越来越难做成",
+      en: "Why AI products are getting harder to build"
     },
     description: {
-      zh: "探索设计、AI与产品体验融合的新方向。",
-      en: "Exploring how design, AI, and product experience come together."
+      zh: "从一篇深度产品复盘，重新理解 AI 产品、组织协作与真实用户价值。",
+      en: "Rethinking AI products, team collaboration, and real user value through a product deep dive."
     },
     metric: {
-      zh: "8.6K 阅读",
-      en: "8.6K reads"
+      zh: "100+ 阅读",
+      en: "100+ reads"
     },
-    platform: "XHS",
+    platform: "微信公众号",
     date: "2026",
-    href: "/blog/llm-eval-for-designers"
-  },
-  {
-    category: "AI Workflow",
-    title: {
-      zh: "Codex、Claude Code 与设计工作流",
-      en: "Codex, Claude Code and design workflows"
-    },
-    description: {
-      zh: "探索 AI Coding 如何提升设计研发协作效率。",
-      en: "How AI coding improves collaboration between design and engineering."
-    },
-    metric: {
-      zh: "5.2K 阅读",
-      en: "5.2K reads"
-    },
-    platform: "Tutorial",
-    date: "2026",
-    href: "/blog/design-system-for-ai"
+    href: "https://mp.weixin.qq.com/s/ppbFJpUQmFvN5nKQs9TFGg"
   },
   {
     category: "Tutorial",
@@ -340,6 +323,8 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </Section>
+
+      <RecognitionSection locale={locale} />
 
       <Section eyebrow="Featured Projects" id="featured-projects" title={projectTitle} description={dict.projects.subtitle}>
         <div className="grid gap-5 lg:grid-cols-2">

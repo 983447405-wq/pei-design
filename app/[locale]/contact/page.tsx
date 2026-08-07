@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Github, Mail, PenLine, Sparkles } from "lucide-react";
+import { Mail, Phone, Sparkles } from "lucide-react";
 import { dictionary } from "@/content/dictionary";
 import { profile } from "@/content/profile";
 import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
@@ -25,8 +26,7 @@ export default async function ContactPage({ params }: Props) {
   const dict = dictionary[locale];
   const socialIcon = {
     Email: Mail,
-    GitHub: Github,
-    Blog: PenLine
+    Phone
   };
 
   return (
@@ -51,7 +51,40 @@ export default async function ContactPage({ params }: Props) {
               {profile.socialLinks.map((link) => {
                 const Icon = socialIcon[link.label as keyof typeof socialIcon] ?? Mail;
                 const className =
-                  "focus-ring grid h-12 w-12 place-items-center rounded-full border border-line bg-panel2 text-muted transition hover:border-lineStrong hover:bg-white/[0.06] hover:text-text";
+                  "focus-ring contact-action group relative grid h-12 w-12 place-items-center rounded-full border border-line bg-panel2 text-muted transition hover:border-lineStrong hover:bg-white/[0.06] hover:text-text";
+
+                if (link.label === "WeChat") {
+                  return (
+                    <button aria-label={link.label} className={className} key={link.label} type="button">
+                      <Image alt="" aria-hidden="true" className="contact-wechat-icon" height={30} src="/wechat-icon.svg" width={30} />
+                      <span className="contact-tooltip contact-tooltip-qr" role="tooltip">
+                        <Image alt="WeChat QR code" height={202} src="/wechat-qr.jpg" width={160} />
+                      </span>
+                    </button>
+                  );
+                }
+
+                if (link.label === "Phone") {
+                  return (
+                    <a aria-label={link.label} className={className} href={link.href} key={link.label}>
+                      <Icon className="h-5 w-5" />
+                      <span className="contact-tooltip contact-tooltip-text" role="tooltip">
+                        15272508556
+                      </span>
+                    </a>
+                  );
+                }
+
+                if (link.label === "Email") {
+                  return (
+                    <button aria-label={link.label} className={className} key={link.label} type="button">
+                      <Icon className="h-5 w-5" />
+                      <span className="contact-tooltip contact-tooltip-text" role="tooltip">
+                        {profile.email}
+                      </span>
+                    </button>
+                  );
+                }
 
                 if (link.href.startsWith("/")) {
                   return (

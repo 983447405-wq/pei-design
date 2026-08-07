@@ -276,8 +276,8 @@ export const profile = {
   },
   socialLinks: [
     { label: "Email", href: "mailto:pjx983447405@outlook.com" },
-    { label: "GitHub", href: "https://github.com/983447405-wq" },
-    { label: "Blog", href: "/#insights" }
+    { label: "WeChat", href: "#" },
+    { label: "Phone", href: "tel:15272508556" }
   ]
 } satisfies {
   name: string;

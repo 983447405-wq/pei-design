@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Code2, Flame, PenLine, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Flame, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
 import { ProjectCard } from "@/components/project-card";
 import { RecognitionSection } from "@/components/recognition-section";
@@ -17,7 +17,7 @@ type Props = {
 const backgroundVideoUrl =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4";
 
-const insightIcons = [PenLine, Sparkles, Code2, PenLine, Flame];
+const insightIcons = [PenLine, Sparkles, PenLine, Flame];
 const heroTags = ["AI Product", "AIGC", "E-commerce", "Interaction"];
 
 const insightCards = [
@@ -218,7 +218,7 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-          <div className="about-visual sticky top-24 hidden lg:block">
+          <div className="about-visual lg:sticky lg:top-24">
             <div className="about-portrait">
               <Image
                 alt={locale === "zh" ? "裴锦贤艺术照" : "Portrait of Pei Jinxian"}

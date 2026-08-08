@@ -402,21 +402,6 @@ a {
   transform: translate3d(-50%, 0, 0) scale(1);
 }
 
-.contact-wechat-icon {
-  width: 1.875rem;
-  height: 1.875rem;
-  opacity: 0.72;
-  transition:
-    opacity 180ms var(--ease-out),
-    filter 180ms var(--ease-out);
-}
-
-.contact-action:hover .contact-wechat-icon,
-.contact-action:focus-visible .contact-wechat-icon {
-  opacity: 1;
-  filter: brightness(2.1);
-}
-
 .contact-tooltip-qr {
   width: 10rem;
   overflow: hidden;

@@ -13,17 +13,18 @@ const coverGradient = {
 } satisfies Record<Project["tone"], string>;
 
 const coverImageBySlug: Partial<Record<Project["slug"], string>> = {
-  "ai-short-drama-studio": "/project-cases/ai-short-drama-studio.svg",
+  "ai-short-drama-studio": "/project-cases/ai-short-drama-studio-cover.png",
   falcocut: "/project-cases/falcocut.svg",
   "honor-smart-video": "/project-cases/honor-smart-video.svg",
-  "ai-shopping-assistant": "/project-cases/ai-shopping-assistant.svg",
+  "ai-shopping-assistant": "/project-cases/ai-shopping-assistant-cover.png",
   "ai-virtual-try-on": "/project-cases/ai-virtual-try-on.svg",
-  "tongyi-app": "/project-cases/tongyi-app.svg",
-  "ziroom-enterprise-platform": "/project-cases/ziroom-enterprise-platform.svg"
+  "tongyi-app": "/project-cases/tongyi-app-cover.png",
+  "ziroom-enterprise-platform": "/project-cases/ziroom-enterprise-platform-cover.png"
 };
 
-export function ProjectCard({ project, locale }: { project: Project; locale: Locale }) {
+export function ProjectCard({ project, locale, titleOverride }: { project: Project; locale: Locale; titleOverride?: string }) {
   const coverImage = coverImageBySlug[project.slug];
+  const title = titleOverride ?? project.title[locale];
 
   return (
     <Link
@@ -31,13 +32,13 @@ export function ProjectCard({ project, locale }: { project: Project; locale: Loc
       href={localizedPath(locale, `/projects/${project.slug}`)}
     >
       <div
-        className="relative aspect-[16/10] overflow-hidden bg-black"
+        className="relative aspect-video overflow-hidden bg-black"
         style={{ "--project-cover": coverGradient[project.tone] } as CSSProperties}
       >
         {coverImage ? (
           <Image
-            alt={`${project.title[locale]} project cover`}
-            className="object-cover opacity-90 transition duration-700 group-hover:scale-[1.035] group-hover:opacity-100"
+            alt={`${title} project cover`}
+            className="object-cover opacity-100 transition duration-700 ease-out group-hover:scale-[1.04]"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             src={coverImage}
@@ -68,7 +69,7 @@ export function ProjectCard({ project, locale }: { project: Project; locale: Loc
           ))}
         </div>
         <div className="mb-3 flex items-start justify-between gap-4">
-          <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white md:text-3xl">{project.title[locale]}</h3>
+          <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white md:text-3xl">{title}</h3>
           <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-white/45 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" />
         </div>
         <p className="max-w-xl leading-7 text-white/55">{project.summary[locale]}</p>

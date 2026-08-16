@@ -329,7 +329,12 @@ export default async function HomePage({ params }: Props) {
       <Section eyebrow="Featured Projects" id="featured-projects" title={projectTitle} description={dict.projects.subtitle}>
         <div className="grid gap-5 lg:grid-cols-2">
           {featured.map((project) => (
-            <ProjectCard key={project.slug} locale={locale} project={project} />
+            <ProjectCard
+              key={project.slug}
+              locale={locale}
+              project={project}
+              titleOverride={locale === "zh" && project.slug === "ai-short-drama-studio" ? "AI短剧出海平台" : undefined}
+            />
           ))}
         </div>
       </Section>

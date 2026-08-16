@@ -39,7 +39,7 @@ export const projects: Project[] = [
       en: "AI Short Drama Studio"
     },
     summary: {
-      zh: "AI 短剧内容创作平台，从 0→1 建立创作流程、设计语言、组件系统和动效体验。",
+      zh: "AI短剧出海",
       en: "An AI content creation platform for short drama production, built from 0 to 1 with workflow, design language, component system, and motion experience."
     },
     role: {
@@ -124,13 +124,13 @@ export const projects: Project[] = [
     year: "2025",
     featured: true,
     tone: "cyan",
-    tags: ["AI", "Video", "Workflow"],
+    tags: ["AI", "E-commerce", "Agent", "Workflow"],
     title: {
       zh: "FalcoCut",
       en: "FalcoCut"
     },
     summary: {
-      zh: "AI 视频编辑平台，通过数据驱动迭代优化创作者工作流、界面一致性和 AI 辅助剪辑体验。",
+      zh: "面向北美跨境电商与内容创作者的 AI 内容生产平台，覆盖视频生成、数字人、爆款复刻、Agent 与 Workflow 等核心能力。",
       en: "An AI video editing platform optimized through data-driven iteration across creator workflows, interface consistency, and AI-assisted editing."
     },
     role: {
@@ -138,7 +138,7 @@ export const projects: Project[] = [
       en: "Product Designer / Creator Workflow"
     },
     impact: {
-      zh: "围绕创作效率和 AI 辅助剪辑建立更轻、更稳定的编辑体验。",
+      zh: "围绕内容生产效率与商业转化，持续优化生成链路、核心功能曝光及产品体验，推动多个核心功能导出率超过 55%。",
       en: "Created a lighter and more consistent editing experience around creator efficiency and AI-assisted editing."
     },
     media: [
@@ -362,7 +362,7 @@ export const projects: Project[] = [
   {
     slug: "ai-virtual-try-on",
     year: "2024",
-    featured: true,
+    featured: false,
     tone: "violet",
     tags: ["AI", "Virtual Try-on", "Retail"],
     title: {
@@ -536,7 +536,7 @@ export const projects: Project[] = [
       en: "Product Designer / Enterprise UX"
     },
     impact: {
-      zh: "通过用户中心设计提升复杂业务系统的操作效率和流程清晰度。",
+      zh: "通过体验设计提升复杂业务系统的操作效率和流程清晰度。",
       en: "Improved operational efficiency and workflow clarity in complex business systems through user-centered design."
     },
     media: [

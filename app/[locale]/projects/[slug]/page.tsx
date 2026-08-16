@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BarChart3, FileText, ImageIcon, MousePointer2, Play } from "lucide-react";
@@ -16,6 +17,41 @@ const mediaIcon = {
   PDF: FileText,
   Video: Play,
   Prototype: MousePointer2
+};
+
+const projectImageSequences: Partial<Record<string, string[]>> = {
+  "ai-shopping-assistant": ["23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "34", "35", "36"].map(
+    (name) => `/project-details/ai-shopping-assistant/${name}.png`
+  ),
+  "tongyi-app": ["04", "05", "07", "08", "09", "10", "11", "12", "14-updated", "15", "17", "19", "20", "21", "22"].map(
+    (name) => `/project-details/tongyi-app/${name}.png`
+  ),
+  "ziroom-enterprise-platform": [
+    "03",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "31.2",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "40"
+  ].map((name) => `/project-details/ziroom-enterprise-platform/${name}.png`)
 };
 
 export function generateStaticParams() {
@@ -59,6 +95,9 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!project) notFound();
 
   const dict = dictionary[locale];
+  const hideHeroMetrics = project.slug === "ai-shopping-assistant";
+  const projectImages = projectImageSequences[project.slug] ?? [];
+  const hasProjectImages = projectImages.length > 0;
   const canonicalUrl = absoluteUrl(localizedPath(locale, `/projects/${project.slug}`));
   const jsonLd = {
     "@context": "https://schema.org",
@@ -102,77 +141,102 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       <Link
         className="focus-ring mb-10 inline-flex items-center gap-2 rounded-md text-sm text-muted transition hover:text-text"
-        href={localizedPath(locale, "/projects")}
+        href={`${localizedPath(locale, "")}#featured-projects`}
       >
         <ArrowLeft className="h-4 w-4" />
         {dict.common.backToList}
       </Link>
 
-      <section className="glass gradient-border overflow-hidden rounded-2xl">
-        <div className="grid gap-8 p-6 md:p-10 lg:grid-cols-[1fr_0.72fr]">
-          <div>
-            <div className="mb-5 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs text-muted" key={tag}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">
-              {project.year} / {project.role[locale]}
-            </p>
-            <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl">
-              {project.title[locale]}
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-muted md:text-xl">{project.summary[locale]}</p>
-          </div>
-
-          <div className="rounded-2xl border border-line bg-panel p-5">
-            <BarChart3 className="mb-6 h-6 w-6 text-blue" />
-            <div className="grid gap-3">
-              {project.metrics.map((metric) => (
-                <div className="rounded-xl border border-line bg-ink/45 p-4" key={metric.label.en}>
-                  <strong className="block text-2xl text-text">{metric.value}</strong>
-                  <span className="text-sm text-muted">{metric.label[locale]}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-8 grid gap-4 md:grid-cols-3">
-        {project.media.map((asset) => {
-          const Icon = mediaIcon[asset.type];
-          return (
-            <div className="glass motion-card rounded-2xl p-5" key={asset.label.en}>
-              <Icon className="mb-8 h-6 w-6 text-blue" />
-              <span className="font-mono text-xs text-muted">{asset.type}</span>
-              <h2 className="mt-3 text-xl font-semibold text-text">{asset.label[locale]}</h2>
-              <p className="mt-3 leading-7 text-muted">{asset.detail[locale]}</p>
-            </div>
-          );
-        })}
-      </section>
-
-      <section className="mt-8 grid gap-5">
-        {caseSections.map((section, index) => (
-          <div className="glass rounded-2xl p-6 md:p-8" key={section.label}>
-            <span className="font-mono text-xs text-blue">0{index + 1}</span>
-            <h2 className="mt-5 text-2xl font-semibold tracking-[-0.035em] text-text md:text-3xl">{section.label}</h2>
-            {section.body ? <p className="mt-4 text-base leading-8 text-muted md:text-lg">{section.body}</p> : null}
-            {section.list ? (
-              <ul className="mt-5 grid gap-3">
-                {section.list.map((item) => (
-                  <li className="rounded-xl border border-line bg-panel/70 p-4 leading-7 text-muted" key={item}>
-                    {item}
-                  </li>
+      {hasProjectImages ? null : (
+        <section className="glass gradient-border overflow-hidden rounded-2xl">
+          <div className={`grid gap-8 p-6 md:p-10 ${hideHeroMetrics ? "" : "lg:grid-cols-[1fr_0.72fr]"}`}>
+            <div>
+              <div className="mb-5 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span className="rounded-md border border-line bg-panel2 px-3 py-1.5 font-mono text-xs text-muted" key={tag}>
+                    {tag}
+                  </span>
                 ))}
-              </ul>
-            ) : null}
+              </div>
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-blue">
+                {project.year} / {project.role[locale]}
+              </p>
+              <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-[-0.055em] text-text md:text-6xl">
+                {project.title[locale]}
+              </h1>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-muted md:text-xl">{project.summary[locale]}</p>
+            </div>
+
+            {hideHeroMetrics ? null : (
+              <div className="rounded-2xl border border-line bg-panel p-5">
+                <BarChart3 className="mb-6 h-6 w-6 text-blue" />
+                <div className="grid gap-3">
+                  {project.metrics.map((metric) => (
+                    <div className="rounded-xl border border-line bg-ink/45 p-4" key={metric.label.en}>
+                      <strong className="block text-2xl text-text">{metric.value}</strong>
+                      <span className="text-sm text-muted">{metric.label[locale]}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
-        ))}
-      </section>
+        </section>
+      )}
+
+      {hasProjectImages ? (
+        <section className="mt-8 grid gap-5">
+          {projectImages.map((src, index) => (
+            <div className="overflow-hidden rounded-2xl bg-black" key={src}>
+              <Image
+                alt={`${project.title[locale]} project page ${index + 1}`}
+                className="h-auto w-full select-none"
+                draggable={false}
+                height={1080}
+                priority={index === 0}
+                sizes="(min-width: 1280px) 1200px, 100vw"
+                src={src}
+                width={1920}
+              />
+            </div>
+          ))}
+        </section>
+      ) : (
+        <>
+          <section className="mt-8 grid gap-4 md:grid-cols-3">
+            {project.media.map((asset) => {
+              const Icon = mediaIcon[asset.type];
+              return (
+                <div className="glass motion-card rounded-2xl p-5" key={asset.label.en}>
+                  <Icon className="mb-8 h-6 w-6 text-blue" />
+                  <span className="font-mono text-xs text-muted">{asset.type}</span>
+                  <h2 className="mt-3 text-xl font-semibold text-text">{asset.label[locale]}</h2>
+                  <p className="mt-3 leading-7 text-muted">{asset.detail[locale]}</p>
+                </div>
+              );
+            })}
+          </section>
+
+          <section className="mt-8 grid gap-5">
+            {caseSections.map((section, index) => (
+              <div className="glass rounded-2xl p-6 md:p-8" key={section.label}>
+                <span className="font-mono text-xs text-blue">0{index + 1}</span>
+                <h2 className="mt-5 text-2xl font-semibold tracking-[-0.035em] text-text md:text-3xl">{section.label}</h2>
+                {section.body ? <p className="mt-4 text-base leading-8 text-muted md:text-lg">{section.body}</p> : null}
+                {section.list ? (
+                  <ul className="mt-5 grid gap-3">
+                    {section.list.map((item) => (
+                      <li className="rounded-xl border border-line bg-panel/70 p-4 leading-7 text-muted" key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
+            ))}
+          </section>
+        </>
+      )}
     </main>
   );
 }

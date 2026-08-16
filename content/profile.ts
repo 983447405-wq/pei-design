@@ -149,7 +149,7 @@ export const profile = {
       title: { zh: "Design Lead", en: "Design Lead" },
       period: "2025 — Present",
       body: {
-        zh: "负责多条 AI 产品线，包括 AI 短剧平台、FalcoCut、Honor Smart Video、设计系统和 AI 产品体验。",
+        zh: "负责 AI 产品体验与设计体系建设，覆盖 FalcoCut、AI 短剧及荣耀 AI 生成等业务；主导 0-1 产品设计、核心体验迭代与 Design System 建设，以数据驱动持续优化用户转化与内容生产效率。",
         en: "Responsible for multiple AI product lines, including AI Short Drama Platform, FalcoCut, Honor Smart Video, design systems, and AI product experience."
       },
       highlights: {
@@ -197,7 +197,7 @@ export const profile = {
       title: { zh: "UI", en: "UI" },
       period: "2021 — 2024",
       body: {
-        zh: "负责企业 SaaS 体验设计，覆盖 CRM、VR 看房、房源管理、客户管理和业务流程优化。",
+        zh: "负责企业 SaaS 产品体验设计，覆盖 CRM、VR 看房、房源及客户管理等核心业务，持续优化复杂业务流程与产品易用性。",
         en: "Designed enterprise SaaS experiences across CRM, VR house viewing, property management, customer management, and workflow optimization."
       },
       highlights: {

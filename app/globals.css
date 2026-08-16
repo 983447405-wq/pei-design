@@ -57,6 +57,11 @@ body {
   font-feature-settings: "calt", "kern", "liga", "ss03";
 }
 
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 body::before {
   content: "";
   position: fixed;

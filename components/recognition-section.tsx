@@ -27,7 +27,7 @@ const recognitionCards = [
   {
     year: "2024",
     title: {
-      zh: "创新突破最佳团队奖",
+      zh: "业务线获创新突破最佳团队奖",
       en: "Best Innovation Breakthrough Team Award"
     },
     image: "/recognition/innovation-team-award.png",

@@ -156,14 +156,32 @@ a {
   transform: translate3d(0, 34px, 0) scale(0.982);
   filter: blur(16px);
   transition:
-    opacity 1600ms var(--ease-reveal),
-    transform 1600ms var(--ease-reveal),
-    filter 1600ms var(--ease-reveal);
+    opacity 1200ms var(--ease-soft),
+    transform 1200ms var(--ease-soft),
+    filter 1200ms var(--ease-soft);
   transition-delay: calc(var(--reveal-order, 0) * 70ms);
   will-change: opacity, transform, filter;
 }
 
 [data-reveal="section"].is-inview {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+  will-change: auto;
+}
+
+[data-reveal="page"] {
+  opacity: 0;
+  transform: translate3d(0, 38px, 0) scale(0.985);
+  filter: blur(8px);
+  transition:
+    opacity 1200ms var(--ease-soft),
+    transform 1200ms var(--ease-soft),
+    filter 1200ms var(--ease-soft);
+  will-change: opacity, transform, filter;
+}
+
+[data-reveal="page"].is-inview {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
   filter: blur(0);
@@ -1625,7 +1643,8 @@ a {
     filter: none;
   }
 
-  [data-reveal="section"] {
+  [data-reveal="section"],
+  [data-reveal="page"] {
     opacity: 1;
     transform: none;
     filter: none;

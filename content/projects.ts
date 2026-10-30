@@ -30,7 +30,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "ai-short-drama-studio",
-    year: "2025",
+    year: "2025-2026",
     featured: true,
     tone: "violet",
     tags: ["AI", "Product", "UX", "Motion"],
@@ -121,7 +121,7 @@ export const projects: Project[] = [
   },
   {
     slug: "falcocut",
-    year: "2025",
+    year: "2025-2026",
     featured: true,
     tone: "cyan",
     tags: ["AI", "E-commerce", "Agent", "Workflow"],
@@ -281,7 +281,7 @@ export const projects: Project[] = [
     tone: "cyan",
     tags: ["AI", "Shopping", "Conversation"],
     title: {
-      zh: "AI Shopping Assistant",
+      zh: "AI导购助手-答答",
       en: "AI Shopping Assistant"
     },
     summary: {
@@ -448,7 +448,7 @@ export const projects: Project[] = [
     tone: "cyan",
     tags: ["AI", "Interaction", "Campaign"],
     title: {
-      zh: "Tongyi App",
+      zh: "通义千问",
       en: "Tongyi App"
     },
     summary: {
@@ -524,7 +524,7 @@ export const projects: Project[] = [
     tone: "blue",
     tags: ["SaaS", "CRM", "Workflow"],
     title: {
-      zh: "Ziroom Enterprise Platform",
+      zh: "超级Z.O",
       en: "Ziroom Enterprise Platform"
     },
     summary: {

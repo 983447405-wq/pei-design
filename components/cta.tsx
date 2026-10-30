@@ -49,7 +49,10 @@ export function ContactCTA({ locale }: { locale: Locale }) {
               {dict.home.ctaTitle}
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-white/60 md:text-lg">{dict.home.ctaBody}</p>
-            <a className="portfolio-button portfolio-button-primary mt-8 inline-flex items-center gap-2 font-mono text-sm" href="tel:15272508556">
+            <a
+              className="portfolio-button portfolio-button-primary mt-8 inline-flex items-center gap-2 font-mono text-sm"
+              href="tel:15272508556"
+            >
               <Phone className="h-4 w-4" />
               15272508556
             </a>

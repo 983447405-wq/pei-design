@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BarChart3, FileText, ImageIcon, MousePointer2, Play } from "lucide-react";
 import { dictionary } from "@/content/dictionary";
+import { ProjectFooter } from "@/components/project-footer";
 import { getProject, projects } from "@/content/projects";
 import { isLocale, locales, localizedPath, type Locale } from "@/lib/i18n";
 import { absoluteUrl, site } from "@/lib/seo";
@@ -20,6 +21,7 @@ const mediaIcon = {
 };
 
 const projectImageSequences: Partial<Record<string, string[]>> = {
+  "ai-short-drama-studio": Array.from({ length: 11 }, (_, index) => `/project-details/ai-short-drama-studio/${index + 2}.png?v=20261030b`),
   "ai-shopping-assistant": ["23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "34", "35", "36"].map(
     (name) => `/project-details/ai-shopping-assistant/${name}.png`
   ),
@@ -98,6 +100,10 @@ export default async function ProjectDetailPage({ params }: Props) {
   const hideHeroMetrics = project.slug === "ai-shopping-assistant";
   const projectImages = projectImageSequences[project.slug] ?? [];
   const hasProjectImages = projectImages.length > 0;
+  const isShortDrama = project.slug === "ai-short-drama-studio";
+  const projectIndex = projects.findIndex((item) => item.slug === project.slug);
+  const previousProject = projects[projectIndex - 1];
+  const nextProject = projects[projectIndex + 1];
   const canonicalUrl = absoluteUrl(localizedPath(locale, `/projects/${project.slug}`));
   const jsonLd = {
     "@context": "https://schema.org",
@@ -147,7 +153,23 @@ export default async function ProjectDetailPage({ params }: Props) {
         {dict.common.backToList}
       </Link>
 
-      {hasProjectImages ? null : (
+      {isShortDrama ? (
+        <section className="overflow-hidden bg-black" aria-label={project.title[locale]} data-project-page>
+          <video
+            aria-label={locale === "zh" ? "AI短剧出海平台封面动画" : "AI Short Drama Studio cover animation"}
+            autoPlay
+            className="block aspect-video w-full"
+            loop
+            muted
+            playsInline
+            poster="/project-cases/ai-short-drama-studio-cover-poster.jpg"
+            preload="auto"
+          >
+            <source src="/project-cases/ai-short-drama-studio-cover.webm" type="video/webm" />
+            <source src="/project-cases/ai-short-drama-studio-cover-fallback.mp4" type="video/mp4" />
+          </video>
+        </section>
+      ) : hasProjectImages ? null : (
         <section className="glass gradient-border overflow-hidden rounded-2xl">
           <div className={`grid gap-8 p-6 md:p-10 ${hideHeroMetrics ? "" : "lg:grid-cols-[1fr_0.72fr]"}`}>
             <div>
@@ -184,10 +206,26 @@ export default async function ProjectDetailPage({ params }: Props) {
         </section>
       )}
 
-      {hasProjectImages ? (
-        <section className="mt-8 grid gap-5">
+      {isShortDrama ? (
+        <section className="mt-8 grid gap-5" data-project-sequence>
           {projectImages.map((src, index) => (
-            <div className="overflow-hidden rounded-2xl bg-black" key={src}>
+            <div className="overflow-hidden bg-black" data-project-page key={src}>
+              <Image
+                alt={locale === "zh" ? `AI短剧出海平台第 ${index + 2} 页` : `AI Short Drama Studio page ${index + 2}`}
+                className="h-auto w-full select-none"
+                draggable={false}
+                height={2160}
+                sizes="(min-width: 1280px) 1200px, 100vw"
+                src={src}
+                width={3840}
+              />
+            </div>
+          ))}
+        </section>
+      ) : hasProjectImages ? (
+        <section className="mt-8 grid gap-5" data-project-sequence>
+          {projectImages.map((src, index) => (
+            <div className="overflow-hidden bg-black" data-project-page key={src}>
               <Image
                 alt={`${project.title[locale]} project page ${index + 1}`}
                 className="h-auto w-full select-none"
@@ -237,6 +275,15 @@ export default async function ProjectDetailPage({ params }: Props) {
           </section>
         </>
       )}
+      <ProjectFooter
+        locale={locale}
+        previous={
+          previousProject
+            ? { href: localizedPath(locale, `/projects/${previousProject.slug}`), title: previousProject.title[locale] }
+            : null
+        }
+        next={nextProject ? { href: localizedPath(locale, `/projects/${nextProject.slug}`), title: nextProject.title[locale] } : null}
+      />
     </main>
   );
 }

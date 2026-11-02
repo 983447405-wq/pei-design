@@ -1,5 +1,5 @@
 import { posts } from "@/content/blog";
-import { projects } from "@/content/projects";
+import { listedProjects } from "@/content/projects";
 import { resources } from "@/content/resources";
 import { localizedPath } from "@/lib/i18n";
 import { site } from "@/lib/seo";
@@ -19,7 +19,7 @@ export function GET() {
       date: post.updated,
       category: post.category.zh
     })),
-    ...projects.map((project) => ({
+    ...listedProjects.map((project) => ({
       title: project.title.zh,
       description: project.summary.zh,
       url: `${site.url}${localizedPath("zh", `/projects/${project.slug}`)}`,

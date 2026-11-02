@@ -147,7 +147,7 @@ export const profile = {
         "/experience-trail/quvideo-04.png"
       ],
       title: { zh: "Design Lead", en: "Design Lead" },
-      period: "2025 — Present",
+      period: "2025 — 2026",
       body: {
         zh: "负责 AI 产品体验与设计体系建设，覆盖 FalcoCut、AI 短剧及荣耀 AI 生成等业务；主导 0-1 产品设计、核心体验迭代与 Design System 建设，以数据驱动持续优化用户转化与内容生产效率。",
         en: "Responsible for multiple AI product lines, including AI Short Drama Platform, FalcoCut, Honor Smart Video, design systems, and AI product experience."
@@ -271,7 +271,7 @@ export const profile = {
     "Shader Experiments"
   ],
   contactOptions: {
-    zh: ["AI 产品设计负责人", "UI/UX 设计", "0→1 AI 产品顾问"],
+    zh: ["AI 产品设计负责人", "UI/UX 设计", "0-1设计负责人"],
     en: ["AI product design lead", "UI/UX design", "0-to-1 AI product consulting"]
   },
   socialLinks: [

@@ -14,7 +14,7 @@ const coverGradient = {
 
 const coverImageBySlug: Partial<Record<Project["slug"], string>> = {
   "ai-short-drama-studio": "/project-cases/ai-short-drama-studio-cover-macbook.jpg",
-  falcocut: "/project-cases/falcocut.svg",
+  falcocut: "/project-details/falcocut/13.png",
   "honor-smart-video": "/project-cases/honor-smart-video.svg",
   "ai-shopping-assistant": "/project-cases/ai-shopping-assistant-cover.png",
   "ai-virtual-try-on": "/project-cases/ai-virtual-try-on.svg",

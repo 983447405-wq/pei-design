@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { locales, localizedPath } from "@/lib/i18n";
 import { site } from "@/lib/seo";
 import { posts } from "@/content/blog";
-import { projects } from "@/content/projects";
+import { listedProjects } from "@/content/projects";
 import { resources } from "@/content/resources";
 
 export const dynamic = "force-static";
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     });
 
-    projects.forEach((project) => {
+    listedProjects.forEach((project) => {
       entries.push({
         url: `${site.url}${localizedPath(locale, `/projects/${project.slug}`)}`,
         lastModified: new Date(),

@@ -163,7 +163,7 @@ export default async function HomePage({ params }: Props) {
   const dict = dictionary[locale];
   const featured = projects.filter((project) => project.featured);
   const writingTitle = locale === "zh" ? "分享关于产品设计、AI 和创造力的思考。" : "Sharing ideas about Product Design, AI and Creativity.";
-  const projectTitle = locale === "zh" ? "大图卡片呈现核心项目。" : "Image-first cases with product depth.";
+  const projectTitle = locale === "zh" ? "精选作品" : "Selected Work";
   const aboutTitle = locale === "zh" ? "Hi, I'm Pei." : "Hi, I'm Pei.";
 
   return (

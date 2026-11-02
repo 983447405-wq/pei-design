@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, BarChart3, FileText, ImageIcon, MousePointer2, Play } from "lucide-react";
 import { dictionary } from "@/content/dictionary";
 import { ProjectFooter } from "@/components/project-footer";
-import { getProject, projects } from "@/content/projects";
+import { getProject, listedProjects, projects } from "@/content/projects";
 import { isLocale, locales, localizedPath, type Locale } from "@/lib/i18n";
 import { absoluteUrl, site } from "@/lib/seo";
 
@@ -22,6 +22,7 @@ const mediaIcon = {
 
 const projectImageSequences: Partial<Record<string, string[]>> = {
   "ai-short-drama-studio": Array.from({ length: 11 }, (_, index) => `/project-details/ai-short-drama-studio/${index + 2}.png?v=20261030b`),
+  falcocut: Array.from({ length: 11 }, (_, index) => `/project-details/falcocut/${index + 13}.png`),
   "ai-shopping-assistant": ["23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "34", "35", "36"].map(
     (name) => `/project-details/ai-shopping-assistant/${name}.png`
   ),
@@ -101,9 +102,9 @@ export default async function ProjectDetailPage({ params }: Props) {
   const projectImages = projectImageSequences[project.slug] ?? [];
   const hasProjectImages = projectImages.length > 0;
   const isShortDrama = project.slug === "ai-short-drama-studio";
-  const projectIndex = projects.findIndex((item) => item.slug === project.slug);
-  const previousProject = projects[projectIndex - 1];
-  const nextProject = projects[projectIndex + 1];
+  const projectIndex = listedProjects.findIndex((item) => item.slug === project.slug);
+  const previousProject = projectIndex < 0 ? undefined : listedProjects[projectIndex - 1];
+  const nextProject = projectIndex < 0 ? undefined : listedProjects[projectIndex + 1];
   const canonicalUrl = absoluteUrl(localizedPath(locale, `/projects/${project.slug}`));
   const jsonLd = {
     "@context": "https://schema.org",
@@ -230,11 +231,11 @@ export default async function ProjectDetailPage({ params }: Props) {
                 alt={`${project.title[locale]} project page ${index + 1}`}
                 className="h-auto w-full select-none"
                 draggable={false}
-                height={1080}
+                height={project.slug === "falcocut" ? 1620 : 1080}
                 priority={index === 0}
                 sizes="(min-width: 1280px) 1200px, 100vw"
                 src={src}
-                width={1920}
+                width={project.slug === "falcocut" ? 2880 : 1920}
               />
             </div>
           ))}

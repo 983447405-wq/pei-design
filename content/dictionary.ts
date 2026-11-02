@@ -40,7 +40,7 @@ export const dictionary = {
     },
     projects: {
       title: "项目案例",
-      subtitle: "精选 AI、视频、购物、企业平台和交互体验项目。"
+      subtitle: "涵盖 AI、出海、短剧、电商、SaaS 和交互体验项目。"
     },
     blog: {
       title: "设计笔记",
@@ -52,7 +52,7 @@ export const dictionary = {
     },
     contact: {
       title: "Let's build something meaningful.",
-      subtitle: "如果你正在寻找 AI Product Designer、UI/UX Designer，或需要 0→1 AI 产品顾问，可以直接联系我。",
+      subtitle: "如果你正在寻找 AI Product Designer、UI/UX Designer，或需要 0-1设计负责人，可以直接联系我。",
       emailLabel: "发送邮件"
     }
   },
@@ -96,7 +96,7 @@ export const dictionary = {
     },
     projects: {
       title: "Project cases",
-      subtitle: "Selected AI, video, shopping, enterprise platform, and interaction experience projects."
+      subtitle: "Projects spanning AI, global markets, short drama, e-commerce, SaaS, and interaction design."
     },
     blog: {
       title: "Design notes",

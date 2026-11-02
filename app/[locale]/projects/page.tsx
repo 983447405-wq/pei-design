@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
 import { dictionary } from "@/content/dictionary";
-import { projects } from "@/content/projects";
+import { listedProjects } from "@/content/projects";
 import { isLocale, type Locale } from "@/lib/i18n";
 
 type Props = {
@@ -36,7 +36,7 @@ export default async function ProjectsPage({ params }: Props) {
           ))}
         </div>
         <div className="grid gap-5 lg:grid-cols-3">
-          {projects.map((project) => (
+          {listedProjects.map((project) => (
             <ProjectCard project={project} locale={locale} key={project.slug} />
           ))}
         </div>

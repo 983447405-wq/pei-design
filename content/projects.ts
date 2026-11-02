@@ -204,7 +204,7 @@ export const projects: Project[] = [
   {
     slug: "honor-smart-video",
     year: "2025",
-    featured: true,
+    featured: false,
     tone: "blue",
     tags: ["AI", "Smart Video", "UI"],
     title: {
@@ -607,3 +607,5 @@ export const projects: Project[] = [
 export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);
 }
+
+export const listedProjects = projects.filter((project) => project.slug !== "honor-smart-video" && project.slug !== "ai-virtual-try-on");

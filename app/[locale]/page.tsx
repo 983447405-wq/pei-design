@@ -36,7 +36,7 @@ const insightCards = [
       en: "1.2K reads"
     },
     platform: "人人都是产品经理",
-    date: "2026",
+    date: "2024",
     href: "https://www.woshipm.com/share/6194629.html"
   },
   {
@@ -217,7 +217,7 @@ export default async function HomePage({ params }: Props) {
             ))}
           </div>
         </div>
-        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch">
           <div className="about-visual lg:sticky lg:top-24">
             <div className="about-portrait">
               <Image

@@ -22,7 +22,9 @@ const mediaIcon = {
 
 const projectImageSequences: Partial<Record<string, string[]>> = {
   "ai-short-drama-studio": Array.from({ length: 11 }, (_, index) => `/project-details/ai-short-drama-studio/${index + 2}.png?v=20261030b`),
-  falcocut: [13, 14, 15, 16, 18, 19, 20, 21, 22, 23].map((page) => `/project-details/falcocut/${page}.png`),
+  falcocut: [13, 14, 15, 16, 18, 19, 20, 21, 22, 23].map(
+    (page) => `/project-details/falcocut/${page}.${page === 14 || page === 19 ? "webm" : "png"}`
+  ),
   "ai-shopping-assistant": ["23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "34", "35", "36"].map(
     (name) => `/project-details/ai-shopping-assistant/${name}.png`
   ),
@@ -243,16 +245,30 @@ export default async function ProjectDetailPage({ params }: Props) {
           ) : null}
           {projectImages.map((src, index) => (
             <div className="overflow-hidden bg-black" data-project-page key={src}>
-              <Image
-                alt={`${project.title[locale]} project page ${index + 1}`}
-                className="h-auto w-full select-none"
-                draggable={false}
-                height={project.slug === "falcocut" ? 1620 : 1080}
-                priority={index === 0 && project.slug !== "tongyi-app"}
-                sizes="(min-width: 1280px) 1200px, 100vw"
-                src={src}
-                width={project.slug === "falcocut" ? 2880 : 1920}
-              />
+              {src.endsWith(".webm") ? (
+                <video
+                  aria-label={locale === "zh" ? `FalcoCut 第 ${index + 1} 页视频演示` : `FalcoCut page ${index + 1} video demo`}
+                  autoPlay
+                  className="block aspect-video w-full"
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                >
+                  <source src={src} type="video/webm" />
+                </video>
+              ) : (
+                <Image
+                  alt={`${project.title[locale]} project page ${index + 1}`}
+                  className="h-auto w-full select-none"
+                  draggable={false}
+                  height={project.slug === "falcocut" ? 1620 : 1080}
+                  priority={index === 0 && project.slug !== "tongyi-app"}
+                  sizes="(min-width: 1280px) 1200px, 100vw"
+                  src={src}
+                  width={project.slug === "falcocut" ? 2880 : 1920}
+                />
+              )}
             </div>
           ))}
           {project.slug === "ziroom-enterprise-platform" ? (

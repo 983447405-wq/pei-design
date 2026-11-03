@@ -1,36 +1,13 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Heart } from "lucide-react";
-import { ClickSpark } from "@/components/click-spark";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 
 type Neighbor = { href: string; title: string } | null;
 
 export function ProjectFooter({ locale, previous, next }: { locale: Locale; previous: Neighbor; next: Neighbor }) {
-  const [likes, setLikes] = useState(0);
-
   return (
     <section className="mt-16 border-t border-white/10 pt-10">
-      <div className="flex justify-center">
-        <ClickSpark>
-          <button
-            aria-label={locale === "zh" ? "点赞此项目" : "Like this project"}
-            aria-pressed={likes > 0}
-            className="group flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-white transition hover:border-white/50 hover:bg-white/5"
-            onClick={() => setLikes((count) => count + 1)}
-            type="button"
-          >
-            <Heart className={`h-5 w-5 ${likes > 0 ? "fill-current text-rose-400" : "fill-none text-white"}`} />
-            <span>{locale === "zh" ? "点赞" : "Like"}</span>
-            <span aria-live="polite" className="font-mono text-sm text-white/60">
-              {likes}
-            </span>
-          </button>
-        </ClickSpark>
-      </div>
-      <nav aria-label={locale === "zh" ? "切换项目" : "Project navigation"} className="mt-10 grid gap-6 sm:grid-cols-2">
+      <nav aria-label={locale === "zh" ? "切换项目" : "Project navigation"} className="grid gap-6 sm:grid-cols-2">
         {previous ? (
           <Link
             className="group inline-flex w-fit flex-col gap-2 py-3 text-white transition hover:text-blue focus-visible:text-blue"

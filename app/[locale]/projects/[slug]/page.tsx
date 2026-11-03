@@ -22,7 +22,7 @@ const mediaIcon = {
 
 const projectImageSequences: Partial<Record<string, string[]>> = {
   "ai-short-drama-studio": Array.from({ length: 11 }, (_, index) => `/project-details/ai-short-drama-studio/${index + 2}.png?v=20261030b`),
-  falcocut: Array.from({ length: 11 }, (_, index) => `/project-details/falcocut/${index + 13}.png`),
+  falcocut: [13, 14, 15, 16, 18, 19, 20, 21, 22, 23].map((page) => `/project-details/falcocut/${page}.png`),
   "ai-shopping-assistant": ["23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "34", "35", "36"].map(
     (name) => `/project-details/ai-shopping-assistant/${name}.png`
   ),
@@ -225,6 +225,22 @@ export default async function ProjectDetailPage({ params }: Props) {
         </section>
       ) : hasProjectImages ? (
         <section className="mt-8 grid gap-5" data-project-sequence>
+          {project.slug === "tongyi-app" ? (
+            <div className="overflow-hidden bg-black" data-project-page>
+              <video
+                aria-label={locale === "zh" ? "通义千问 Logo 动画" : "Tongyi logo animation"}
+                autoPlay
+                className="block aspect-video w-full"
+                loop
+                muted
+                playsInline
+                poster="/project-details/tongyi-app/logo-animation-poster.jpg"
+                preload="auto"
+              >
+                <source src="/project-details/tongyi-app/logo-animation.webm" type="video/webm" />
+              </video>
+            </div>
+          ) : null}
           {projectImages.map((src, index) => (
             <div className="overflow-hidden bg-black" data-project-page key={src}>
               <Image
@@ -232,13 +248,28 @@ export default async function ProjectDetailPage({ params }: Props) {
                 className="h-auto w-full select-none"
                 draggable={false}
                 height={project.slug === "falcocut" ? 1620 : 1080}
-                priority={index === 0}
+                priority={index === 0 && project.slug !== "tongyi-app"}
                 sizes="(min-width: 1280px) 1200px, 100vw"
                 src={src}
                 width={project.slug === "falcocut" ? 2880 : 1920}
               />
             </div>
           ))}
+          {project.slug === "ziroom-enterprise-platform" ? (
+            <div className="overflow-hidden bg-black" data-project-page>
+              <video
+                aria-label={locale === "zh" ? "自如项目作品视频" : "Ziroom project showreel"}
+                className="block aspect-video w-full"
+                controls
+                controlsList="nodownload"
+                playsInline
+                poster="/project-details/ziroom-enterprise-platform/showreel-poster.jpg"
+                preload="metadata"
+              >
+                <source src="/project-details/ziroom-enterprise-platform/showreel.webm" type="video/webm" />
+              </video>
+            </div>
+          ) : null}
         </section>
       ) : (
         <>

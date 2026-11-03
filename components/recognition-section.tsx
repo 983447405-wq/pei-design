@@ -78,7 +78,7 @@ export function RecognitionSection({ locale }: RecognitionSectionProps) {
 
       <div className="grid gap-10 md:grid-cols-2 md:gap-8 xl:gap-10">
         {recognitionCards.map((card) => (
-          <article className="recognition-item" key={card.year}>
+          <article className="recognition-item" key={card.image}>
             <div className="recognition-thumb group">
               <Image
                 alt=""

@@ -23,7 +23,7 @@ export function GET() {
       title: project.title.zh,
       description: project.summary.zh,
       url: `${site.url}${localizedPath("zh", `/projects/${project.slug}`)}`,
-      date: `${project.year}-01-01`,
+      date: `${project.year.slice(-4)}-01-01`,
       category: "Portfolio"
     })),
     ...resources.map((resource) => ({

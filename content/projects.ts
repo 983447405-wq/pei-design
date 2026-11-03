@@ -276,7 +276,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ai-shopping-assistant",
-    year: "2024",
+    year: "2024-2025",
     featured: true,
     tone: "cyan",
     tags: ["AI", "Shopping", "Conversation"],
@@ -443,7 +443,7 @@ export const projects: Project[] = [
   },
   {
     slug: "tongyi-app",
-    year: "2023-2024",
+    year: "2024-2025",
     featured: true,
     tone: "cyan",
     tags: ["AI", "Interaction", "Campaign"],

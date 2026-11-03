@@ -28,9 +28,9 @@ export const profile = {
   },
   about: {
     zh: [
-      "我专注于 AI 大模型产品、企业平台和消费级应用的体验设计，致力于将复杂的技术能力转化为简单、可信且易于使用的产品体验。",
-      "我相信优秀的设计不仅来自视觉表达，更源于产品思考、用户洞察与技术理解。我的工作涵盖 AI Workflow、视觉设计、Design System 与前端实现，不断探索设计与 AI 的融合方式。",
-      "除了产品设计，我也持续研究 Web Coding、AIGC 与创意开发，通过代码、动画和 AI 工具构建更具表现力的数字体验。"
+      "我专注于 AI 产品、企业级 SaaS 与消费级应用的体验设计，拥有 AI 大模型、AIGC 创作及出海产品的项目经验，致力于将复杂的技术能力转化为简单、高效且易于使用的产品体验。",
+      "在产品设计之外，我也承担项目负责人的角色。从需求定义、产品策略与交互设计，到研发资源协调、版本排期及上线验收，推动产品从 0 到 1 建设与持续迭代，兼顾用户体验、业务目标和交付效率。",
+      "我持续探索 AI Agent、Workflow、Design System 与 AI Coding，将设计思维与技术实践相结合，通过快速原型、交互验证和跨团队协作，探索 AI 时代更高效的产品设计方式。"
     ],
     en: [
       "I focus on experience design for large-model AI products, enterprise platforms, and consumer applications, turning complex technical capabilities into simple, trustworthy, and usable product experiences.",
@@ -149,7 +149,10 @@ export const profile = {
       title: { zh: "Design Lead", en: "Design Lead" },
       period: "2025 — 2026",
       body: {
-        zh: "负责 AI 产品体验与设计体系建设，覆盖 FalcoCut、AI 短剧及荣耀 AI 生成等业务；主导 0-1 产品设计、核心体验迭代与 Design System 建设，以数据驱动持续优化用户转化与内容生产效率。",
+        zh: [
+          "负责 FalcoCut、AI 短剧及荣耀 AI 生成等产品的体验设计，主导 AI 产品从 0 到 1 建设、核心功能迭代与 Design System 搭建。",
+          "作为体验侧 Project Owner，负责需求优先级决策、研发资源与测试工时统筹、版本排期及上线验收，推动设计方案高质量落地，并结合业务数据持续优化产品体验。"
+        ],
         en: "Responsible for multiple AI product lines, including AI Short Drama Platform, FalcoCut, Honor Smart Video, design systems, and AI product experience."
       },
       highlights: {

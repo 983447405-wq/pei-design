@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, BarChart3, FileText, ImageIcon, MousePointer2, Play } from "lucide-react";
 import { dictionary } from "@/content/dictionary";
 import { ProjectFooter } from "@/components/project-footer";
+import { ShortDramaCoverVideo } from "@/components/short-drama-cover-video";
 import { getProject, listedProjects, projects } from "@/content/projects";
 import { isLocale, locales, localizedPath, type Locale } from "@/lib/i18n";
 import { absoluteUrl, site } from "@/lib/seo";
@@ -158,19 +159,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {isShortDrama ? (
         <section className="overflow-hidden bg-black" aria-label={project.title[locale]} data-project-page>
-          <video
-            aria-label={locale === "zh" ? "AI短剧出海平台封面动画" : "AI Short Drama Studio cover animation"}
-            autoPlay
-            className="block aspect-video w-full"
-            loop
-            muted
-            playsInline
-            poster="/project-cases/ai-short-drama-studio-cover-poster.jpg"
-            preload="auto"
-          >
-            <source src="/project-cases/ai-short-drama-studio-cover.webm" type="video/webm" />
-            <source src="/project-cases/ai-short-drama-studio-cover-fallback.mp4" type="video/mp4" />
-          </video>
+          <ShortDramaCoverVideo locale={locale} />
         </section>
       ) : hasProjectImages ? null : (
         <section className="glass gradient-border overflow-hidden rounded-2xl">

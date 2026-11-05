@@ -6,6 +6,7 @@
   "packageManager": "pnpm@11.7.0",
   "description": "AI Product Designer and UI/UX Designer portfolio, blog, and resource content hub.",
   "scripts": {
+    "prepare:images": "node scripts/prepare-portfolio-images.mjs",
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "build:cloudflare": "NEXT_OUTPUT=export next build",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { PortfolioImage as Image } from "@/components/portfolio-image";
+import { PortfolioVideo } from "@/components/portfolio-video";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BarChart3, FileText, ImageIcon, MousePointer2, Play } from "lucide-react";
@@ -218,34 +219,26 @@ export default async function ProjectDetailPage({ params }: Props) {
         <section className="mt-8 grid gap-5" data-project-sequence>
           {project.slug === "tongyi-app" ? (
             <div className="overflow-hidden bg-black" data-project-page>
-              <video
-                aria-label={locale === "zh" ? "通义千问 Logo 动画" : "Tongyi logo animation"}
-                autoPlay
-                className="block aspect-video w-full"
-                loop
-                muted
-                playsInline
+              <PortfolioVideo
+                label={locale === "zh" ? "通义千问 Logo 动画" : "Tongyi logo animation"}
+                locale={locale}
                 poster="/project-details/tongyi-app/logo-animation-poster.jpg"
-                preload="auto"
-              >
-                <source src="/project-details/tongyi-app/logo-animation.webm" type="video/webm" />
-              </video>
+                src="/project-details/tongyi-app/logo-animation-compatible.mp4"
+              />
             </div>
           ) : null}
           {projectImages.map((src, index) => (
             <div className="overflow-hidden bg-black" data-project-page key={src}>
               {src.endsWith(".webm") ? (
-                <video
-                  aria-label={locale === "zh" ? `FalcoCut 第 ${index + 1} 页视频演示` : `FalcoCut page ${index + 1} video demo`}
-                  autoPlay
-                  className="block aspect-video w-full"
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                >
-                  <source src={src} type="video/webm" />
-                </video>
+                <PortfolioVideo
+                  label={locale === "zh" ? `FalcoCut 第 ${index + 1} 页视频演示` : `FalcoCut page ${index + 1} video demo`}
+                  locale={locale}
+                  poster={src
+                    .replace(".webm", ".png")
+                    .replace("/project-details/", "/optimized/project-details/")
+                    .replace(".png", "-960.webp")}
+                  src={src.replace(".webm", "-compatible.mp4")}
+                />
               ) : (
                 <Image
                   alt={`${project.title[locale]} project page ${index + 1}`}
@@ -262,17 +255,13 @@ export default async function ProjectDetailPage({ params }: Props) {
           ))}
           {project.slug === "ziroom-enterprise-platform" ? (
             <div className="overflow-hidden bg-black" data-project-page>
-              <video
-                aria-label={locale === "zh" ? "自如项目作品视频" : "Ziroom project showreel"}
-                className="block aspect-video w-full"
+              <PortfolioVideo
                 controls
-                controlsList="nodownload"
-                playsInline
+                label={locale === "zh" ? "自如项目作品视频" : "Ziroom project showreel"}
+                locale={locale}
                 poster="/project-details/ziroom-enterprise-platform/showreel-poster.jpg"
-                preload="metadata"
-              >
-                <source src="/project-details/ziroom-enterprise-platform/showreel.webm" type="video/webm" />
-              </video>
+                src="/project-details/ziroom-enterprise-platform/showreel-compatible.mp4"
+              />
             </div>
           ) : null}
         </section>

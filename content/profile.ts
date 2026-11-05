@@ -28,12 +28,12 @@ export const profile = {
   },
   about: {
     zh: [
-      "我专注于 AI 产品、企业级 SaaS 与消费级应用的体验设计，拥有 AI 大模型、AIGC 创作及出海产品的项目经验，致力于将复杂的技术能力转化为简单、高效且易于使用的产品体验。",
+      "我专注于 AI 产品与消费级应用的体验设计，拥有 AI 大模型、AIGC 创作及出海产品的项目经验，致力于将复杂的技术能力转化为简单、高效且易于使用的产品体验。",
       "在产品设计之外，我也承担项目负责人的角色。从需求定义、产品策略与交互设计，到研发资源协调、版本排期及上线验收，推动产品从 0 到 1 建设与持续迭代，兼顾用户体验、业务目标和交付效率。",
       "我持续探索 AI Agent、Workflow、Design System 与 AI Coding，将设计思维与技术实践相结合，通过快速原型、交互验证和跨团队协作，探索 AI 时代更高效的产品设计方式。"
     ],
     en: [
-      "I focus on experience design for large-model AI products, enterprise platforms, and consumer applications, turning complex technical capabilities into simple, trustworthy, and usable product experiences.",
+      "I focus on experience design for large-model AI products and consumer applications, turning complex technical capabilities into simple, trustworthy, and usable product experiences.",
       "I believe excellent design comes not only from visual expression, but also from product thinking, user insight, and technical understanding. My work spans AI workflows, interaction design, design systems, and frontend implementation as I explore new ways to bring design and AI together.",
       "Beyond product design, I continue to explore web coding, AIGC, and creative development, using code, motion, and AI tools to build more expressive digital experiences."
     ]
@@ -174,12 +174,12 @@ export const profile = {
       period: "2024 — 2025",
       body: {
         zh: [
-          "负责 AI 购物助手、AI 虚拟试衣和 AI 购物体验创新，推动 GMV +36%、单日 GMV 超 ¥1M，并获得创新突破团队奖。",
-          "参与通义、百炼相关 AI 交互体验和 Web 产品设计，支持多项 AI 运营活动和交互能力落地。"
+          "负责千万级 DAU 的通义千问 App 核心功能模块与 AI 交互体验设计，参与「全民舞王」「全民照相馆」等 AI 创新玩法及运营活动，推动 AI 能力在 C 端场景落地。",
+          "主导银泰 AI 购物助手、AI 虚拟试衣等消费体验创新，优化用户购物决策与转化链路，助力 GMV 增长 36%、单日 GMV 突破 ¥1M，并获创新突破团队奖。"
         ],
         en: [
-          "Owned AI Shopping Assistant, AI Virtual Try-on, and AI shopping experience innovation, driving +36% GMV growth, ¥1M+ single-day GMV, and innovation awards.",
-          "Designed AI interaction experiences and web products for Tongyi and Bailian, supporting AI operation campaigns and interaction features."
+          "Designed core features and AI interactions for Tongyi Qianwen, an app with tens of millions of daily active users. Contributed to AI experiences and campaigns including Everybody Dance and AI Photo Studio, bringing AI capabilities to consumer use cases.",
+          "Led consumer experience innovation for Intime AI Shopping Assistant and AI Virtual Try-on, improving shopping decisions and conversion. Helped grow GMV by 36%, surpass ¥1M in single-day GMV, and earn an Innovation Breakthrough Team Award."
         ]
       },
       highlights: {

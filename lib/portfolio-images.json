@@ -1,0 +1,1292 @@
+{
+  "/about-portrait.png": {
+    "width": 1044,
+    "height": 1046,
+    "variants": [
+      {
+        "src": "/optimized/about-portrait-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/about-portrait-1044.webp",
+        "width": 1044
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYABgAPx16rlGtKCQisAwBoCOJaQAAIZuJgbPnCyo5VvkAAP5w6WyPtMYszFDaE7yRZCxTLU5tI9TeprLE0ukXYSHV7byc+sJx/7bw3ZKq/MewAAA="
+  },
+  "/project-cases/ai-shopping-assistant-cover.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-cases/ai-shopping-assistant-cover-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-cases/ai-shopping-assistant-cover-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAQBACdASoYAA4APyV8tVIuJ6UisAgBwCSJbACsEf/gPDTpNQoaVU1+AAD+6nsjKzXj2WEtmlmEcI8lX+vpxMS+etPJzBTNFbGFTS9htcKjDYs/t4cNAm0F/DkWXgEP+hDdqCiem3FNAdDqzMdLbe8Sl4TlZm2x3H/CLEynu1v+CyhKGfRFbOWRXmsWyAIUiN+wDBSHV/8YtUE7yjkoDLAA"
+  },
+  "/project-cases/ai-short-drama-studio-cover-macbook.jpg": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-cases/ai-short-drama-studio-cover-macbook-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-cases/ai-short-drama-studio-cover-macbook-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJaAC7ABtymZSUWQaMdQAAAP7r/0TxjqKVSsnTHZtvfYOt8bysxiO+7lC2gNLg6bk/rHoIct/4x2yiIpr1u6bGkdFJpza8izWLYuojAzir4YWqh1tr+Cm6yD7Yy9urlTJKW7fAWIcTRBoCU85EhUXFi/EK8WAA"
+  },
+  "/project-cases/ai-short-drama-studio-cover-poster.jpg": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-cases/ai-short-drama-studio-cover-poster-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-cases/ai-short-drama-studio-cover-poster-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBACdASoYAA4APyV6tVIuJ6UisAgBwCSJagCsMoADT23HjJIj7BxUnKgA/uw/HzuMhHpf9yAS+ZHssXDZ2TMUALN7FiSuQFwV8pSWWx2tvmfQ5EUq3SDiM/timbMBBO2Kw+8TcI39wAAA"
+  },
+  "/project-cases/ai-short-drama-studio-cover.png": {
+    "width": 2156,
+    "height": 1354,
+    "variants": [
+      {
+        "src": "/optimized/project-cases/ai-short-drama-studio-cover-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-cases/ai-short-drama-studio-cover-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4WAoAAAAQAAAAFwAADgAAQUxQSCYAAAABLyAQSPyhP42ICFYwDEBNChmkkEMI88e5594R/Z8A0fzAtKIZPVZQOCBCAAAAEAIAnQEqGAAPAASAciUAAFyFjspXxR6TwAD+779eK3DX04PWEvjrajCDunF6oYrGOYPArwKLSeCyDBFxznmQAAAA"
+  },
+  "/project-cases/project-gallery-placeholder.png": {
+    "width": 1645,
+    "height": 956,
+    "variants": [
+      {
+        "src": "/optimized/project-cases/project-gallery-placeholder-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-cases/project-gallery-placeholder-1645.webp",
+        "width": 1645
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYAA4APyV8t1KuJ6WisAgBwCSJZQAAUqJb0MgdfiAf7gAA/uv/IyY8fJMV9nUt5pfI/x9GtWn6nHKIgvZDdrknygqvTFkSqSp2lM7St6u2zXet8tUq6KAA"
+  },
+  "/project-cases/tongyi-app-cover.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-cases/tongyi-app-cover-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-cases/tongyi-app-cover-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJaAAAW83XyNLyAWWqmAAA/uMMdLNo4phwgY+wlHCzAR7ZQEr9oHmDHStyuEKIyrwldYuKIe+z/UJV3vXMWq67ndOaIKc5KKvJLyFB9APRqs6WshyQ7SiAAAA="
+  },
+  "/project-cases/ziroom-enterprise-platform-cover.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-cases/ziroom-enterprise-platform-cover-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-cases/ziroom-enterprise-platform-cover-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwDImC0Lfvom0QAA/u7ElkShydGTkmPkZkMQfuFft4v3KtY+KEYtnLT0AA=="
+  },
+  "/project-details/ai-shopping-assistant/23.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/23-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/23-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAQBACdASoYAA4APyV8tVIuJ6UisAgBwCSJbACsEf/gPDTpNQoaVU1+AAD+6nsjKzXj2WEtmlmEcI8lX+vpxMS+etPJzBTNFbGFTS9htcKjDYs/t4cNAm0F/DkWXgEP+hDdqCiem3FNAdDqzMdLbe8Sl4TlZm2x3H/CLEynu1v+CyhKGfRFbOWRXmsWyAIUiN+wDBSHV/8YtUE7yjkoDLAA"
+  },
+  "/project-details/ai-shopping-assistant/24.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/24-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/24-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZQC3uCIj14L8/EuKmwAA/uCJfKNg5Uni/GwQuZ/Dk2sCxawQrY7HrzeuR+qJlCRyAf09Jll+HLbyVYPNogOF8aUAAA=="
+  },
+  "/project-details/ai-shopping-assistant/25.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/25-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/25-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQBbZBDlKvj8BPcWZshoAAP7giXy2DPDgarBTSYZTzar0+A53FY3W24g1FdBS13ghqPtqsl2JYQXNNl1zocJlkXiL5IDMWD57AUy/3ApkBO/4fl3gT90LyqleTtOv9JV+995lD/17Xas0xNLNmqAYEx8tr9aYgZUCnF9Cop3yAAAA"
+  },
+  "/project-details/ai-shopping-assistant/26.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/26-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/26-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJQBWCP/wHjid1llFIZjmXCx9qAAD+4Il8tgzw4GqwxK7bLzMmHtccxBl5ffdnf5BpQ+bzb9je5HuR+rV0ZS2x4TKufpCgJG1BOTl9T7etAKqwHPr3Jk4PtbGhBYWCWvOF8RoDknET3FCW0I4AAA=="
+  },
+  "/project-details/ai-shopping-assistant/27.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/27-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/27-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJbACw7CHKVIAzQTgTOHHs0AD+xyJp6fU+1+9/9rDY6mpXAvckdMU+0PmAqG6Dkzn9ktXc/8BVbF3jW4njL4k2Rk3Y/sGJdVSOv1beIvwzF3D0Wo+mwQHhML45UPr7kLxTTKFiEDICTlBw4w9KuQZxrM3DIyAA"
+  },
+  "/project-details/ai-shopping-assistant/28.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/28-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/28-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoYAA4APyV8tFIuJ6UisAgBwCSJYwC7ACIeyZF+XEScpQgbo6AA/tXn0AEJoczumqRHQXaPW2Fhnl6R3gTlEhKTIEnRidftoEKrpHxceowZ446KOhoXWpkfY9d2olRVlWS76l0Imwtm8e2HnlqXX7XfItXePF5iVBBZRAAA"
+  },
+  "/project-details/ai-shopping-assistant/29.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/29-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/29-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoYAA4APyV8tFGuJ6UisAgBwCSJZgC7AGmhenkVd1iOhZ5+gAD++DRnOuv36ffIK467cV//1NVYGyBEfWbCSjhnnvmM7tC7K5NeWSKw/XbmnbzZFZiVrXdhbqUMqBGKEG4YeWv62dG8YcRtbbg2BMrty9CxPRKoMG8sFNAA"
+  },
+  "/project-details/ai-shopping-assistant/30.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/30-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/30-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwDImCIgu0j+PpJYAP7giTuEtWLtziRC2vQuP/IF93T3EkpNTJFrcCokG2ILi8r3nbMBbGrBJbfbQMHqZ9iFkpG7uOfioAA="
+  },
+  "/project-details/ai-shopping-assistant/31.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/31-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/31-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoYAA4APyV+tlKuKCUisAgBwCSJYwC7ACIiqS9vh/RjgQgAAP7giYKpN8rxjO0qdTM9ClWE0NfO2AUQO15Jdj0EF1mPBvq7G38qBdjVVQoX37etIwANrqiykxSGi2A8ZFiv1YivkgAAAA=="
+  },
+  "/project-details/ai-shopping-assistant/32.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/32-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/32-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJYgCdACPtXpDnli/xgAD+4Kipx4YlAbaPc/3ljqdZDzMu1qalUs3P6rSxd5T/X3X7eVCM0ZQL7nRDfBYb+mAylfBBKtQOU5r3sZAA"
+  },
+  "/project-details/ai-shopping-assistant/34.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/34-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/34-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJbACw7CIe0OqfFL8XEwbz0AD+1efQAQeI6qWdrshF/E4kI9QkI+cLiwZ5955H8tvare+Ov2CVyDoNmTrALdaWHEoYoyM8qCDgebVdIJ0PwUXB1AgrechHYIaiBYei6iNSPEEwJ6yNf7iD1AVAAA=="
+  },
+  "/project-details/ai-shopping-assistant/35.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/35-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/35-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwDDNCHafC+QEfeqAAD+3x3Ngdd1EXELG1RJEnyEQG5wPF1sODJHyJS0OvnDUJt5qyO3781Q6TAmdnwUi3TAAAA="
+  },
+  "/project-details/ai-shopping-assistant/36.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/36-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-shopping-assistant/36-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoYAA4APyV8tlIuJ6UisAgBwCSJZwAAWlCMba7yn5E6hMAA/uCJfNO5Dtr65zubIvKRbicduQK4bEWzijR00EmQE00oR9yVfa/4a15srdJfsPXoGTU7DnzGetpwcVzmGZb2veqekgRwAA=="
+  },
+  "/project-details/ai-short-drama-studio/10.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/10-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/10-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZQAAUiF/0R/qEHmScAD+6QZwuLiLk6l/U2xicPBNuDNGKeklTmk7bZBcTJVsMse76JE0PuOd+OcmQBJ+gOAiGXlbvk3xOyCRDHeLgAA="
+  },
+  "/project-details/ai-short-drama-studio/11.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/11-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/11-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJYgC2ydwLgC+wB+ext+nmU1cQyzcAAP6EDwqr3Oxs9xG/0aGL2wkhmtQhevieLeX5MUsdl97jBeQ3wSqU8fwwxesCYDVclnG6f2UcOOycgti3bJ2sATcvxUPPMPz+xbwaANn8kC5xONoXHiHKeLwXAiCIS//CpPDiw3pwm907FwCGaBWCc/XkUYdyn6WRx/8OrR2I16erMkq9wbp7AA2O/QAAAA=="
+  },
+  "/project-details/ai-short-drama-studio/12.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/12-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/12-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAwCdASoYAA4APyV+tlKuKCUisAgBwCSJYwAAg501gnaGAP7u2w0O6AJeZePy/NqHqbrjJUCDb9aKPO/rz3VLkVGwHkZaHNrcpPqMNGJqMP4oiYic92ec9QAAAA=="
+  },
+  "/project-details/ai-short-drama-studio/2.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/2-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/2-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYAA4APyV8tFGuJ6UisAgBwCSJYwDCgCIjMUs9U8gOm/HAAP7c5LBTqTdzssK2nhpwVBeiSLiX2BAYDIJQACC1ctvHh71mW6wsLZhKqVO9MCyAAAA="
+  },
+  "/project-details/ai-short-drama-studio/3.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/3-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/3-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoYAA4APyV8tVIuJ6UisAgBwCSJYwAAUOSE9l5m9BTngAD+5EeXG0zffbUK5XTKWOjyIeoMn780c2rMoUat3cV5BwC9FrWT2W1FHaiM8jsdsy39OfhXDunl7j+sBD31oLI3Kys7cyQuZ96AAAA="
+  },
+  "/project-details/ai-short-drama-studio/4.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/4-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/4-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoYAA4APyV8tFGuJ6UisAgBwCSJYwC7AB7H1xLB0rWacoAA/ukGaOhLnm3oKq4yTS8oLAuHO2BaYYBiaSyhHPHhlPEyULWF0AaVf5l1gAA="
+  },
+  "/project-details/ai-short-drama-studio/5.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/5-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/5-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoYAA4APyV+tVIuKCUisAgBwCSJYwC/OCIKGi3a9WDi4AD+5b0meDe10ODGnPZq+2GSpgPMk6jId0vzHUr7+7RFxpPz07tinPR/336xEf7z9gOulT0nJrVW8MsVivyQdjK5+D7KkRRgAA=="
+  },
+  "/project-details/ai-short-drama-studio/6.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/6-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/6-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJYwDCgB4mViIiZ/rruG5ZAAD+6QbBPILABii9TykWwTQjkjxsgY4Q8gJ7ASJEVHQp7Sc8mx2pJLlhxB269jW7EIU88I4AgUmsnW87oAA="
+  },
+  "/project-details/ai-short-drama-studio/7.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/7-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/7-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoYAA4APyV8tFIuJ6UisAgBwCSJQAALlf5K9TAb2uvzlHFzAAD+5b0nTVUofgj9/9zD/Zn31m5u+x4PDdEAN4s1GeEDgNQGhBf9u12i81/vYRcy7SdG3zd6Of2YmIwbAJkiQSW3/sZX6Dtu6hzSAAAA"
+  },
+  "/project-details/ai-short-drama-studio/8.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/8-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/8-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoYAA4APyV6tVGuJ6UisAgBwCSJQBhQBEQhQSii8IsiidAA/unirVZO3JplJrU21Ftskc2WUqb4QbtSadxk73SYEKjoquaKkirPIUb4nMyeymyf22q71RjPhVb3dnPQLyoAhDY1kc0TY4Nv34AAAA=="
+  },
+  "/project-details/ai-short-drama-studio/9.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/9-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/9-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJYgAIEAPYlVJ3p4vvzV3RYYAA/uX1XePxw/N2LN7Hl2yujFPoFKi3T+RvksWIupLXIo/aK8vmBTwgnheMCDC3eG/K0QSUsyWzI5BBI83wpX9en0mLcqgVxSYaHLny1iHs3FmICxCAAA=="
+  },
+  "/project-details/falcocut/13.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/13-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/13-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJbACdMoADUiR+PThOl7ujUfZIAP7lvSc1t/GnbfQkjEnjjbS1NSchpMFgSgsmK/aUYtfncRvzOohDRPWJD9WAhrueo49vSOlqMf53Fdu/ue5YkT4L1T3Prlz9oekbE50/XPVL9+oq4s/x6jXA35pJmgZ57Qz0Gw7AAA=="
+  },
+  "/project-details/falcocut/14.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/14-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/14-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoYAA4APyV8tFIuJ6UisAgBwCSJbACdMoADSuVodi4c3KxP2HEGAP7p+Yqym0r21kxrS+Thu0pSMGNnFDFOiZPDcUdmil2t5nlbWFEXG5A0B92GYB1r1GWnl85ijlLMEr+TdtUfLp0rejEQKAveEqY6oe4zHT4/xOgKGXG8dtnQeM2j6rwAAA=="
+  },
+  "/project-details/falcocut/15.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/15-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/15-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJbACsLwDs/wHlcYqMX2mD2AD+5fb1t7c1QoOhlhXLdquH5PypFt1vENstFMa6a3Fk+BGE4jBg+mJmViel9gSuMZhoYyBjPIQB0ELeFG7Pb2trqj42aO92Zr2sGdhRCd95VOZQrrJwYZdAAAA="
+  },
+  "/project-details/falcocut/16.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/16-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/16-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBACdASoYAA4APyV8tVIuJ6UisAgBwCSJbACdMoR3N6SAYYojkcF/J7u+cLRQAP7l9r0qIuN9GAvOsDpcbCUGcgktkQuUmIcFQuid33s7uKIRiB5PLrdb1kzvJvpMHpf0tAocz/pT2mg6U/F7LzIduof7dRcU5H+KdBvbjbThu0wdXAREEdXrROZID5GH8iYnQAAA"
+  },
+  "/project-details/falcocut/17.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/17-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/17-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoYAA4APyV+tlKuKCUisAgBwCSJbACdMoRwACn0uqPy3izoySShIAD+5fa9KiLjfRgLzOxo2yb0kbsN4BqcLVzbLMnl2/sNRWx8xbFl7+/tvIjntzjfbmfgIk08/9aY/f116ZoTrqHckYGsMJLnyeEBgQutttg6tFZdjeay7SxNkq4Il5E0ZEAA"
+  },
+  "/project-details/falcocut/18.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/18-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/18-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJbACdMoADT6CXn9JrHBjS3FAA/unjIB9YPeQ+w0EpYFPxWU0yuOXCOe4BGrIG5iOt7Yjrd74N7BXn9LmiBW68KMpPzNbcFfRV3R/2/sln3TMOBk04d/FhHqzcUIkkkkcMkCpc/vGrAnfI/h4H/3kz4cZmKd6PHaIP6YhPp3zE2+eDeYoNUdL6/AAAAA=="
+  },
+  "/project-details/falcocut/19.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/19-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/19-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoYAA4APyV6tFGuJ6UisAgBwCSJbACdMoRwFft2TIBjgv3M/TAN2ni2GhIZQAD+3PXZGD6bB3o1gEoXzlEOVmCszW5+Q4/5C98cEm9zTNQjx+7ciox+9YwDjdgOAeBm+Tq60k8b2pCjxx+uRLgY+q3kFT8k8t3uJ6xzQMXapQ4CuHxAQTeIKpyal0FiN3i7237wD3LkuTpHsbd/hPsd4E+4m+k0WA+IYLSmZ1JuiAA="
+  },
+  "/project-details/falcocut/20.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/20-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/20-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJbACdMoR3ACmZ1Bf57iqxv4RqSwAA/uX29i5JjU0GhxfbaTYjB82vkrwiQC0NC5tBI25IJfsSWZ/s1VHla7FBgrodJYp6NScnjdYOof8rYKXVbZgp6luxrdNXcWJW9unKlAfM/QjrRf2RNhghSAwd941It1wA"
+  },
+  "/project-details/falcocut/21.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/21-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/21-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJbACdMoRwACQSbxHAwvAA/ukGv2jNe2hW3+xIu+RGAD8MZlVbpy6+ACJl0loskPmWZ9wM4DytwTP4NCqvSoeKQO6dn3qmIA8Psd+7e77lhvoGL6ML3PfsmmU3YErQ0x/a/+6FnudSQFWIAAA="
+  },
+  "/project-details/falcocut/22.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/22-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/22-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4WAoAAAAQAAAAFwAADQAAQUxQSCAAAAABH6AQQADE37nRiIj4gJoABBjj0kAc/bMJENH/xNucBlZQOCBcAAAA0AMAnQEqGAAOAD8lfLRSLielIrAIAcAkiWwAnTKAA0v1x+C1er5YAP7p4yAC4Pkc6VMj01o2uUGeYy7ReMOpWyHb3ADsrT+uY4Obz1xPEx8J4tGgfCVIsVcAAAA="
+  },
+  "/project-details/falcocut/23.png": {
+    "width": 2880,
+    "height": 1620,
+    "variants": [
+      {
+        "src": "/optimized/project-details/falcocut/23-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/falcocut/23-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoYAA4APyV8tFGuJ6UisAgBwCSJbACdMoRwACnT+0d7rT+G+o8gAP7l9lfROYg63CXuJwkeoZa1BoWH26ykE3aWn0cdElz2mkqXEdIQ48uj0FcUXc+jbcXIFZIW3LHuw0225LJlwMLI98w9rlLO2A8Sl/PFolj3uQ5SueO5Rtfs6OAA"
+  },
+  "/project-details/tongyi-app/04.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/04-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/04-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJaAAAW83Xy6vJXAwBgAD+4wx0s2jimHCBj7CUcLMBHtlASv2lsaS8KonKQl6IJSoPfyLdAhZUNN8V+9cxT9IN6anLU6ueUocSiO7qQpLAWWkGznhaHEAA"
+  },
+  "/project-details/tongyi-app/05.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/05-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/05-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAwCdASoYAA4APyWAtlKuKCUisAgBwCSJTB1gBubh7XwcSAD+7Z3XErf9RTX29qP4GsYQIeVlM4NjoXAzkXne8FQV7DzCAyqzemizOanfPS9fVtqcuHj9Y43I+nkFSrrfQAAA"
+  },
+  "/project-details/tongyi-app/07.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/07-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/07-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJYwAAW+qtnrhQEwAA/uOCcjNhzsYqIb/+wVqkyCrAeVEQi6eP3b7jhojNgsDKS3kSzvSpr2P30z2eXl4AAA=="
+  },
+  "/project-details/tongyi-app/08.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/08-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/08-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwAwCdASoYAA4APyV6tVIuJ6UisAgBwCSJQBfnA2kTpifPgAAA/ukGXYn6zvFHc1zaLSV2PVFyZcGBfrN5InUn/N6I4Nv0v9G5AjsJvob+MSlIL4rFn/dA6MGnxEyIyx8ezxed4aQAAA=="
+  },
+  "/project-details/tongyi-app/09.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/09-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/09-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJYwAAXBsB0BEypDtQ3J/IAAD+5etB4ks2bYVZVC35LJzQfWbwb7LnAp4NX77V0MsmL+OmObq5KqU0Z+HHSfGq/NEzV0P/H5D8VrCSGHpTfpPFC7lmRG1ud3mDipuayx55rgAA"
+  },
+  "/project-details/tongyi-app/10.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/10-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/10-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwDCgCEQcze6/JTuysAA/uL8I55Z1y3qtjyVWwH13wLPk5MGovnPFEEOKs/ef93G+L4WPndCxt10gMy4ntv8C0dmUOBmPMWoegS7IG0IHdbyywh5j5bKNn4uGW6iV72KdnwAAAA="
+  },
+  "/project-details/tongyi-app/11.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/11-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/11-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYAA4APyV8tFGuJ6UisAgBwCSJQAALk/LpUms/AlTk6UsAAP7c255/XtNxvJEuoKsiDVVIRi1fYT2DAbRu4tgUccCuX419DQhraga7yL2S4zzB3UWmB1/Hk9qFTR6Q9//3KihiQ5fDHV6kgKx8hFvOLPIG19bQjiwpCCA8+hjZAAAA"
+  },
+  "/project-details/tongyi-app/12.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/12-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/12-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQBdgBC17VhB6cwOQYQAA/tz0XZDSQT9YFYSF5QVxZYn3tGIqtbmTJk5ktZ3weV2A7LVdnWchRssUlAQXesE6IQP/wVcnd9S5fVPljL6fs90Qbma172uVxogyjCAA"
+  },
+  "/project-details/tongyi-app/14-updated.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/14-updated-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/14-updated-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQAALed8GkPzBwgAA/tzbhUs+mxtV8vOfRp2BV8meO7YcF7sYCjLn9K72ul7yhRrUv7Y49BTPDpVLMgueaySkTOT/DkvLvicGSQkfRGtkesaE11P/Qt7i8bW675L2AAA="
+  },
+  "/project-details/tongyi-app/14.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/14-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/14-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQAALed8GkPzBwgAA/tzbhUs+mxtV8vOfRp2BV8meO7YcF7sYCjLn9K72ul7yhRrUv7Y49BTPDpVLMgueaySkTOT/DkvLvicGSQkfRGtkesaE11P/Qt7i8bW675L2AAA="
+  },
+  "/project-details/tongyi-app/15.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/15-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/15-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABQBACdASoYAA4APyV8tVIuJ6UisAgBwCSJbACdIP8C+Lb/qN7/qMNTzZKAAP7l6XbtFyK3z7kkP+8lmoKTNA8EcdCAGlI9U73zsn+D7w13EW2n8iUJvBXCASRcdtTv/HX0Eiwui1QhiA/ztKp55lxV7sPqr3Wynv97rKHMZNYh+1juCV2rhCeCEdP9jSnPPoo0UPPfia2/CUAA"
+  },
+  "/project-details/tongyi-app/17.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/17-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/17-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAACQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQBadA9ZWOsKwbHgAAP7kIvUXFeTZdShYf907sRj621rXEsgNwLdejToEvAIwNjJks3zOYVVVV8pspi5zyIVm0MnNKBhdV/+8TOJDEQwNu5fE9V6VWsG7VrnnSvzX1zY+aH7dAAmKQAAA"
+  },
+  "/project-details/tongyi-app/18.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/18-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/18-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZQCo9CFskXOjSM/nqgAA/uXwxnRmdePS4kO1eBQFdwkrWtwhnP+89wGBpWWAMbl15fYYPZyBNQad+uqqbgAA"
+  },
+  "/project-details/tongyi-app/19.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/19-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/19-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJYwCdAdwA9E0HcpBmGCinhgAA/uXwxnRjpQ9q1Zpwpuo8kczeODt7kXHD2tkpNBlztQu07bn453uyq5h0L/1MC6iWwHxrrmFrPQLxnDx7Fhwb4KBUlVDR1zjSjWWYFinwySJIWFLECeDYLMN1wAAA"
+  },
+  "/project-details/tongyi-app/20.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/20-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/20-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJYgC/WBmJ/qUB3wv70YFpWZ/5giZ5pWAA/ni256IeEL4aa44C3Q0Voy1iOEhYtBuKZhjSz/sGbx6hlP+rLGO2cWnuu3xdnpd30KqoxMvkPgpi1wuWbGVIv05PsWbI1l6aGhvFzYZdpjJX3wii+Z9U1vPhyBGIXTUcTvu4YEulZ2LGDzhVmAO5hTplgAAA"
+  },
+  "/project-details/tongyi-app/21.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/21-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/21-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACQAwCdASoYAA4APyV8tFGuJ6UisAgBwCSJZQAAW3D85Uy4bdJwAP7l8JS2Wv4vWXFSWVTnazivbOVcXrIh+O247eHFli4dPvTcJtos5Sn3/g05aXC6RQUJ9AH4BRircvAAAA=="
+  },
+  "/project-details/tongyi-app/22.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/22-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/22-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJZQDImCG06MjInsUw5mV+PHAA/uLxchpRooz9K4LW8rUHMruPtT+qVGk3iglJ1RaanGv85Z2Y+vB5FrSvHGIH2qYVazqUceZ5Wgu/f/IVoVLbwS+wzpr8Jt1tfgF+iABAoKBZboPAdmQAkuiJTp5p7JrRU4aV3/+Np9dKJ49smzwA"
+  },
+  "/project-details/tongyi-app/logo-animation-poster.jpg": {
+    "width": 2276,
+    "height": 1282,
+    "variants": [
+      {
+        "src": "/optimized/project-details/tongyi-app/logo-animation-poster-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/tongyi-app/logo-animation-poster-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYAA4APyV6tVIuJ6UisAgBwCSJZAAAW+vsENnQ8hO+kAAA/t6EicedEy3P4MH0A3OIvaeO68Bg7U1t9oIIEUnR/11DkDdr1s+sULJ528eFQR/Ac2gjGI2sxAA="
+  },
+  "/project-details/ziroom-enterprise-platform/03.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/03-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/03-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwDImC0Lfvom0QAA/u7ElkShydGTkmPkZkMQfuFft4v3KtY+KEYtnLT0AA=="
+  },
+  "/project-details/ziroom-enterprise-platform/17.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/17-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/17-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoYAA4APyV+uVMuKCYisAgBwCSJZwAAUf8DniGHFZtAAAD+51OVrE3bOvsEmGJ7B7L+PmQHc4Fus4he7Caf0hX5k5WNBndUdZAhtMEWnKKSsHHTt97WwAAA"
+  },
+  "/project-details/ziroom-enterprise-platform/18.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/18-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/18-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJZwAAXE5Bl55vJ8/9QKBo4AD+4KiIROBsUlvESKAn9OLpHFD4xxtUasoAokH5uriu6GBgCzJpmoXMpcaBry0UNMAQPAndGXNz5cNz/Kcnj7DSJnYadDSca33tbAAA"
+  },
+  "/project-details/ziroom-enterprise-platform/19.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/19-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/19-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwAAWoup7AVKwPvu3zwAAP7gqIhE/iZIxV6sUOfr5VD3nzIJ0faBrYzbt06K7MNIl2LzveuSecU2jOTu1YPkFdyGI6kvAAA="
+  },
+  "/project-details/ziroom-enterprise-platform/20.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/20-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/20-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoYAA4APyV8tFGuJ6UisAgBwCSJZQDA3CIKFF6v0XXz5FbY1gAA/uCgiz0zR/Guj0bL4IZfxoUiOeFdCUgzPAYbwVH20bu6L+1V/JlKta1C4AnZW00u1HAA"
+  },
+  "/project-details/ziroom-enterprise-platform/21.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/21-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/21-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoYAA4APyWAtlKuKCUisAgBwCSJQBjgv/wHxNpPCccUAAAA/uCojhy4H6OpwEvruP1g7qDr+yC7r6PtKRUAM0t4jruDpfq8lML58IBdmUI8NB6EAAA="
+  },
+  "/project-details/ziroom-enterprise-platform/22.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/22-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/22-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwAAXE7Oebq8hRfuIAAA/uCoiEUAtZ9W2hTaGu0nHyXqdNM5cq7kzSSPT5JKdtBpg4dpPbeiySugvZFV8AAA"
+  },
+  "/project-details/ziroom-enterprise-platform/23.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/23-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/23-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAwCdASoYAA4APyWAtlKuKCUisAgBwCSJZ2DrADc14NZwBAAA/u5tMh9TkMeXXMh3eZdfwHozK+Kd6N82v6ylhc3O8S6D+TCTDiuvcPQEvAAA"
+  },
+  "/project-details/ziroom-enterprise-platform/24.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/24-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/24-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABQAwCdASoYAA4APyV6tVGuJ6UisAgBwCSJZQAAWpndiTo4AAD+4Ik95d9KwNZm60bF7KRO3Ak9th3VbRJsncFmAetQj8pfRHyKTcsPIAA="
+  },
+  "/project-details/ziroom-enterprise-platform/25.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/25-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/25-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwAAXEwbJqzAAP7giT3l3vfSLui85TepPtGcsjNBTCU6jbKWNSbleaAAAA=="
+  },
+  "/project-details/ziroom-enterprise-platform/26.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/26-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/26-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJZwAAXE7wC+ZzyQ+gAAD+335dG7Vdbhn8JG3VKrowSlZJ4FjiJ3LI5NNddjXH51WNsnXecsdcoPavn99MOUZj4l4AAA=="
+  },
+  "/project-details/ziroom-enterprise-platform/27.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/27-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/27-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoYAA4APyWEuVOuKSWisAgBwCSJaAC7AGmgboS6nMNDihzl4AAA/vc+ZBgpRdMk26EEyAuoWnc5t4ACdo9SxQ0Vbsp6tvdxKEBQdgh0FDvBdWxo+b7FcqrzBLsUzHROsC4u5Huutnw4lNJxKqeIHCYVMM7BAAAA"
+  },
+  "/project-details/ziroom-enterprise-platform/28.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/28-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/28-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAwBACdASoYAA4APyV6tVGuJ6UisAgBwCSJYwC7ACPzcxVnf5fFD3cAgAAA/tXkbSsSMTVCURbV29mBtDxLYLBOZagD4D3trhK13ufqm9Ypc8znso6fe5rBMPSMCNrY5PDu9lQF06iX2t/W+DuHDLCQVuH+b9hbHM6pW7t3gAA="
+  },
+  "/project-details/ziroom-enterprise-platform/29.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/29-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/29-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAwCdASoYAA4APyV8tFGuJ6UisAgBwCSJQAALvgH8dZ6ZwkAA/tYVtTxKXB/R9S7HekYRUJ3Ku1Lz1Ch+dKVsxPGlZAytEOZ647+PXiSgUAAA"
+  },
+  "/project-details/ziroom-enterprise-platform/30.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/30-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/30-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJbACw7B6VpdjT17//UehQAP7gqIhZK7zicY0IZLqwkEKUjL7gKlI7ILqU9jVyAWlKD4OT1lS8PFxtFunSZwrjbITjY/z54ZKiZVgKik5wBpTniilNxLYFCxzXgAAA"
+  },
+  "/project-details/ziroom-enterprise-platform/31.2.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/31.2-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/31.2-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoYAA4APyV+tVGuKCUisAgBwCSJZQAAW39eq5z+1MAAAP7fG0Vn4seij19Itj2lwVA7OH1A7roMfLaTjFdC8Gnp3rOIm4VsAAA="
+  },
+  "/project-details/ziroom-enterprise-platform/31.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/31-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/31-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoYAA4APyV8tFIuJ6UisAgBwCSJZQDKACHgSgHfewAA/t8b9Ru/VZMm7deQ329c4tzpt/BiZ5cbGBs559a5IEeTa2AAAA=="
+  },
+  "/project-details/ziroom-enterprise-platform/32.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/32-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/32-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQBlABCv8lwTYC9zMEIAA/uCJPg4kQ/MZd22+FVMZDLp8p/p/9hNLfpiT2a7ZDAfDkecAGFcH1CP/WZaz1w8kInCSuNKKFTst6o0iEDyLW+QU00AAAA=="
+  },
+  "/project-details/ziroom-enterprise-platform/33.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/33-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/33-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBACdASoYAA4APyV8tFIuJ6UisAgBwCSJYgC06CHgZhfNKyK+AwuPRAAA/rusUoT4jxeA4nh+7ycuHIAv4hV5ENTVTWHrVs0TxFX4wkNhuvEgY8He4O34HTBlxwSi8BzwATiOngXJAhgA"
+  },
+  "/project-details/ziroom-enterprise-platform/34.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/34-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/34-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYAA4APyV6tFGuJ6UisAgBwCSJZADCgCHwz5R3W+uCRywprwAA/r/DSJK6fx6zNSGCGvFAAWKLszVMNMNEpr+olT4von4uXGdwVUGpAs0mTHe7nSHytgVPkejAGbyDE3YSYO2t8nsvOVAA"
+  },
+  "/project-details/ziroom-enterprise-platform/35.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/35-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/35-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJaACw7CGUzPAobynAAP7Zah8xILMbj1Y+V3n0upjb+psLiDZAv0NzMA5ZP10gyWIpm4yHTt+Kr4ueXJItH7Qea7X1h/K++gziPLniEZ1NTTiY8AA="
+  },
+  "/project-details/ziroom-enterprise-platform/36.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/36-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/36-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoYAA4APyV8tFGuJ6UisAgBwCSJZgC06CGVjs1qjSZ3k2AA/suOoxizCS5K1Pl1gyI5uW9v1wN4aBYKxqvpOW9YtgzzkTcTU9I32lftU56419kDMJLP3VO5OXXdEZisx51RYUGNE0T6RDcaEl2rFcoAAAA="
+  },
+  "/project-details/ziroom-enterprise-platform/37.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/37-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/37-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQAALMZYNpT//zt4LAAD+u6/8TLxQuZORdCQlCJOYkFwr9o2xKyHlOkgWfIJM7hm2jjNeUgLPkiSfddbNjbavVahs8vPxXhW8kOqGMCXbjEw3npCI3RMqvGhCPuCqiQAAAA=="
+  },
+  "/project-details/ziroom-enterprise-platform/40.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/40-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/40-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoYAA4APyV6tFGuJ6UisAgBwCSJQAAMP8+JQKxrPsBHM12wAP7NTv0Rf1cqxT7LArWGQGuKmj6UmwRRQSrZ4c0mcrht/WMVoZPfdKsvh+pcSo7HU+mzAMJYmpaC8CMEOEUBphiILYXY+5qxZMAAAA=="
+  },
+  "/project-details/ziroom-enterprise-platform/showreel-poster.jpg": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/showreel-poster-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ziroom-enterprise-platform/showreel-poster-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAgCdASoYAA4APyV8tFGuJ6UisAgBwCSJaQAAeyAA/u/HbYeYD9swchB/jYagAAA="
+  }
+}

@@ -18,6 +18,9 @@
 - `AI Virtual Try-on` 当前不在首页精选项目中。
 - 图片在站内默认不可拖拽，并阻止图片上的右键菜单；现有实现位于 `components/image-protection.tsx`。
 
+- 作品媒体使用 `PortfolioImage` / `PortfolioVideo` 的预览、失败恢复与兼容格式；普通浏览器保留自动静音循环，自动播放被拦截时提供点击入口。
+- 更新作品原图后运行 `pnpm prepare:images` 生成静态 WebP 与预览清单；原图保留。视频需有站内海报和 H.264 MP4，避免只提供 WebM 或依赖外部背景视频。
+
 ## 开发与验证
 
 - 使用 `pnpm dev` 启动本地服务。若当前终端找不到 Node，可将 `/Users/kaola/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin` 加入本次命令的 `PATH`。

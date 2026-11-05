@@ -319,3 +319,9 @@ Analytics: add Vercel Analytics, Umami, Cloudflare Analytics, or Google Analytic
 ```
 
 See workflow details: [docs/workflows.md](./docs/workflows.md)
+
+## Portfolio media
+
+After replacing original images, run `pnpm prepare:images` to regenerate `public/optimized/` and `lib/portfolio-images.json`. The generator uses the Sharp dependency bundled with Next.js. Commit generated files together with the originals. Static responsive WebP files work on both Vercel and Cloudflare Pages without a separate image service.
+
+Use `PortfolioImage` for project images and `PortfolioVideo` for project/background videos. Supply a local poster and an H.264 MP4 with fast start. Videos near the viewport load on demand, loop silently by default, and offer playback/retry controls when autoplay or loading fails.

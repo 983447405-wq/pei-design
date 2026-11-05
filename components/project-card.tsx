@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { PortfolioImage as Image } from "@/components/portfolio-image";
 import { ArrowUpRight } from "lucide-react";
 import type { CSSProperties } from "react";
 import type { Project } from "@/content/projects";

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { PortfolioImage } from "@/components/portfolio-image";
+import { PortfolioVideo } from "@/components/portfolio-video";
 import { ArrowDown, ArrowUpRight, Flame, PenLine, Sparkles } from "lucide-react";
 import { ContactCTA } from "@/components/cta";
 import { ProjectCard } from "@/components/project-card";
@@ -13,9 +15,6 @@ import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
 type Props = {
   params: Promise<{ locale: string }>;
 };
-
-const backgroundVideoUrl =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4";
 
 const insightIcons = [PenLine, Sparkles, PenLine, Flame];
 const heroTags = ["AI Product Design", "Design Lead", "AI Agent & Workflow", "AI Coding"];
@@ -169,9 +168,13 @@ export default async function HomePage({ params }: Props) {
   return (
     <main className="portfolio-root">
       <RootNoiseFilter />
-      <div className="portfolio-bg-video">
-        <video autoPlay loop muted playsInline src={backgroundVideoUrl} />
-      </div>
+      <PortfolioVideo
+        background
+        locale={locale}
+        label={locale === "zh" ? "首页背景视频" : "Background video"}
+        src="/videos/portfolio-background.mp4"
+        poster="/videos/portfolio-background-poster.jpg"
+      />
       <div className="portfolio-bg-overlay" />
 
       <section className="portfolio-hero" id="home">
@@ -220,11 +223,12 @@ export default async function HomePage({ params }: Props) {
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch">
           <div className="about-visual lg:sticky lg:top-24">
             <div className="about-portrait">
-              <Image
+              <PortfolioImage
+                fill
                 alt={locale === "zh" ? "裴锦贤艺术照" : "Portrait of Pei Jinxian"}
                 className="about-portrait-image"
                 height={1046}
-                priority
+                sizes="(min-width: 1024px) 384px, 90vw"
                 src="/about-portrait.png"
                 width={1044}
               />

@@ -29,6 +29,88 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "falcocut",
+    year: "2025-2026",
+    featured: true,
+    tone: "cyan",
+    tags: ["AI", "E-commerce", "Agent", "Workflow"],
+    title: {
+      zh: "FalcoCut",
+      en: "FalcoCut"
+    },
+    summary: {
+      zh: "面向北美跨境电商与内容创作者的 AI 内容生产平台，覆盖视频生成、数字人、爆款复刻、Agent 与 Workflow 等核心能力。",
+      en: "An AI video editing platform optimized through data-driven iteration across creator workflows, interface consistency, and AI-assisted editing."
+    },
+    role: {
+      zh: "Product Designer / Creator Workflow",
+      en: "Product Designer / Creator Workflow"
+    },
+    impact: {
+      zh: "围绕内容生产效率与商业转化，持续优化生成链路、核心功能曝光及产品体验，推动多个核心功能导出率超过 55%。",
+      en: "Created a lighter and more consistent editing experience around creator efficiency and AI-assisted editing."
+    },
+    media: [
+      {
+        type: "Video",
+        label: { zh: "AI 剪辑流程演示", en: "AI editing workflow demo" },
+        detail: { zh: "展示素材导入、智能剪辑、预览和导出。", en: "Import, AI editing, preview, and export." }
+      },
+      {
+        type: "Images",
+        label: { zh: "编辑台界面图集", en: "Editor interface gallery" },
+        detail: { zh: "时间线、素材库、参数面板和结果预览。", en: "Timeline, asset library, parameter panel, and result preview." }
+      },
+      {
+        type: "Prototype",
+        label: { zh: "交互原型", en: "Interaction prototype" },
+        detail: { zh: "验证关键剪辑路径和状态反馈。", en: "Validated key editing paths and state feedback." }
+      }
+    ],
+    metrics: [
+      { label: { zh: "核心路径", en: "Core path" }, value: "Simplified" },
+      { label: { zh: "迭代依据", en: "Iteration basis" }, value: "Data" },
+      { label: { zh: "体验重点", en: "Experience focus" }, value: "Creator" }
+    ],
+    sections: {
+      background: {
+        zh: "AI 视频编辑工具需要同时服务专业编辑和轻量创作者。旧流程中素材管理、智能生成、预览和导出之间切换频繁，影响效率。",
+        en: "AI video editing tools need to serve both professional editors and lightweight creators. The old flow forced frequent switching between assets, AI generation, preview, and export."
+      },
+      responsibilities: [
+        { zh: "梳理创作者高频任务和低效节点。", en: "Mapped creator tasks and workflow bottlenecks." },
+        {
+          zh: "优化编辑台、素材库、预览和 AI 辅助剪辑体验。",
+          en: "Improved the editor, asset library, preview, and AI-assisted editing experience."
+        },
+        { zh: "推动界面规范统一，提高跨模块一致性。", en: "Unified interface patterns to improve cross-module consistency." }
+      ],
+      process: [
+        { zh: "基于行为数据定位转化损耗和操作断点。", en: "Used behavior data to identify conversion loss and interaction drop-offs." },
+        {
+          zh: "重构编辑路径，减少用户在参数和预览之间的来回切换。",
+          en: "Restructured editing paths to reduce switching between parameters and previews."
+        },
+        {
+          zh: "用原型快速验证时间线、AI 建议和结果确认模式。",
+          en: "Validated timeline, AI suggestion, and result confirmation patterns through prototypes."
+        }
+      ],
+      outcome: [
+        { zh: "形成更清晰的视频编辑工作台和 AI 辅助状态反馈。", en: "Created a clearer video editor and AI assistance state feedback." },
+        { zh: "建立适合视频工具的组件和交互规范。", en: "Built component and interaction standards for video tools." }
+      ],
+      results: [
+        { zh: "提升创作者关键路径效率和界面一致性。", en: "Improved creator efficiency and interface consistency." },
+        {
+          zh: "让 AI 辅助剪辑从黑盒能力变成可确认、可调整的体验。",
+          en: "Made AI-assisted editing confirmable and adjustable instead of a black-box flow."
+        },
+        { zh: "支持后续真实视频项目接入和商业化迭代。", en: "Supported future real video asset integration and commercial iteration." }
+      ]
+    }
+  },
+  {
     slug: "ai-short-drama-studio",
     year: "2025-2026",
     featured: true,
@@ -120,88 +202,6 @@ export const projects: Project[] = [
     }
   },
   {
-    slug: "falcocut",
-    year: "2025-2026",
-    featured: true,
-    tone: "cyan",
-    tags: ["AI", "E-commerce", "Agent", "Workflow"],
-    title: {
-      zh: "FalcoCut",
-      en: "FalcoCut"
-    },
-    summary: {
-      zh: "面向北美跨境电商与内容创作者的 AI 内容生产平台，覆盖视频生成、数字人、爆款复刻、Agent 与 Workflow 等核心能力。",
-      en: "An AI video editing platform optimized through data-driven iteration across creator workflows, interface consistency, and AI-assisted editing."
-    },
-    role: {
-      zh: "Product Designer / Creator Workflow",
-      en: "Product Designer / Creator Workflow"
-    },
-    impact: {
-      zh: "围绕内容生产效率与商业转化，持续优化生成链路、核心功能曝光及产品体验，推动多个核心功能导出率超过 55%。",
-      en: "Created a lighter and more consistent editing experience around creator efficiency and AI-assisted editing."
-    },
-    media: [
-      {
-        type: "Video",
-        label: { zh: "AI 剪辑流程演示", en: "AI editing workflow demo" },
-        detail: { zh: "展示素材导入、智能剪辑、预览和导出。", en: "Import, AI editing, preview, and export." }
-      },
-      {
-        type: "Images",
-        label: { zh: "编辑台界面图集", en: "Editor interface gallery" },
-        detail: { zh: "时间线、素材库、参数面板和结果预览。", en: "Timeline, asset library, parameter panel, and result preview." }
-      },
-      {
-        type: "Prototype",
-        label: { zh: "交互原型", en: "Interaction prototype" },
-        detail: { zh: "验证关键剪辑路径和状态反馈。", en: "Validated key editing paths and state feedback." }
-      }
-    ],
-    metrics: [
-      { label: { zh: "核心路径", en: "Core path" }, value: "Simplified" },
-      { label: { zh: "迭代依据", en: "Iteration basis" }, value: "Data" },
-      { label: { zh: "体验重点", en: "Experience focus" }, value: "Creator" }
-    ],
-    sections: {
-      background: {
-        zh: "AI 视频编辑工具需要同时服务专业编辑和轻量创作者。旧流程中素材管理、智能生成、预览和导出之间切换频繁，影响效率。",
-        en: "AI video editing tools need to serve both professional editors and lightweight creators. The old flow forced frequent switching between assets, AI generation, preview, and export."
-      },
-      responsibilities: [
-        { zh: "梳理创作者高频任务和低效节点。", en: "Mapped creator tasks and workflow bottlenecks." },
-        {
-          zh: "优化编辑台、素材库、预览和 AI 辅助剪辑体验。",
-          en: "Improved the editor, asset library, preview, and AI-assisted editing experience."
-        },
-        { zh: "推动界面规范统一，提高跨模块一致性。", en: "Unified interface patterns to improve cross-module consistency." }
-      ],
-      process: [
-        { zh: "基于行为数据定位转化损耗和操作断点。", en: "Used behavior data to identify conversion loss and interaction drop-offs." },
-        {
-          zh: "重构编辑路径，减少用户在参数和预览之间的来回切换。",
-          en: "Restructured editing paths to reduce switching between parameters and previews."
-        },
-        {
-          zh: "用原型快速验证时间线、AI 建议和结果确认模式。",
-          en: "Validated timeline, AI suggestion, and result confirmation patterns through prototypes."
-        }
-      ],
-      outcome: [
-        { zh: "形成更清晰的视频编辑工作台和 AI 辅助状态反馈。", en: "Created a clearer video editor and AI assistance state feedback." },
-        { zh: "建立适合视频工具的组件和交互规范。", en: "Built component and interaction standards for video tools." }
-      ],
-      results: [
-        { zh: "提升创作者关键路径效率和界面一致性。", en: "Improved creator efficiency and interface consistency." },
-        {
-          zh: "让 AI 辅助剪辑从黑盒能力变成可确认、可调整的体验。",
-          en: "Made AI-assisted editing confirmable and adjustable instead of a black-box flow."
-        },
-        { zh: "支持后续真实视频项目接入和商业化迭代。", en: "Supported future real video asset integration and commercial iteration." }
-      ]
-    }
-  },
-  {
     slug: "honor-smart-video",
     year: "2025",
     featured: false,
@@ -271,6 +271,82 @@ export const projects: Project[] = [
         { zh: "按项目节点完成 100% 版本交付。", en: "Completed 100% of version delivery milestones." },
         { zh: "减少跨团队评审中的视觉与交互返工。", en: "Reduced visual and interaction rework during cross-team reviews." },
         { zh: "支持后续智能视频体验扩展。", en: "Supported future smart video experience extensions." }
+      ]
+    }
+  },
+  {
+    slug: "tongyi-app",
+    year: "2024-2025",
+    featured: true,
+    tone: "cyan",
+    tags: ["AI", "Interaction", "Campaign"],
+    title: {
+      zh: "通义千问",
+      en: "Tongyi App"
+    },
+    summary: {
+      zh: "通义 App AI 交互体验，参与多个 AI 互动功能和运营活动设计，连接模型能力与用户场景。",
+      en: "AI interaction experience for Tongyi App, designing multiple AI interaction features and operation campaigns that connect model capability with user scenarios."
+    },
+    role: {
+      zh: "UI Designer / AI Interaction",
+      en: "UI Designer / AI Interaction"
+    },
+    impact: {
+      zh: "完成多项 AI 互动功能与运营活动设计，提升用户参与和功能理解。",
+      en: "Delivered multiple AI interaction features and operation campaigns to improve engagement and feature comprehension."
+    },
+    media: [
+      {
+        type: "Images",
+        label: { zh: "AI 互动界面", en: "AI interaction interfaces" },
+        detail: { zh: "通义场景下的多种 AI 互动能力。", en: "AI interaction capabilities across Tongyi scenarios." }
+      },
+      {
+        type: "Prototype",
+        label: { zh: "运营活动原型", en: "Campaign prototype" },
+        detail: { zh: "活动路径、互动反馈和结果页体验。", en: "Campaign paths, interaction feedback, and result pages." }
+      },
+      {
+        type: "Video",
+        label: { zh: "交互动效预览", en: "Interaction motion preview" },
+        detail: { zh: "AI 反馈、生成过程和转场动效。", en: "AI feedback, generation process, and transition motion." }
+      }
+    ],
+    metrics: [
+      { label: { zh: "功能类型", en: "Feature type" }, value: "AI" },
+      { label: { zh: "设计方向", en: "Design focus" }, value: "Interaction" },
+      { label: { zh: "交付范围", en: "Scope" }, value: "Campaign" }
+    ],
+    sections: {
+      background: {
+        zh: "通义 App 的 AI 能力需要通过更直观的交互和运营活动被用户感知。设计需要在模型能力、活动传播和日常使用之间找到清晰表达。",
+        en: "Tongyi App needed AI capabilities to become more visible through intuitive interaction and campaigns. Design had to clarify model capability, campaign communication, and everyday use."
+      },
+      responsibilities: [
+        { zh: "参与通义 App AI 互动功能和运营活动设计。", en: "Designed AI interaction features and operation campaigns for Tongyi App." },
+        {
+          zh: "负责关键界面、视觉表达、状态反馈和动效方向。",
+          en: "Owned key interfaces, visual expression, state feedback, and motion direction."
+        },
+        { zh: "与产品和研发协作推进多版本交付。", en: "Worked with product and engineering to deliver multiple iterations." }
+      ],
+      process: [
+        {
+          zh: "梳理用户触达、互动、生成和分享的完整活动链路。",
+          en: "Mapped the full campaign path from entry, interaction, generation, to sharing."
+        },
+        { zh: "设计 AI 等待、生成、结果呈现和异常反馈。", en: "Designed AI waiting, generation, result reveal, and exception feedback." },
+        { zh: "通过高保真稿和动效说明降低交付误差。", en: "Reduced handoff ambiguity through high-fidelity designs and motion specs." }
+      ],
+      outcome: [
+        { zh: "交付多项 AI 互动体验和运营活动页面。", en: "Delivered multiple AI interaction experiences and campaign pages." },
+        { zh: "让 AI 能力更容易被用户理解、尝试和传播。", en: "Made AI capabilities easier for users to understand, try, and share." }
+      ],
+      results: [
+        { zh: "支持通义 App 多项 AI 互动功能上线。", en: "Supported the launch of multiple Tongyi App AI interaction features." },
+        { zh: "提升活动体验完整度和 AI 功能感知。", en: "Improved campaign experience completeness and AI feature perception." },
+        { zh: "沉淀 AI 互动与运营活动的设计经验。", en: "Built design learnings for AI interaction and campaigns." }
       ]
     }
   },
@@ -438,82 +514,6 @@ export const projects: Project[] = [
         { zh: "入选中国零售数字化创新案例 2024。", en: "Selected as China Retail Digital Innovation Case 2024." },
         { zh: "获得创新突破团队奖。", en: "Received Innovation Breakthrough Team Award." },
         { zh: "降低线上购物犹豫并提升决策效率。", en: "Reduced online shopping hesitation and improved decision efficiency." }
-      ]
-    }
-  },
-  {
-    slug: "tongyi-app",
-    year: "2024-2025",
-    featured: true,
-    tone: "cyan",
-    tags: ["AI", "Interaction", "Campaign"],
-    title: {
-      zh: "通义千问",
-      en: "Tongyi App"
-    },
-    summary: {
-      zh: "通义 App AI 交互体验，参与多个 AI 互动功能和运营活动设计，连接模型能力与用户场景。",
-      en: "AI interaction experience for Tongyi App, designing multiple AI interaction features and operation campaigns that connect model capability with user scenarios."
-    },
-    role: {
-      zh: "UI Designer / AI Interaction",
-      en: "UI Designer / AI Interaction"
-    },
-    impact: {
-      zh: "完成多项 AI 互动功能与运营活动设计，提升用户参与和功能理解。",
-      en: "Delivered multiple AI interaction features and operation campaigns to improve engagement and feature comprehension."
-    },
-    media: [
-      {
-        type: "Images",
-        label: { zh: "AI 互动界面", en: "AI interaction interfaces" },
-        detail: { zh: "通义场景下的多种 AI 互动能力。", en: "AI interaction capabilities across Tongyi scenarios." }
-      },
-      {
-        type: "Prototype",
-        label: { zh: "运营活动原型", en: "Campaign prototype" },
-        detail: { zh: "活动路径、互动反馈和结果页体验。", en: "Campaign paths, interaction feedback, and result pages." }
-      },
-      {
-        type: "Video",
-        label: { zh: "交互动效预览", en: "Interaction motion preview" },
-        detail: { zh: "AI 反馈、生成过程和转场动效。", en: "AI feedback, generation process, and transition motion." }
-      }
-    ],
-    metrics: [
-      { label: { zh: "功能类型", en: "Feature type" }, value: "AI" },
-      { label: { zh: "设计方向", en: "Design focus" }, value: "Interaction" },
-      { label: { zh: "交付范围", en: "Scope" }, value: "Campaign" }
-    ],
-    sections: {
-      background: {
-        zh: "通义 App 的 AI 能力需要通过更直观的交互和运营活动被用户感知。设计需要在模型能力、活动传播和日常使用之间找到清晰表达。",
-        en: "Tongyi App needed AI capabilities to become more visible through intuitive interaction and campaigns. Design had to clarify model capability, campaign communication, and everyday use."
-      },
-      responsibilities: [
-        { zh: "参与通义 App AI 互动功能和运营活动设计。", en: "Designed AI interaction features and operation campaigns for Tongyi App." },
-        {
-          zh: "负责关键界面、视觉表达、状态反馈和动效方向。",
-          en: "Owned key interfaces, visual expression, state feedback, and motion direction."
-        },
-        { zh: "与产品和研发协作推进多版本交付。", en: "Worked with product and engineering to deliver multiple iterations." }
-      ],
-      process: [
-        {
-          zh: "梳理用户触达、互动、生成和分享的完整活动链路。",
-          en: "Mapped the full campaign path from entry, interaction, generation, to sharing."
-        },
-        { zh: "设计 AI 等待、生成、结果呈现和异常反馈。", en: "Designed AI waiting, generation, result reveal, and exception feedback." },
-        { zh: "通过高保真稿和动效说明降低交付误差。", en: "Reduced handoff ambiguity through high-fidelity designs and motion specs." }
-      ],
-      outcome: [
-        { zh: "交付多项 AI 互动体验和运营活动页面。", en: "Delivered multiple AI interaction experiences and campaign pages." },
-        { zh: "让 AI 能力更容易被用户理解、尝试和传播。", en: "Made AI capabilities easier for users to understand, try, and share." }
-      ],
-      results: [
-        { zh: "支持通义 App 多项 AI 互动功能上线。", en: "Supported the launch of multiple Tongyi App AI interaction features." },
-        { zh: "提升活动体验完整度和 AI 功能感知。", en: "Improved campaign experience completeness and AI feature perception." },
-        { zh: "沉淀 AI 互动与运营活动的设计经验。", en: "Built design learnings for AI interaction and campaigns." }
       ]
     }
   },

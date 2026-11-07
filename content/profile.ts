@@ -28,14 +28,14 @@ export const profile = {
   },
   about: {
     zh: [
-      "我专注于 AI 产品与消费级应用的体验设计，拥有 AI 大模型、AIGC 创作及出海产品的项目经验，致力于将复杂的技术能力转化为简单、高效且易于使用的产品体验。",
-      "在产品设计之外，我也承担项目负责人的角色。从需求定义、产品策略与交互设计，到研发资源协调、版本排期及上线验收，推动产品从 0 到 1 建设与持续迭代，兼顾用户体验、业务目标和交付效率。",
-      "我持续探索 AI Agent、Workflow、Design System 与 AI Coding，将设计思维与技术实践相结合，通过快速原型、交互验证和跨团队协作，探索 AI 时代更高效的产品设计方式。"
+      "我长期专注于 AI 产品体验设计，负责过多款面向 C 端和内容创作者的 AI 产品。曾负责千万级日活产品的核心功能与 AI 交互设计，主导过 AI 产品从 0 到 1 的体验设计，也负责海外 AI 视频创作平台的核心工作流迭代。",
+      "我擅长把复杂的模型能力转化为清晰、可控的产品流程。在生成式 AI 产品中，我关注用户如何表达意图、了解生成进度，以及如何判断和调整结果。我通过交互原型与 AI Coding 验证关键流程，并将成熟的交互模式纳入设计系统，支持后续功能迭代。",
+      "作为体验侧项目负责人，我根据业务目标确定需求优先级、版本范围与上线节奏，协调前端和测试资源，负责设计走查与上线验收。上线后，我结合业务数据检验设计效果，判断下一轮应优先解决哪些体验问题。"
     ],
     en: [
-      "I focus on experience design for large-model AI products and consumer applications, turning complex technical capabilities into simple, trustworthy, and usable product experiences.",
-      "I believe excellent design comes not only from visual expression, but also from product thinking, user insight, and technical understanding. My work spans AI workflows, interaction design, design systems, and frontend implementation as I explore new ways to bring design and AI together.",
-      "Beyond product design, I continue to explore web coding, AIGC, and creative development, using code, motion, and AI tools to build more expressive digital experiences."
+      "I specialize in experience design for AI products and have worked on several products for consumers and content creators. I designed core features and AI interactions for a product with tens of millions of daily active users, led experience design for AI products from concept to launch, and refined core workflows for an AI video creation platform serving international markets.",
+      "I turn complex model capabilities into workflows users can understand and control. In generative AI products, I design for how people express intent, track generation progress, and evaluate and refine results. I use interactive prototypes and AI-assisted coding to validate key workflows, then incorporate proven interaction patterns into the design system to support future iterations.",
+      "As the project lead for experience design, I set requirements priorities, define release scope and timing around business goals, coordinate frontend and QA resources, and lead design reviews and release sign-off. After launch, I use business data to evaluate the design and decide which experience issues to address next."
     ]
   },
   numbers: [
@@ -150,10 +150,13 @@ export const profile = {
       period: "2025 — 2026",
       body: {
         zh: [
-          "负责 FalcoCut、AI 短剧及荣耀 AI 生成等产品的体验设计，主导 AI 产品从 0 到 1 建设、核心功能迭代与 Design System 搭建。",
-          "作为体验侧 Project Owner，负责需求优先级决策、研发资源与测试工时统筹、版本排期及上线验收，推动设计方案高质量落地，并结合业务数据持续优化产品体验。"
+          "负责多款 AI 产品的体验设计：FalcoCut、AI 短剧出海平台及荣耀智慧视频。主导 AI 短剧出海平台从 0 到 1 的体验设计，主导海外 AI 视频创作平台 FalcoCut 的视频生成与数字人创作流程迭代，并搭建设计系统。",
+          "担任体验侧项目负责人，决定需求优先级，统筹前端与测试资源，根据业务目标调整版本范围和上线排期。负责设计走查与上线验收，并结合上线后的业务数据推进后续迭代。"
         ],
-        en: "Responsible for multiple AI product lines, including AI Short Drama Platform, FalcoCut, Honor Smart Video, design systems, and AI product experience."
+        en: [
+          "Led experience design for FalcoCut, AI Short Drama Studio, and Honor Smart Video. Designed AI Short Drama Studio from concept to launch, led improvements to video generation and digital human creation workflows for FalcoCut, a global AI video creation platform, and built a design system.",
+          "As the experience design project lead, I set requirements priorities, coordinated frontend and testing resources, and adjusted release scope and schedules to meet business goals. I led design reviews and release sign-off, then used post-launch business data to guide further improvements."
+        ]
       },
       highlights: {
         zh: ["AI Short Drama Platform", "FalcoCut", "Honor Smart Video", "Design System"],

@@ -434,6 +434,21 @@
     ],
     "preview": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYAA4APyV6tFGuJ6UisAgBwCSJYwDCgB4mViIiZ/rruG5ZAAD+6QbBPILABii9TykWwTQjkjxsgY4Q8gJ7ASJEVHQp7Sc8mx2pJLlhxB269jW7EIU88I4AgUmsnW87oAA="
   },
+  "/project-details/ai-short-drama-studio/7-20261116.png": {
+    "width": 3840,
+    "height": 2160,
+    "variants": [
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/7-20261116-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/optimized/project-details/ai-short-drama-studio/7-20261116-1920.webp",
+        "width": 1920
+      }
+    ],
+    "preview": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoYAA4APyV6tVIuJ6UisAgBwCSJQAALlf5K9Siy3cfAXIbp4AD+5b0nTVUofgj9/9zD/Zn31m5u+x4PDdEAOrXGriQSse0Usg5a/ZsnssX5zSF6rD24TlGsStmTmliunHxX8CyW3/sZX6DtvCgcewAA"
+  },
   "/project-details/ai-short-drama-studio/7.png": {
     "width": 3840,
     "height": 2160,

@@ -23,7 +23,10 @@ const mediaIcon = {
 };
 
 const projectImageSequences: Partial<Record<string, string[]>> = {
-  "ai-short-drama-studio": Array.from({ length: 11 }, (_, index) => `/project-details/ai-short-drama-studio/${index + 2}.png?v=20261030b`),
+  "ai-short-drama-studio": Array.from(
+    { length: 11 },
+    (_, index) => `/project-details/ai-short-drama-studio/${index === 5 ? "7-20261116" : index + 2}.png?v=20261030b`
+  ),
   falcocut: [13, 14, 15, 16, 18, 19, 20, 21, 22, 23].map(
     (page) => `/project-details/falcocut/${page}.${page === 14 || page === 19 ? "webm" : "png"}`
   ),
